@@ -57,9 +57,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const images = [];
         const journeyScrollObj = { frame: 0 };
+        let loadedImages = 0;
+
+        const loader = document.getElementById("cinematic-loader");
+        const loaderBar = document.getElementById("loader-bar");
+        const loaderText = document.getElementById("loader-percentage");
+
+        // Stop user from scrolling while loading
+        if (lenis) lenis.stop();
+
+        function checkProgress() {
+            loadedImages++;
+            const progress = (loadedImages / frameCount) * 100;
+            
+            if (loaderBar) loaderBar.style.width = `${progress}%`;
+            if (loaderText) loaderText.innerText = `${Math.floor(progress)}%`;
+
+            if (loadedImages === frameCount) {
+                // All frames loaded
+                setTimeout(() => {
+                    document.body.classList.add("loader-hidden");
+                    if (lenis) lenis.start();
+                    
+                    // Reveal the first frame
+                    renderCanvas();
+                }, 400); // slight delay to show 100%
+            }
+        }
 
         for (let i = 1; i <= frameCount; i++) {
             const img = new Image();
+            img.onload = checkProgress;
+            img.onerror = checkProgress; // Fallback so it doesn't hang if an image is missing
             img.src = currentFrame(i);
             images.push(img);
         }
@@ -95,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
             ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
         }
         
-        images[0].onload = renderCanvas;
         window.addEventListener("resize", renderCanvas);
 
         gsap.to(journeyScrollObj, {
