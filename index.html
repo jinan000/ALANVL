@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400;1,6..96,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="logoloop.css">
@@ -21,7 +22,7 @@
     <!-- CINEMATIC PRELOADER -->
     <div id="cinematic-loader" class="cinematic-loader">
         <div class="loader-content">
-            <span class="loader-eyebrow">INITIATING SEQUENCE</span>
+            <span class="loader-eyebrow" id="loader-status">ESTABLISHING SECURE CONNECTION…</span>
             <div class="loader-progress-wrapper">
                 <div class="loader-progress-bar" id="loader-bar"></div>
             </div>
@@ -37,7 +38,7 @@
             <a href="#origin">The Origin</a>
             <a href="#intelligence">Intelligence</a>
             <a href="#book">The Book</a>
-            <a href="contact.html" class="nav-cta">Contact</a>
+            <a href="contact.html" class="nav-cta">[ INITIALIZE CONTACT ]</a>
         </nav>
     </header>
 
@@ -52,19 +53,27 @@
 
                 <div class="journey-text-container">
                     <div class="journey-text text-0" style="opacity: 1;">
-                        <h2 class="font-accent">He Started Where Most People Give Up, at Rock Bottom.</h2>
+                        <h2 class="font-heading">This is not just a website.<br>This is my journey from nothing.</h2>
+                        <div class="scroll-prompt">
+                            [ <span class="heartbeat-arrow">&darr;</span> SCROLL TO WALK THE PATH ]
+                        </div>
                     </div>
                     <div class="journey-text text-30" style="opacity: 0;">
-                        <h2 class="font-serif">Every Drop of Sweat Was a Silent Rebellion<br><span
-                                class="italic text-white-70">Against His Destiny.</span></h2>
+                        <h2 class="font-heading text-bold-white">Every Drop of Sweat Was a Silent Rebellion<br><span
+                                class="italic text-gold">Against the System.</span></h2>
                     </div>
                     <div class="journey-text text-60" style="opacity: 0;">
-                        <h2 class="font-serif">The White Coat Wasn't Given.<br><span class="italic text-white-70"> It
-                                Was Earned in the Dark.</span></h2>
+                        <div class="ecg-container">
+                            <svg class="ecg-line" viewBox="0 0 500 100" preserveAspectRatio="none">
+                                <polyline points="0,50 150,50 170,20 190,100 210,10 230,70 250,50 500,50" />
+                            </svg>
+                        </div>
+                        <h2 class="font-heading text-large-white">The White Coat Wasn't Given.<br><span class="italic text-small-gold">It Was Earned in the Dark.</span></h2>
                     </div>
                     <div class="journey-text text-90" style="opacity: 0;">
-                        <h2 class="font-accent">From Surviving the Streets to <br><span class="text-eee">Awakening a
-                                Generation</span></h2>
+                        <div class="spotlight-effect"></div>
+                        <h2 class="font-heading">From Surviving the Streets to Awakening a Generation.</h2>
+                        <a href="#origin" class="btn btn-premium-cta mt-4">[ EXPLORE THE ARCHITECTURE ]</a>
                     </div>
                 </div>
             </div>
@@ -81,29 +90,28 @@
                         <div class="card-border"></div>
                         <div class="card-content">
                             <h3>Clinical Intelligence</h3>
-                            <p>Mapping the unseen patterns of human behavior and physical consequence with surgical
-                                precision.</p>
-                        </div>
-                    </div>
-                    <div class="intel-card">
-                        <div class="card-border"></div>
-                        <div class="card-content">
-                            <h3>Strategic Diagnosis</h3>
-                            <p>Moving beyond surface symptoms to excavate the architectural root of the condition.</p>
+                            <p>Backed by global credentials from <strong>Harvard Medical School, Yale, Johns Hopkins, and the WHO.</strong><br>I don’t rely on raw intuition; I map the unseen patterns of human biology with advanced clinical intelligence and surgical precision.</p>
                         </div>
                     </div>
                     <div class="intel-card">
                         <div class="card-border"></div>
                         <div class="card-content">
                             <h3>Psychological Profiling</h3>
-                            <p>Understanding the architecture of the mind to heal the body. The ultimate decryption.</p>
+                            <p>Accredited Professional Clinical Counsellor.<br>Navigated complex psychological traumas by listening to <strong>10,000+ minds</strong>, successfully guiding countless individuals back from the absolute brink.</p>
+                        </div>
+                    </div>
+                    <div class="intel-card">
+                        <div class="card-border"></div>
+                        <div class="card-content">
+                            <h3>Strategic Diagnosis</h3>
+                            <p>Shaping the global medical curriculum.<br>Author of <strong>12+ highly acclaimed clinical textbooks</strong> and a high-impact speaker.<br>Moving beyond surface symptoms to <strong>build future doctors — not just treat patients.</strong></p>
                         </div>
                     </div>
                     <div class="intel-card">
                         <div class="card-border"></div>
                         <div class="card-content">
                             <h3>Survival Instinct</h3>
-                            <p>Harnessing trauma and high-stakes pressure to forge an unbreakable resilience.</p>
+                            <p>The business of medicine.<br>Founder & Architect of <strong>3 ISO 9001:2015 certified companies.</strong><br>Applying a sharp diagnostic mindset to <strong>corporate finance, administration, and scaling a zero-compromise global empire.</strong></p>
                         </div>
                     </div>
                 </div>
@@ -115,20 +123,88 @@
             <div class="container">
                 <div class="authority-showcase">
                     <div class="auth-card animate-up">
-                        <span class="micro-badge">CERTIFIED</span>
+                        <span class="micro-badge">[ CERTIFIED ]</span>
                         <h4>Global Learning</h4>
-                        <p>Educated across continents, synthesizing diverse medical philosophies into a singular
-                            framework.</p>
+                        <p>Educated across continents. From mastering clinical medicine at <strong>Northern State Medical University (Russia)</strong> to advanced specializations from <strong>Harvard and Stanford.</strong><br><br>Fluent in <strong>7 languages including Russian and Arabic</strong>, synthesizing diverse medical philosophies into a singular global framework.</p>
                     </div>
                     <div class="auth-card animate-up">
-                        <span class="micro-badge">RECOGNIZED</span>
+                        <span class="micro-badge">[ RECOGNIZED ]</span>
                         <h4>Advanced Intelligence</h4>
-                        <p>Pioneering methodologies at the razor's edge intersection of psychology and physiology.</p>
+                        <p>Pioneering methodologies at the razor-edge intersection of <strong>psychology and physiology.</strong><br><br>Delivering groundbreaking scientific presentations on global stages — from <strong>Outbreak Prevention at international medical forums</strong> to advanced <strong>psychiatric profiling.</strong></p>
                     </div>
                     <div class="auth-card animate-up">
-                        <span class="micro-badge">ELITE</span>
+                        <span class="micro-badge">[ ELITE ]</span>
                         <h4>International Mastery</h4>
-                        <p>Consulting for the world’s most demanding minds, elite individuals, and institutions.</p>
+                        <p>Consulting for the <strong>world’s most demanding minds.</strong><br><br>Bridging the critical gap between <strong>complex medical science and high-stakes business leadership.</strong> Trusted by <strong>elite individuals, corporate leaders, and institutions worldwide.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE ARSENAL SECTION -->
+        <section class="section arsenal" id="arsenal">
+            <div class="container">
+                <div class="text-center animate-up" style="margin-bottom: 5rem;">
+                    <h2 class="section-title center gold-text">THE ARSENAL: INTELLECTUAL PROPERTY</h2>
+                    <p class="font-heading" style="color: var(--text-secondary); font-size: 1.35rem; margin-top: -1.5rem;">Books designed to break the system and awaken a generation.</p>
+                </div>
+                
+                <div class="arsenal-grid animate-up">
+                    <div class="arsenal-card">
+                        <div class="arsenal-image">
+                            <img src="images/book1.jpeg" alt="The Rich Ambulance Driver" />
+                        </div>
+                        <div class="arsenal-content">
+                            <h4>THE RICH AMBULANCE DRIVER (TRAD) 🚑</h4>
+                            <p class="tagline">The Ultimate Survival Blueprint. From rock bottom to building an empire.</p>
+                            <p class="status">Non-Fiction & Life Strategy (Malayalam Edition)</p>
+                            <div class="arsenal-actions">
+                                <a href="contact.html#get-the-book" class="btn btn-outline-gold" style="font-size: 0.65rem;">[ 🛒 SECURE THE ASSET (MALAYALAM) ]</a>
+                                <a href="contact.html#waitlist" class="btn btn-text-gold" style="font-size: 0.65rem;">[ 🌍 JOIN THE 1% (ENGLISH WAITLIST) ]</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arsenal-card">
+                        <div class="arsenal-image">
+                            <img src="images/book2.jpeg" alt="Forbidden Sex Ed" />
+                        </div>
+                        <div class="arsenal-content">
+                            <h4>FORBIDDEN SEX ED (FSE) 🔐</h4>
+                            <p class="tagline">Decoding the unspoken truths. The medical biology they hid from you.</p>
+                            <p class="status">Clinical & Psychological Strategy</p>
+                            <div class="arsenal-actions">
+                                <a href="contact.html#get-the-book" class="btn btn-outline-gold" style="font-size: 0.65rem;">[ 🛒 UNLOCK THE BLUEPRINT ]</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arsenal-card">
+                        <div class="arsenal-image">
+                            <img src="images/book3.jpeg" alt="The Academic Architect" />
+                        </div>
+                        <div class="arsenal-content">
+                            <h4>THE ACADEMIC ARCHITECT 🔬</h4>
+                            <p class="tagline">Shaping the global medical curriculum.</p>
+                            <p class="status">It is one thing to study medicine; it is entirely another to write the books that future doctors study from.<br><br>Available exclusively on the MedMelo Learning App.</p>
+                            <div class="arsenal-actions">
+                                <a href="#" class="btn btn-outline-gold" style="font-size: 0.65rem;">[ 📱 DECODE FURTHER ]</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arsenal-card bonus-card">
+                        <div class="arsenal-image">
+                            <img src="images/book4.jpeg" alt="From Blue Collar To White Coat" />
+                        </div>
+                        <div class="arsenal-content">
+                            <h4>FROM BLUE COLLAR TO WHITE COAT 🌍</h4>
+                            <p class="tagline text-gold">The unedited journey of a Matrix Breaker.</p>
+                            <p class="status">English "Blue Collar" cinematic release.</p>
+                            <div class="arsenal-actions">
+                                <a href="contact.html#waitlist" class="btn btn-premium-cta" style="margin-top:0; font-size: 0.65rem;">[ ⏳ ENTER THE NETWORK ]</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,81 +215,85 @@
             <div class="spotlight"></div>
             <div class="container empathy-content animate-up">
                 <blockquote class="core-quote">
-                    "I didn’t just prescribe.<br>I listened to 10,000 silent battles."
+                    "It is One thing to study medicine; it is entirely different thing to write the books that future doctors study from"
                 </blockquote>
                 <div class="empathy-action">
-                    <a href="#book" class="btn btn-gold-glow">👉 BUY THE BOOK</a>
+                    <a href="#book" class="btn btn-gold-glow">[ SECURE THE ASSET ]</a>
                 </div>
             </div>
         </section>
 
         <!-- BOOK SHOWCASE SECTION -->
-        <section class="section book" id="book">
-            <div class="marquee-wrapper animate-up">
-                <div class="marquee-track marquee-left">
-                    <div class="book-img-wrapper"><img src="images/book1.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book2.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book3.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book4.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book5.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book6.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book1.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book2.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book3.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book4.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book5.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book6.jpeg" alt="Book"></div>
-                </div>
+        <section class="section book" id="book" style="padding: 4rem 0; position: relative; z-index: 2; min-height: 120vh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: visible;">
+            <div class="container text-center animate-up" style="margin-bottom: 2rem; position: relative; z-index: 10;">
+                <h2 class="section-title center gold-text">THE ARSENAL: MEDICAL TEXTBOOKS</h2>
+                <p class="font-heading" style="color: var(--text-secondary); font-size: 1.35rem; margin-top: -1.5rem;">The Architecture of Future Doctors.</p>
             </div>
-            <div class="marquee-wrapper animate-up" style="margin-top: 3rem;">
-                <div class="marquee-track marquee-right">
-                    <div class="book-img-wrapper"><img src="images/book7.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book8.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book9.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book10.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book11.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book12.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book7.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book8.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book9.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book10.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book11.jpeg" alt="Book"></div>
-                    <div class="book-img-wrapper"><img src="images/book12.jpeg" alt="Book"></div>
-                </div>
+            
+            <div id="circular-gallery-container" class="circular-gallery" style="height: 60vh; min-height: 500px; width: 100%; position: relative; z-index: 5; margin-top: 8vh; transform: translateZ(0); opacity: 1; visibility: visible; overflow: visible;">
             </div>
 
-            <div class="container book-container" style="margin-top: 6rem;">
-                <div class="book-actions animate-up">
-                    <a href="contact.html#get-the-book" class="btn btn-outline-gold">BUY NOW</a>
-                    <a href="contact.html#get-the-book" class="btn btn-outline-gold">PREORDER</a>
-                    <a href="contact.html#get-the-book" class="btn btn-text-gold">ADD TO WISHLIST</a>
+            <div class="container book-container" style="margin-top: 2rem; position: relative; z-index: 10;">
+                <div class="book-actions animate-up" style="justify-content: center; display: flex; gap: 1rem;">
+                    <a href="contact.html#get-the-book" class="btn btn-outline-gold">[ SECURE THE ASSET ]</a>
+                    <a href="contact.html#get-the-book" class="btn btn-outline-gold">[ UNLOCK THE BLUEPRINT ]</a>
+                    <a href="contact.html#get-the-book" class="btn btn-text-gold">[ ENTER THE NETWORK ]</a>
                 </div>
             </div>
         </section>
 
         <!-- THE EMPIRE SECTION -->
         <section class="section empire">
-            <div class="container">
+            <div class="container" style="max-width: 1400px;">
                 <div class="empire-network animate-up">
-                    <div class="network-node">
+                    <div class="network-node app">
                         <div class="node-point"></div>
-                        <div class="node-name">The Foundation</div>
+                        <div class="node-text">
+                            <div class="node-name">MEDMELO LEARNING APP</div>
+                            <div class="node-desc">12+ clinical textbooks and medical education platform</div>
+                        </div>
                     </div>
-                    <div class="network-line horizontal"></div>
+                    <div class="network-line horizontal left"></div>
                     <div class="network-node main">
                         <div class="node-point pulse"></div>
-                        <div class="node-name">Intelligence Group</div>
+                        <a href="#detective-tox" class="node-text node-link">
+                            <div class="node-name">CLINICAL INTELLIGENCE</div>
+                        </a>
                     </div>
                     <div class="network-line vertical"></div>
-                    <div class="network-node">
+                    <div class="network-node books">
                         <div class="node-point"></div>
-                        <div class="node-name">Publishing</div>
+                        <div class="node-text">
+                            <div class="node-name">MEDMELO BOOKS&reg;</div>
+                            <div class="node-desc">Your publishing company</div>
+                        </div>
                     </div>
                     <div class="network-line horizontal right"></div>
-                    <div class="network-node">
+                    <div class="network-node iso">
                         <div class="node-point"></div>
-                        <div class="node-name">Venture Capital</div>
+                        <div class="node-text">
+                            <div class="node-name">ISO 9001:2015 VENTURES</div>
+                            <div class="node-desc">Businesses like MedMelo Pharmacy, Neem Rosa, etc.</div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GLOBAL CREDENTIALS SECTION -->
+        <section class="section logo-loop-section credentials-section" id="credentials">
+            <div class="container logo-loop-intro animate-up text-center" style="margin-bottom: 3rem;">
+                <p class="logo-loop-label" style="text-align: center;">GLOBAL CLEARANCES & CREDENTIALS</p>
+            </div>
+            <div
+                id="credential-loop"
+                class="logoloop logoloop--fade animate-up"
+                style="--logoloop-fadeColor: #000000;"
+                role="region"
+                aria-label="Academic Credentials"
+            >
+                <div class="logoloop__track" id="credential-loop-track">
+                    <!-- Lists injected by script.js -->
                 </div>
             </div>
         </section>
@@ -223,24 +303,24 @@
             <div class="container">
                 <div class="timeline animate-up">
                     <div class="timeline-item">
-                        <div class="timeline-year">2018</div>
+                        <div class="timeline-year">2017 &ndash; 2019</div>
                         <div class="timeline-content">
-                            <h4>Clinical Excellence</h4>
-                            <p>Awarded top honors for diagnostic precision and strategic intervention.</p>
+                            <h4>The Foundation: Radiology &amp; Imaging</h4>
+                            <p>Before commanding the wards as a physician, I mastered the machines that see through the human body.<br><em>(Diploma in Radiological Techniques).</em><br><strong>The grind started here.</strong></p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-year">2021</div>
+                        <div class="timeline-year">2020 &ndash; 2023</div>
                         <div class="timeline-content">
-                            <h4>Intellectual Dominance</h4>
-                            <p>Published groundbreaking research on psychosomatic trauma and recovery.</p>
+                            <h4>The Silent Battles (Clinical Counsellor)</h4>
+                            <p>Navigated complex psychological traumas.<br>Listened to <strong>10,000+ minds</strong> and successfully pulled countless individuals back from the absolute brink.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-year">2024</div>
+                        <div class="timeline-year">2024 &ndash; 2025</div>
                         <div class="timeline-content">
-                            <h4>Competitive Edge</h4>
-                            <p>Established the premiere medical intelligence consultancy for high-performers.</p>
+                            <h4>Clinical &amp; Corporate Dominance</h4>
+                            <p>Secured <strong>2nd Position in Pediatrics Olympiad (2025).</strong><br>Founded and scaled <strong>3 ISO 9001:2015 certified companies.</strong><br>Authored <strong>12+ clinical textbooks.</strong><br><strong>The Architect emerged.</strong></p>
                         </div>
                     </div>
                 </div>
@@ -268,28 +348,74 @@
             </div>
         </section>
 
+        <!-- THE EVIDENCE ROOM SECTION -->
+        <section class="section evidence-room" id="archives">
+            <div class="container">
+                <div class="text-center animate-up" style="margin-bottom: 5rem;">
+                    <h2 class="section-title center gold-text">THE EVIDENCE ROOM</h2>
+                    <p class="font-heading" style="color: var(--text-secondary); font-size: 1.35rem; margin-top: -1.5rem;">The Architecture in Action.</p>
+                </div>
+
+                <div class="evidence-grid animate-up">
+                    <div class="evidence-item">
+                        <img src="images/evidence1.jpg" alt="Commanding the Stage">
+                        <div class="evidence-overlay">
+                            <span class="evidence-label">01 // Commanding the Stage</span>
+                        </div>
+                    </div>
+                    <div class="evidence-item">
+                        <img src="images/evidence2.jpg" alt="The Strategic Mind">
+                        <div class="evidence-overlay">
+                            <span class="evidence-label">02 // The Strategic Mind</span>
+                        </div>
+                    </div>
+                    <div class="evidence-item">
+                        <img src="images/evidence3.jpg" alt="Decoding the Wards">
+                        <div class="evidence-overlay">
+                            <span class="evidence-label">03 // Decoding the Wards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVE COMMAND CENTER -->
+        <section class="section live-command" style="background: var(--bg-surface); border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container text-center animate-up" style="padding: 4rem 0;">
+                <h3 style="font-family: 'Space Mono', monospace; letter-spacing: 0.2em; color: var(--gold); font-size: 0.85rem; margin-bottom: 2rem;">THE NETWORK IS GROWING.</h3>
+                <div class="live-counter" style="font-family: var(--font-hero); font-size: clamp(3.5rem, 8vw, 6rem); color: var(--text-primary); margin-bottom: 1.5rem; text-shadow: 0 0 30px rgba(255,255,255,0.1);">
+                    [ 50,000+ ]
+                </div>
+                <p style="font-family: var(--font-story); font-size: 1.2rem; color: var(--text-secondary); font-style: italic; margin-bottom: 3rem;">
+                    Minds currently decoding the system. Join the intelligence.
+                </p>
+                <a href="https://instagram.com/alanvl.md" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold">[ VERIFY INTEL ]</a>
+            </div>
+        </section>
+
         <!-- FINAL CULT CONVERSION FOOTER -->
         <footer class="section footer" id="contact">
             <div class="container text-center">
                 <h2 class="footer-statement animate-up text-gold">This is not just a book.<br>This is initiation.</h2>
 
                 <div class="footer-actions animate-up">
-                    <a href="contact.html#get-the-book" class="btn btn-primary">BUY NOW</a>
-                    <a href="contact.html" class="btn btn-outline">GET IN TOUCH</a>
-                    <a href="mailto:hi@dralanvl.com" class="btn btn-text">CONTACT</a>
+                    <a href="contact.html#get-the-book" class="btn btn-primary">[ SECURE THE BOOK ]</a>
+                    <a href="contact.html" class="btn btn-outline">[ COMMAND CENTER ]</a>
                 </div>
 
                 <div class="footer-contact animate-up">
-                    <a href="mailto:hi@dralanvl.com" class="contact-link">hi@dralanvl.com</a>
+                    <a href="mailto:HI@DRALANVL.COM" class="contact-link">HI@DRALANVL.COM</a>
                     <div class="social-links">
-                        <a href="https://threads.net/@alanvl.md" target="_blank" rel="noopener noreferrer">TH</a>
                         <a href="https://instagram.com/alanvl.md" target="_blank" rel="noopener noreferrer">IG</a>
+                        <a href="https://yt.com/alanvl.md" target="_blank" rel="noopener noreferrer">YT</a>
+                        <a href="https://threads.net/@alanvl.md" target="_blank" rel="noopener noreferrer">TH</a>
+                        <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer">SP</a>
                     </div>
-                    <a href="contact.html" class="contact-link">Collaboration Call</a>
+                    <a href="contact.html" class="contact-link">COLLABORATION CALL</a>
                 </div>
 
                 <div class="footer-legal">
-                    <p>&copy; 2026 The Author. All intelligence protected.</p>
+                    <p>&copy; 2026 Dr. Alan V.L. All intelligence protected.</p>
                 </div>
             </div>
         </footer>
@@ -301,6 +427,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script src="ogl.umd.js"></script>
+    <script src="circular-gallery.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('circular-gallery-container');
+            if (container) {
+                const bookItems = [
+                    { image: 'images/book1.jpeg', text: 'The Rich Ambulance Driver' },
+                    { image: 'images/book2.jpeg', text: 'Forbidden Sex Ed' },
+                    { image: 'images/book3.jpeg', text: 'The Academic Architect' },
+                    { image: 'images/book4.jpeg', text: 'Blue Collar To White Coat' },
+                    { image: 'images/book5.jpeg', text: 'Clinical Surgery' },
+                    { image: 'images/book6.jpeg', text: 'Medical Atlas' },
+                    { image: 'images/book7.jpeg', text: 'Diagnostic Imaging' },
+                    { image: 'images/book8.jpeg', text: 'Psychiatric Profiling' },
+                    { image: 'images/book9.jpeg', text: 'Pathology Reports' },
+                    { image: 'images/book10.jpeg', text: 'Anatomy Volumes' },
+                    { image: 'images/book11.jpeg', text: 'Internal Medicine' },
+                    { image: 'images/book12.jpeg', text: 'Surgical Operations' }
+                ];
+                
+                new CircularGalleryApp(container, {
+                    items: bookItems,
+                    bend: 3,
+                    textColor: '#ffffff',
+                    borderRadius: 0.05,
+                    font: 'bold 24px "Cinzel", serif',
+                    scrollSpeed: 2,
+                    scrollEase: 0.05
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
