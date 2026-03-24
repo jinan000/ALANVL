@@ -426,259 +426,64 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize Global Credentials Loop
     createLogoLoop('credential-loop', 'credential-loop-track', [
-        { src: 'images/harvard.png',    alt: 'Harvard Medical School' },
-        { src: 'images/yale.png',       alt: 'Yale University' },
-        { src: 'images/hopkins.png',    alt: 'Johns Hopkins University' },
-        { src: 'images/stanford.png',   alt: 'Stanford University' },
-        { src: 'images/who.png',        alt: 'World Health Organization' },
-        { src: 'images/iarc.png',       alt: 'IARC' }
+        { src: 'images/harvard.png',  alt: 'Harvard Medical School' },
+        { src: 'images/yale.png',     alt: 'Yale University' },
+        { src: 'images/johns.png',    alt: 'Johns Hopkins University' },
+        { src: 'images/stanford.png', alt: 'Stanford University' },
+        { src: 'images/who.png',      alt: 'World Health Organization' },
+        { src: 'images/iarc.png',     alt: 'IARC' }
     ], 60);
 
-    // --- EMPIRE NEURAL NETWORK INTERFACE ---
-    const empireSection = document.querySelector('.empire');
-    const empireNetwork = document.querySelector('.empire-network');
-
-    if (empireSection && empireNetwork) {
-        const nodes = gsap.utils.toArray('.empire-network .network-node');
-        const lines = gsap.utils.toArray('.empire-network .network-line');
-
-        // Create Particle Container
-        const particleContainer = document.createElement('div');
-        particleContainer.className = 'empire-particles';
-        particleContainer.style.cssText = 'position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; perspective: 1000px;';
-        empireNetwork.prepend(particleContainer);
-
-        const particles = [];
-        for(let i=0; i<40; i++) {
-            // Randomly select an outer edge band to preserve center focus
-            let px, py;
-            const edge = Math.floor(Math.random() * 4);
-            if (edge === 0) { px = Math.random() * 100; py = Math.random() * 20; }       // Top edge
-            else if (edge === 1) { px = Math.random() * 100; py = 80 + Math.random() * 20; } // Bottom edge
-            else if (edge === 2) { px = Math.random() * 20; py = Math.random() * 100; }  // Left edge
-            else { px = 80 + Math.random() * 20; py = Math.random() * 100; }             // Right edge
-
-            const p = document.createElement('div');
-            p.style.cssText = `
-                position: absolute;
-                width: ${Math.random() * 3 + 1}px;
-                height: ${Math.random() * 3 + 1}px;
-                background: rgba(197, 160, 89, ${Math.random() * 0.4});
-                border-radius: 50%;
-                left: ${px}%;
-                top: ${py}%;
-                transform: translateZ(${Math.random() * 200 - 100}px);
-            `;
-            particleContainer.appendChild(p);
-            particles.push({ el: p });
-        }
-
-        // Idle Floating
-        nodes.forEach((node, i) => {
-            gsap.to(node, {
-                y: "+=12",
-                x: "+=8",
-                rotationZ: Math.random() * 2 - 1,
-                duration: 3 + Math.random() * 2,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut",
-                delay: i * 0.2
+    // --- EMPIRE NEURAL NETWORK INTERFACE (DEPRECATED) ---
+    // Section replaced with native SVG network and standalone Canvas architecture in DOM.
+    // --- FILM STRIP STORYTELLING ---
+    const filmTrack = document.getElementById('film-track');
+    const filmContainer = document.querySelector('.film-strip-container');
+    
+    if (filmTrack && filmContainer) {
+        // Clone frame contents to establish safe seamless scrolling boundaries
+        const originalContent = filmTrack.innerHTML;
+        filmTrack.innerHTML += originalContent + originalContent; 
+        
+        let playbackSpeed = 1.2;
+        let targetSpeed = playbackSpeed;
+        let currentSpeed = playbackSpeed;
+        let trackXPos = 0;
+        
+        const filmFrames = document.querySelectorAll('.film-frame');
+        
+        filmFrames.forEach(frame => {
+            frame.addEventListener('mouseenter', () => {
+                targetSpeed = 0;
+                filmContainer.classList.add('is-paused');
+                frame.classList.add('is-focused');
+            });
+            frame.addEventListener('mouseleave', () => {
+                targetSpeed = playbackSpeed;
+                filmContainer.classList.remove('is-paused');
+                frame.classList.remove('is-focused');
             });
         });
-
-        particles.forEach((p, i) => {
-            gsap.to(p.el, {
-                y: "+=20",
-                x: "+=15",
-                duration: 4 + Math.random() * 3,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut"
-            });
-        });
-
-        let hoverTimer = null;
-        let isHoveringNode = false;
-
-        // Throttle for performance
-        let lastMouseMove = 0;
-        document.addEventListener('mousemove', (e) => {
-            const now = Date.now();
-            if (now - lastMouseMove < 16) return; // ~60fps Limit
-            lastMouseMove = now;
-
-            const rect = empireSection.getBoundingClientRect();
-            // Expand the interaction area slightly beyond the section bounds
-            const isInside = (e.clientY >= rect.top - 100 && e.clientY <= rect.bottom + 100 && e.clientX >= rect.left && e.clientX <= rect.right);
-
-            if (!isInside) return;
-
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
-
-            // Disabled background particle directional drift on cursor move 
-            // to maintain focus strictly on node network and keep motion stable.
-
-            let closestNode = null;
-            let minDistance = Infinity;
-
-            // Neural Magnetic Attraction (Stability Mode)
-            nodes.forEach(node => {
-                const nRect = node.getBoundingClientRect();
-                const nX = nRect.left + nRect.width / 2;
-                const nY = nRect.top + nRect.height / 2;
-                const dist = Math.hypot(mouseX - nX, mouseY - nY);
-
-                if (dist < minDistance) {
-                    minDistance = dist;
-                    closestNode = node;
-                }
-
-                if (dist < 300) {
-                    const angle = Math.atan2(mouseY - nY, mouseX - nX);
-                    const force = (300 - dist) / 300;
-                    
-                    // Reduced magnetic cursor influence intensity to 30% (max 3-4px shift)
-                    const magnetX = Math.cos(angle) * force * 4;
-                    const magnetY = Math.sin(angle) * force * 4;
-                    
-                    gsap.to(node, {
-                        x: magnetX,
-                        y: magnetY,
-                        scale: 1 + (force * 0.04), // Gentle scale 1.04 max
-                        opacity: 1, 
-                        duration: 1.2,
-                        ease: "power2.out", // Soft ease-out interpolation
-                        overwrite: "auto"
-                    });
-                } else {
-                    gsap.to(node, {
-                        x: 0,
-                        y: 0,
-                        scale: 1,
-                        opacity: 0.4, 
-                        duration: 1.5,
-                        ease: "power2.out",
-                        overwrite: "auto"
-                    });
-                }
-            });
-
-            // Connector Lines Synapse Illumination
-            lines.forEach(line => {
-                const lRect = line.getBoundingClientRect();
-                const lX = lRect.left + lRect.width/2;
-                const lY = lRect.top + lRect.height/2;
-                const dist = Math.hypot(mouseX - lX, mouseY - lY);
-                if (dist < 350) {
-                    const force = (350 - dist) / 350;
-                    gsap.to(line, {
-                        backgroundColor: `rgba(197, 160, 89, ${0.3 + force * 0.7})`,
-                        boxShadow: `0 0 ${force * 20}px rgba(197, 160, 89, ${force})`,
-                        duration: 0.4,
-                        overwrite: "auto"
-                    });
-                } else {
-                    gsap.to(line, {
-                        backgroundColor: "rgba(197, 160, 89, 0.3)",
-                        boxShadow: "none",
-                        duration: 0.8,
-                        overwrite: "auto"
-                    });
-                }
-            });
-
-            // Neural Signal Ripple Logic
-            if (minDistance < 70) {
-                if (!isHoveringNode) {
-                    isHoveringNode = true;
-                    clearTimeout(hoverTimer);
-                    hoverTimer = setTimeout(() => {
-                        triggerNetworkRipple(closestNode);
-                    }, 800);
-                }
-            } else {
-                isHoveringNode = false;
-                clearTimeout(hoverTimer);
+        
+        function renderFilmStrip() {
+            // Easing physics simulate projector brakes
+            currentSpeed += (targetSpeed - currentSpeed) * 0.06;
+            trackXPos -= currentSpeed;
+            
+            const oneSetWidth = filmTrack.scrollWidth / 3;
+            if (Math.abs(trackXPos) >= oneSetWidth) {
+                trackXPos += oneSetWidth; // Seamless Loop Jump
             }
-        });
-
-        // Reset interaction bounds
-        empireSection.addEventListener('mouseleave', () => {
-            nodes.forEach(node => {
-                gsap.to(node, { x: 0, y: 0, scale: 1, opacity: 1, duration: 1.5, ease: "power2.out", overwrite: "auto" });
-            });
-            lines.forEach(line => {
-                gsap.to(line, { backgroundColor: "rgba(197, 160, 89, 0.3)", boxShadow: "none", duration: 1, overwrite: "auto" });
-            });
-            particles.forEach(p => {
-                gsap.to(p.el, { x: 0, y: 0, duration: 1.5, ease: "power2.out", overwrite: "auto" });
-            });
-            clearTimeout(hoverTimer);
-            isHoveringNode = false;
-        });
-
-        // Ripple and Pulse
-        function triggerNetworkRipple(sourceNode) {
-            // Visual Ripple ring
-            const ripple = document.createElement('div');
-            ripple.style.cssText = `
-                position: absolute;
-                border: 1px solid rgba(197, 160, 89, 0.8);
-                border-radius: 50%;
-                pointer-events: none;
-                z-index: 10;
-                transform: translate(-50%, -50%);
-            `;
-            const sRect = sourceNode.getBoundingClientRect();
-            const contRect = empireNetwork.getBoundingClientRect();
-            const x = sRect.left - contRect.left + sRect.width/2;
-            const y = sRect.top - contRect.top + sRect.height/2;
             
-            ripple.style.left = `${x}px`;
-            ripple.style.top = `${y}px`;
+            // Micro-jitter injection for analog realism
+            const jitterActive = currentSpeed > 0.6;
+            const jitterY = (jitterActive && Math.random() > 0.3) ? (Math.random() * 1.5 - 0.75) : 0;
             
-            empireNetwork.appendChild(ripple);
-            
-            gsap.fromTo(ripple, 
-                { width: 0, height: 0, opacity: 1 }, 
-                { width: 900, height: 900, opacity: 0, duration: 1.8, ease: "power2.out", onComplete: () => ripple.remove() }
-            );
-
-            // Synapse Pulse towards main
-            lines.forEach(line => {
-                const isHorizontal = line.classList.contains('horizontal');
-                const pulse = document.createElement('div');
-                pulse.style.cssText = `
-                    position: absolute;
-                    background: #fff;
-                    box-shadow: 0 0 15px #fff, 0 0 30px var(--gold);
-                    pointer-events: none;
-                    z-index: 5;
-                `;
-                if (isHorizontal) {
-                    pulse.style.width = '30px';
-                    pulse.style.height = '100%';
-                    pulse.style.top = '0';
-                    pulse.style.left = '0';
-                } else {
-                    pulse.style.width = '100%';
-                    pulse.style.height = '30px';
-                    pulse.style.top = '0';
-                    pulse.style.left = '0';
-                }
-                line.appendChild(pulse);
-                
-                const prop = isHorizontal ? 'x' : 'y';
-                const dist = isHorizontal ? line.offsetWidth : line.offsetHeight;
-                
-                gsap.fromTo(pulse, 
-                    { [prop]: 0, opacity: 1 }, 
-                    { [prop]: dist, opacity: 0, duration: 0.8 + Math.random() * 0.4, ease: "power1.inOut", onComplete: () => pulse.remove() }
-                );
-            });
+            filmTrack.style.transform = `translate3d(${trackXPos}px, ${jitterY}px, 0)`;
+            requestAnimationFrame(renderFilmStrip);
         }
+        
+        renderFilmStrip();
     }
 
 });
