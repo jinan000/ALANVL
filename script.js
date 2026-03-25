@@ -445,7 +445,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const originalContent = filmTrack.innerHTML;
         filmTrack.innerHTML += originalContent + originalContent; 
         
-        let playbackSpeed = 1.2;
+        let playbackSpeed = 2.4;
         let targetSpeed = playbackSpeed;
         let currentSpeed = playbackSpeed;
         let trackXPos = 0;
