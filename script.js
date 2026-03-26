@@ -432,7 +432,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { src: 'images/stanford.png', alt: 'Stanford University' },
         { src: 'images/who.png',      alt: 'World Health Organization' },
         { src: 'images/iarc.png',     alt: 'IARC' }
-    ], 60);
+    ], 120);
 
     // --- EMPIRE NEURAL NETWORK INTERFACE (DEPRECATED) ---
     // Section replaced with native SVG network and standalone Canvas architecture in DOM.

@@ -63,9 +63,9 @@
 /* Individual logo item — fixed-size box so all logos look equal */
 .logoloop__item {
   flex: 0 0 auto;
-  width: 160px;
-  height: 80px;
-  padding: 10px 16px;          /* inner padding forces uniform visual size */
+  width: 220px;
+  height: 110px;
+  padding: 14px 20px;
   margin-right: var(--logoloop-gap);
   display: flex;
   align-items: center;

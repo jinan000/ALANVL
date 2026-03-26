@@ -1411,6 +1411,31 @@ body.loader-hidden .cinematic-loader {
     letter-spacing: 0.05em;
 }
 
+/* --- ECG Heartbeat Text Animation (Film Roll Quote) --- */
+.ecg-quote-text {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.95)  0%,
+        rgba(255, 255, 255, 0.95) 35%,
+        rgba(255, 80,  80, 0.6)  42%,
+        rgba(255,  0,   0, 1.0)  50%,
+        rgba(255, 80,  80, 0.6)  58%,
+        rgba(255, 255, 255, 0.95) 65%,
+        rgba(255, 255, 255, 0.95) 100%
+    );
+    background-size: 300% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: drop-shadow(0 0 2px rgba(255, 60, 60, 0.15));
+    animation: quoteHeartbeat 7s linear infinite;
+}
+
+@keyframes quoteHeartbeat {
+    0%   { background-position: 150% center; }
+    100% { background-position: -50% center; }
+}
+
 .ecg-container {
     position: absolute;
     top: 50%;
