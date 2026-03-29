@@ -1802,3 +1802,127 @@ body.loader-hidden .cinematic-loader {
     50% { transform: translate(-1px, 1px) scale(1.01); opacity: 0.08; }
     100% { transform: translate(1px, -1px) scale(1); opacity: 0.12; }
 }
+
+/* --- CYBERPUNK MATRIX GRID --- */
+.matrix-grid .matrix-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.cyber-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(10,10,10,0.9) 0%, rgba(5,5,5,0.95) 100%);
+    border: 1px solid rgba(212,175,55,0.15);
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.ecosystem-network.is-visible .cyber-card {
+    animation: cyberCardIn 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+/* Staggered entrance */
+.ecosystem-network.is-visible .cyber-card:nth-child(1) { animation-delay: 0.1s; }
+.ecosystem-network.is-visible .cyber-card:nth-child(2) { animation-delay: 0.2s; }
+.ecosystem-network.is-visible .cyber-card:nth-child(3) { animation-delay: 0.3s; }
+.ecosystem-network.is-visible .cyber-card:nth-child(4) { animation-delay: 0.4s; }
+.ecosystem-network.is-visible .cyber-card:nth-child(5) { animation-delay: 0.5s; }
+.ecosystem-network.is-visible .cyber-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes cyberCardIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cyber-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--gold, #D4AF37);
+    opacity: 0.3;
+    transition: opacity 0.4s ease;
+}
+
+.cyber-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212,175,55,0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 15px rgba(212,175,55,0.15);
+}
+
+.cyber-card:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 10px var(--gold);
+}
+
+.cyber-domain {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--gold, #D4AF37);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    background: rgba(212,175,55,0.05);
+    border: 1px solid rgba(212,175,55,0.2);
+    border-radius: 2px;
+}
+
+.cyber-title {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+}
+
+.cyber-desc {
+    font-family: var(--font-text, 'Inter', sans-serif);
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cyber-dots-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px dashed rgba(212,175,55,0.3);
+}
+
+.cyber-dots-card:hover {
+    background: rgba(212,175,55,0.02);
+    border: 1px dashed rgba(212,175,55,0.5);
+    transform: translateY(-5px);
+    box-shadow: inset 0 0 20px rgba(212,175,55,0.05);
+}
+
+.cyber-dots-card::before {
+    display: none; /* No gold accent line on the dots card */
+}
+
+.cyber-dots {
+    font-family: 'Space Mono', monospace;
+    font-size: 2.5rem;
+    color: var(--gold, #D4AF37);
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+    transition: opacity 0.4s ease;
+}
+
+.cyber-dots-card:hover .cyber-dots {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(212,175,55,0.5);
+}

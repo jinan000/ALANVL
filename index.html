@@ -893,294 +893,62 @@
                         [ STRATEGIC INTELLIGENCE CORE ]</div>
                 </div>
 
-                <!-- SVG Vector Ecosystem -->
-                <div class="ecosystem-network animate-up" style="width: 100%; position: relative;">
+                <!-- THE PILLARS MATRIX GRID -->
+                <div class="ecosystem-network matrix-grid animate-up" style="width: 100%; position: relative; padding: 2rem 0; z-index: 10;">
+                    
+                    <div class="matrix-cards">
+                        <!-- Card 1 -->
+                        <div class="cyber-card">
+                            <div class="cyber-card-inner">
+                                <div class="cyber-domain">medmelo.com</div>
+                                <h3 class="cyber-title">[ ULTIMATE AUTHORITY LAYER ]</h3>
+                                <p class="cyber-desc">The core enterprise engine driving healthcare execution and global business infrastructure.</p>
+                            </div>
+                        </div>
 
-                    <style>
-                        /* Ecosystem SVG Styling */
-                        .network-svg {
-                            width: 100%;
-                            height: auto;
-                            max-width: 1000px;
-                            margin: 0 auto;
-                            display: block;
-                            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
-                        }
+                        <!-- Card 2 -->
+                        <div class="cyber-card">
+                            <div class="cyber-card-inner">
+                                <div class="cyber-domain">medmelobooks.com</div>
+                                <h3 class="cyber-title">[ MASS INTELLECTUAL DISTRIBUTION ]</h3>
+                                <p class="cyber-desc">The publishing syndicate distributing blueprints of survival, strategy, and mastermind-level success.</p>
+                            </div>
+                        </div>
 
-                        /* Animation States */
-                        .svg-line {
-                            stroke-dasharray: 2000;
-                            stroke-dashoffset: 2000;
-                        }
+                        <!-- Card 3 -->
+                        <div class="cyber-card">
+                            <div class="cyber-card-inner">
+                                <div class="cyber-domain">medmelolearning.com</div>
+                                <h3 class="cyber-title">[ SYSTEMATIZED DOCTOR CREATION ]</h3>
+                                <p class="cyber-desc">The razor-edge medical ed-tech platform engineering the next generation of elite global doctors.</p>
+                            </div>
+                        </div>
 
-                        .svg-node {
-                            opacity: 0;
-                            transform: scale(0);
-                            transform-origin: center;
-                            transition: all 0.3s ease;
-                        }
+                        <!-- Card 4 -->
+                        <div class="cyber-card">
+                            <div class="cyber-card-inner">
+                                <div class="cyber-domain">medmeloinvestments.com</div>
+                                <h3 class="cyber-title">[ WEALTH ARCHITECTURE ]</h3>
+                                <p class="cyber-desc">The financial command center architecting wealth creation and scaling strategic global investments.</p>
+                            </div>
+                        </div>
 
-                        .svg-text {
-                            opacity: 0;
-                            transform: translateY(10px);
-                            transition: all 0.5s ease;
-                        }
-
-                        .ecosystem-network.is-visible .spine-line {
-                            animation: drawLine 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-                        }
-
-                        .ecosystem-network.is-visible .core-node {
-                            animation: popNode 0.4s ease-out 0.2s forwards;
-                        }
-
-                        .ecosystem-network.is-visible .hub-node {
-                            animation: popNode 0.4s ease-out 0.8s forwards;
-                        }
-
-                        .ecosystem-network.is-visible .left-branch {
-                            animation: drawLine 1s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
-                        }
-
-                        .ecosystem-network.is-visible .center-branch {
-                            animation: drawLine 1s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards;
-                        }
-
-                        .ecosystem-network.is-visible .right-branch {
-                            animation: drawLine 1s cubic-bezier(0.4, 0, 0.2, 1) 1.4s forwards;
-                        }
-
-                        .ecosystem-network.is-visible .node-left {
-                            animation: popNode 0.5s ease-out 1.8s forwards;
-                        }
-
-                        .ecosystem-network.is-visible .node-center {
-                            animation: popNode 0.5s ease-out 2s forwards;
-                        }
-
-                        .ecosystem-network.is-visible .node-right {
-                            animation: popNode 0.5s ease-out 2.2s forwards;
-                        }
-
-                        .ecosystem-network.is-visible .text-parent {
-                            animation: fadeUp 0.8s ease-out 0.4s forwards;
-                        }
-
-                        .ecosystem-network.is-visible .text-left {
-                            animation: fadeUp 0.8s ease-out 2s forwards;
-                        }
-
-                        .ecosystem-network.is-visible .text-center {
-                            animation: fadeUp 0.8s ease-out 2.2s forwards;
-                        }
-
-                        .ecosystem-network.is-visible .text-right {
-                            animation: fadeUp 0.8s ease-out 2.4s forwards;
-                        }
-
-                        @keyframes drawLine {
-                            to {
-                                stroke-dashoffset: 0;
-                            }
-                        }
-
-                        @keyframes popNode {
-                            0% {
-                                opacity: 0;
-                                transform: scale(0);
-                            }
-
-                            60% {
-                                transform: scale(1.3);
-                            }
-
-                            100% {
-                                opacity: 1;
-                                transform: scale(1);
-                            }
-                        }
-
-                        @keyframes fadeUp {
-                            to {
-                                opacity: 1;
-                                transform: translateY(0);
-                            }
-                        }
-
-                        /* Responsive Display */
-                        .mobile-svg {
-                            display: none;
-                        }
-
-                        @media (max-width: 768px) {
-                            .desktop-svg {
-                                display: none;
-                            }
-
-                            .mobile-svg {
-                                display: block;
-                                max-width: 400px;
-                                margin: 0 auto;
-                            }
-
-                            .ecosystem-network.is-visible .node-left {
-                                animation: popNode 0.5s ease-out 1.2s forwards;
-                            }
-
-                            .ecosystem-network.is-visible .node-center {
-                                animation: popNode 0.5s ease-out 1.6s forwards;
-                            }
-
-                            .ecosystem-network.is-visible .node-right {
-                                animation: popNode 0.5s ease-out 2s forwards;
-                            }
-
-                            .ecosystem-network.is-visible .text-left {
-                                animation: fadeUp 0.8s ease-out 1.4s forwards;
-                            }
-
-                            .ecosystem-network.is-visible .text-center {
-                                animation: fadeUp 0.8s ease-out 1.8s forwards;
-                            }
-
-                            .ecosystem-network.is-visible .text-right {
-                                animation: fadeUp 0.8s ease-out 2.2s forwards;
-                            }
-                        }
-                    </style>
-
-                    <!-- DESKTOP SVG -->
-                    <svg class="network-svg desktop-svg" viewBox="0 0 1000 650" preserveAspectRatio="xMidYMid meet">
-                        <defs>
-                            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" stop-color="#FFD700" />
-                                <stop offset="100%" stop-color="#D4AF37" />
-                            </linearGradient>
-                            <filter id="goldGlow" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="6" result="blur" />
-                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                            </filter>
-                        </defs>
-
-                        <!-- Lines -->
-                        <path class="svg-line spine-line" d="M 500,100 L 500,280" fill="none"
-                            stroke="url(#goldGradient)" stroke-width="2" />
-                        <path class="svg-line branch-line left-branch" d="M 500,280 L 250,280 L 250,420" fill="none"
-                            stroke="url(#goldGradient)" stroke-width="1.5" />
-                        <path class="svg-line branch-line center-branch" d="M 500,280 L 500,480" fill="none"
-                            stroke="url(#goldGradient)" stroke-width="2.5" />
-                        <path class="svg-line branch-line right-branch" d="M 500,280 L 750,280 L 750,420" fill="none"
-                            stroke="url(#goldGradient)" stroke-width="1.5" />
-
-                        <!-- Nodes -->
-                        <circle class="svg-node core-node" cx="500" cy="100" r="12" fill="#D4AF37"
-                            filter="url(#goldGlow)" />
-                        <circle class="svg-node hub-node" cx="500" cy="280" r="6" fill="#FFD700"
-                            filter="url(#goldGlow)" />
-                        <circle class="svg-node node-left" cx="250" cy="420" r="8" fill="#D4AF37"
-                            filter="url(#goldGlow)" />
-                        <circle class="svg-node node-center" cx="500" cy="480" r="16" fill="#FFD700"
-                            filter="url(#goldGlow)" />
-                        <circle class="svg-node node-right" cx="750" cy="420" r="8" fill="#D4AF37"
-                            filter="url(#goldGlow)" />
-
-                        <!-- Typography -->
-                        <g class="svg-text text-parent">
-                            <text x="500" y="55" text-anchor="middle" fill="#fff"
-                                font-family="'Playfair Display', serif" font-size="28" letter-spacing="4">THE MEDMELO
-                                ECOSYSTEM</text>
-                            <text x="500" y="145" text-anchor="middle" fill="#D4AF37"
-                                font-family="'Space Mono', monospace" font-size="12" letter-spacing="2">ULTIMATE
-                                AUTHORITY LAYER</text>
-                        </g>
-
-                        <g class="svg-text text-left">
-                            <text x="250" y="470" text-anchor="middle" fill="#fff"
-                                font-family="'Playfair Display', serif" font-size="20">MEDMELO PUBLISHING</text>
-                            <text x="250" y="495" text-anchor="middle" fill="#aaa" font-family="'Space Mono', monospace"
-                                font-size="12">Books &amp; Literature</text>
-                            <text x="250" y="520" text-anchor="middle" fill="#666" font-family="'Inter', sans-serif"
-                                font-size="11">Mass intellectual distribution</text>
-                        </g>
-
-                        <g class="svg-text text-center">
-                            <text x="500" y="535" text-anchor="middle" fill="#FFD700"
-                                font-family="'Playfair Display', serif" font-size="26" font-weight="bold"
-                                filter="drop-shadow(0 0 5px rgba(212,175,55,0.4))">MEDMELO ED-TECH</text>
-                            <text x="500" y="565" text-anchor="middle" fill="#fff" font-family="'Space Mono', monospace"
-                                font-size="14">Learning App &amp; Clinical Mentoring</text>
-                            <text x="500" y="590" text-anchor="middle" fill="#888" font-family="'Inter', sans-serif"
-                                font-size="12">Future doctor creation &amp; systemization</text>
-                        </g>
-
-                        <g class="svg-text text-right">
-                            <text x="750" y="470" text-anchor="middle" fill="#fff"
-                                font-family="'Playfair Display', serif" font-size="20">CORPORATE VENTURES</text>
-                            <text x="750" y="495" text-anchor="middle" fill="#aaa" font-family="'Space Mono', monospace"
-                                font-size="12">ISO 9001:2015 Certified</text>
-                            <text x="750" y="520" text-anchor="middle" fill="#666" font-family="'Inter', sans-serif"
-                                font-size="11">Healthcare execution &amp; enterprise scale</text>
-                        </g>
-                    </svg>
-
-                    <!-- MOBILE SVG -->
-                    <svg class="network-svg mobile-svg" viewBox="0 0 400 900" preserveAspectRatio="xMidYMid meet">
-                        <!-- Lines -->
-                        <path class="svg-line spine-line" d="M 200,80 L 200,800" fill="none" stroke="url(#goldGradient)"
-                            stroke-width="2" />
-
-                        <!-- Nodes -->
-                        <circle class="svg-node core-node" cx="200" cy="80" r="10" fill="#D4AF37"
-                            filter="url(#goldGlow)" />
-                        <!-- Publishing -->
-                        <circle class="svg-node node-left" cx="200" cy="300" r="8" fill="#D4AF37"
-                            filter="url(#goldGlow)" />
-                        <!-- Ed-Tech (Center vertically but structurally the powerhouse) -->
-                        <circle class="svg-node node-center" cx="200" cy="550" r="14" fill="#FFD700"
-                            filter="url(#goldGlow)" />
-                        <!-- Ventures -->
-                        <circle class="svg-node node-right" cx="200" cy="800" r="8" fill="#D4AF37"
-                            filter="url(#goldGlow)" />
-
-                        <!-- Typography -->
-                        <g class="svg-text text-parent">
-                            <text x="200" y="40" text-anchor="middle" fill="#fff"
-                                font-family="'Playfair Display', serif" font-size="22" letter-spacing="2">THE MEDMELO
-                                ECOSYSTEM</text>
-                            <text x="200" y="120" text-anchor="middle" fill="#D4AF37"
-                                font-family="'Space Mono', monospace" font-size="10" letter-spacing="1">ULTIMATE
-                                AUTHORITY LAYER</text>
-                        </g>
-
-                        <g class="svg-text text-left">
-                            <text x="200" y="340" text-anchor="middle" fill="#fff"
-                                font-family="'Playfair Display', serif" font-size="18">MEDMELO PUBLISHING</text>
-                            <text x="200" y="360" text-anchor="middle" fill="#aaa" font-family="'Space Mono', monospace"
-                                font-size="11">Books &amp; Literature</text>
-                            <text x="200" y="380" text-anchor="middle" fill="#666" font-family="'Inter', sans-serif"
-                                font-size="10">Mass intellectual distribution</text>
-                        </g>
-
-                        <g class="svg-text text-center">
-                            <text x="200" y="600" text-anchor="middle" fill="#FFD700"
-                                font-family="'Playfair Display', serif" font-size="22" font-weight="bold">MEDMELO
-                                ED-TECH</text>
-                            <text x="200" y="625" text-anchor="middle" fill="#fff" font-family="'Space Mono', monospace"
-                                font-size="12">Learning App &amp; Clinical Mentoring</text>
-                            <text x="200" y="645" text-anchor="middle" fill="#888" font-family="'Inter', sans-serif"
-                                font-size="10">Future doctor creation &amp; systemization</text>
-                        </g>
-
-                        <g class="svg-text text-right">
-                            <text x="200" y="840" text-anchor="middle" fill="#fff"
-                                font-family="'Playfair Display', serif" font-size="18">CORPORATE VENTURES</text>
-                            <text x="200" y="860" text-anchor="middle" fill="#aaa" font-family="'Space Mono', monospace"
-                                font-size="11">ISO 9001:2015 Certified</text>
-                            <text x="200" y="880" text-anchor="middle" fill="#666" font-family="'Inter', sans-serif"
-                                font-size="10">Healthcare execution &amp; enterprise scale</text>
-                        </g>
-                    </svg>
-
+                        <!-- Card 5 -->
+                        <div class="cyber-card">
+                            <div class="cyber-card-inner">
+                                <div class="cyber-domain">medmeloenergy.com</div>
+                                <h3 class="cyber-title">[ FUTURE POWER INFRASTRUCTURE ]</h3>
+                                <p class="cyber-desc">Pioneering sustainable power innovations and high-scale energy solutions for the future.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 3 DOTS PLACEHOLDER (as requested by the user: "dont delete the 3 dots one") -->
+                        <div class="cyber-card cyber-dots-card">
+                            <div class="cyber-card-inner">
+                                <div class="cyber-dots">...</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
