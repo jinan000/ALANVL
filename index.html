@@ -16,6 +16,9 @@
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 
+    <!-- WebGL Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="logoloop.css">
 </head>
@@ -224,7 +227,10 @@
                         <div class="card-border" style="z-index: 2;"></div>
                         <div class="card-content" style="position: relative; z-index: 3;">
                             <h3>Founder of Clinical Intelligence Agency</h3>
-                            <p>Founder of NSMU Case Files Under International Faculty of General Medicine, NSMU, Arkhanegelsk, Russia — forging ordinary medical students into zero-compromise, sharp-shooter diagnosticians. We don't just study medicine — <strong>we decode it.</strong></p>
+                            <p>Founder of NSMU Case Files Under International Faculty of General Medicine, NSMU,
+                                Arkhanegelsk, Russia — forging ordinary medical students into zero-compromise,
+                                sharp-shooter diagnosticians. We don't just study medicine — <strong>we decode
+                                    it.</strong></p>
                         </div>
                     </div>
 
@@ -894,15 +900,17 @@
                 </div>
 
                 <!-- THE PILLARS MATRIX GRID -->
-                <div class="ecosystem-network matrix-grid animate-up" style="width: 100%; position: relative; padding: 2rem 0; z-index: 10;">
-                    
+                <div class="ecosystem-network matrix-grid animate-up"
+                    style="width: 100%; position: relative; padding: 2rem 0; z-index: 10;">
+
                     <div class="matrix-cards">
                         <!-- Card 1 -->
                         <div class="cyber-card">
                             <div class="cyber-card-inner">
                                 <div class="cyber-domain">medmelo.com</div>
                                 <h3 class="cyber-title">[ ULTIMATE AUTHORITY LAYER ]</h3>
-                                <p class="cyber-desc">The core enterprise engine driving healthcare execution and global business infrastructure.</p>
+                                <p class="cyber-desc">The core enterprise engine driving healthcare execution and global
+                                    business infrastructure.</p>
                             </div>
                         </div>
 
@@ -911,7 +919,8 @@
                             <div class="cyber-card-inner">
                                 <div class="cyber-domain">medmelobooks.com</div>
                                 <h3 class="cyber-title">[ MASS INTELLECTUAL DISTRIBUTION ]</h3>
-                                <p class="cyber-desc">The publishing syndicate distributing blueprints of survival, strategy, and mastermind-level success.</p>
+                                <p class="cyber-desc">The publishing syndicate distributing blueprints of survival,
+                                    strategy, and mastermind-level success.</p>
                             </div>
                         </div>
 
@@ -920,7 +929,8 @@
                             <div class="cyber-card-inner">
                                 <div class="cyber-domain">medmelolearning.com</div>
                                 <h3 class="cyber-title">[ SYSTEMATIZED DOCTOR CREATION ]</h3>
-                                <p class="cyber-desc">The razor-edge medical ed-tech platform engineering the next generation of elite global doctors.</p>
+                                <p class="cyber-desc">The razor-edge medical ed-tech platform engineering the next
+                                    generation of elite global doctors.</p>
                             </div>
                         </div>
 
@@ -929,7 +939,8 @@
                             <div class="cyber-card-inner">
                                 <div class="cyber-domain">medmeloinvestments.com</div>
                                 <h3 class="cyber-title">[ WEALTH ARCHITECTURE ]</h3>
-                                <p class="cyber-desc">The financial command center architecting wealth creation and scaling strategic global investments.</p>
+                                <p class="cyber-desc">The financial command center architecting wealth creation and
+                                    scaling strategic global investments.</p>
                             </div>
                         </div>
 
@@ -938,10 +949,11 @@
                             <div class="cyber-card-inner">
                                 <div class="cyber-domain">medmeloenergy.com</div>
                                 <h3 class="cyber-title">[ FUTURE POWER INFRASTRUCTURE ]</h3>
-                                <p class="cyber-desc">Pioneering sustainable power innovations and high-scale energy solutions for the future.</p>
+                                <p class="cyber-desc">Pioneering sustainable power innovations and high-scale energy
+                                    solutions for the future.</p>
                             </div>
                         </div>
-                        
+
                         <!-- 3 DOTS PLACEHOLDER (as requested by the user: "dont delete the 3 dots one") -->
                         <div class="cyber-card cyber-dots-card">
                             <div class="cyber-card-inner">
@@ -1007,6 +1019,57 @@
                     }
                 });
             </script>
+        </section>
+        <!-- CLINICAL MENTORING CORE -->
+        <section class="section clinical-mentoring" style="background: var(--bg-surface); padding: 8rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container mentoring-grid" style="max-width: 1400px; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                
+                <!-- Text Content -->
+                <div class="mentoring-content animate-up">
+                    <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 1.5rem;">
+                        [ CLINICAL MENTORING CORE ]
+                    </div>
+                    <h2 class="section-title" style="font-size: clamp(2rem, 3vw, 3.5rem); margin-bottom: 2rem; line-height: 1.2;">
+                        ENGINEERING THE NEXT GENERATION OF DOCTORS
+                    </h2>
+                    <div class="mentoring-quote" style="border-left: 2px solid var(--gold); padding-left: 2rem; margin-top: 3rem;">
+                        <p style="font-family: var(--font-story); font-size: clamp(1rem, 1.5vw, 1.3rem); color: var(--text-secondary); font-style: italic; line-height: 1.8;">
+                            "Most medical students try to survive the syllabus. I decided to decode it, systemize it, and teach it. Through the Medmelo Learning App, we are not just sharing lectures; we are architecting clinical minds capable of zero-hour decision making."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sliding Photos Showcase (WebGL) -->
+                <div id="mentoring-slider" class="mentoring-showcase auto-slider animate-up" style="position: relative; aspect-ratio: 4/5; border-radius: 4px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5); background: #0a0a0a;">
+                    
+                    <!-- WebGL Canvas Mount -->
+                    <div id="slider-canvas-mount" style="position: absolute; inset: 0; z-index: 0;"></div>
+                    
+                    <!-- Overlay gradient for depth & contrast -->
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%); z-index: 10; pointer-events: none;"></div>
+
+                    <!-- Slide Content Overlay Removed -->
+
+                    <!-- Pagination Controls -->
+                    <div class="slider-pagination" style="position: absolute; bottom: 3rem; right: 2rem; z-index: 20; display: flex; flex-direction: column; gap: 2rem;">
+                        <!-- Buttons injected via JS -->
+                    </div>
+
+                    <!-- Loading Spinner -->
+                    <div id="slider-loader" style="position: absolute; inset: 0; z-index: 100; background: black; display: flex; align-items: center; justify-content: center; transition: opacity 1s;">
+                        <div style="width: 3rem; height: 1px; background: rgba(255,255,255,0.2); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; background: white; animation: loadingSlider 1.5s infinite;"></div>
+                        </div>
+                    </div>
+                    <style>
+                        @keyframes loadingSlider {
+                            0% { transform: translateX(-100%); }
+                            100% { transform: translateX(100%); }
+                        }
+                    </style>
+                </div>
+
+            </div>
         </section>
 
         <!-- EVOLUTION TIMELINE SECTION -->
@@ -1118,7 +1181,7 @@
             <div class="container text-center animate-up" style="margin-bottom: 2rem;">
                 <p
                     style="font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.25em; color: rgba(255,255,255,0.4); text-transform: uppercase;">
-                    ISO 9001:2015 Certified Enterprises</p>
+                    50+ BRANDS, 1 EMPIRE, BUILT FROM SCRATCH</p>
             </div>
             <div id="logo-loop" class="logoloop logoloop--fade logoloop--scale-hover"
                 style="--logoloop-fadeColor: #020202;" role="region" aria-label="Partner logos">
