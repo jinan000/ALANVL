@@ -449,21 +449,27 @@ document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener('resize', measure);
     }
 
-    // Initialize Partners Loop
-    createLogoLoop('logo-loop', 'logo-loop-track', [1,2,3,4,5,6,7,8,9,11,12,13,15,16].map(n => ({
-        src: `images/logo${n}.png`,
-        alt: `Partner logo ${n}`
-    })), 80);
-
-    // Initialize Global Credentials Loop
-    createLogoLoop('credential-loop', 'credential-loop-track', [
+    // Initialize Medical Loop
+    createLogoLoop('medical-loop', 'medical-loop-track', [
         { src: 'images/harvard.png',  alt: 'Harvard Medical School' },
         { src: 'images/yale.png',     alt: 'Yale University' },
         { src: 'images/johns.png',    alt: 'Johns Hopkins University' },
         { src: 'images/stanford.png', alt: 'Stanford University' },
         { src: 'images/who.png',      alt: 'World Health Organization' },
         { src: 'images/iarc.png',     alt: 'IARC' }
-    ], 120);
+    ], 100);
+
+    // Initialize Financial Loop
+    createLogoLoop('financial-loop', 'financial-loop-track', [1,2,3,4,5,6,7].map(n => ({
+        src: `images/logo${n}.png`,
+        alt: `Financial Institution ${n}`
+    })), 80);
+
+    // Initialize Ecosystem Loop
+    createLogoLoop('ecosystem-loop', 'ecosystem-loop-track', [8,9,11,12,13,15,16].map(n => ({
+        src: `images/logo${n}.png`,
+        alt: `Medmelo Brand ${n}`
+    })), 90);
 
     // --- EMPIRE NEURAL NETWORK INTERFACE (DEPRECATED) ---
     // Section replaced with native SVG network and standalone Canvas architecture in DOM.

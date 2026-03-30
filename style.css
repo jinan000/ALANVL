@@ -1973,3 +1973,280 @@ body.loader-hidden .cinematic-loader {
         gap: 2rem !important;
     }
 }
+
+/* --- PREMIUM MEDICAL TEXT ANIMATION --- */
+.medical-anim-text {
+    font-family: 'Inter', sans-serif; /* Bold modern sans-serif */
+    font-weight: 700;
+    color: #ffffff; /* Primary text: clean white */
+    display: inline-block;
+    transition: transform 0.4s ease, text-shadow 0.4s ease;
+    
+    /* Animation initial state */
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(8px);
+    animation: medicalReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Subtle letter spacing animation during reveal */
+@keyframes medicalReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(8px);
+        letter-spacing: 0.1em;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+        letter-spacing: normal;
+    }
+}
+
+/* Hover effect - sequencing red to blue siren glow */
+.medical-anim-text:hover {
+    transform: scale(1.02);
+    animation: medicalSirenGlow 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes medicalSirenGlow {
+    0%, 30% {
+        text-shadow: 0 0 20px rgba(214, 40, 40, 0.6); /* Glow in emergency red */
+    }
+    70%, 100% {
+        text-shadow: 0 0 25px rgba(168, 218, 220, 0.8); /* Transition to soft clinical blue */
+    }
+}
+
+/* Highlight words */
+.medical-anim-text .highlight-red {
+    color: #D62828; /* emergency red */
+    transition: text-shadow 0.4s ease;
+}
+
+.medical-anim-text .highlight-blue {
+    color: #A8DADC; /* soft clinical blue */
+    transition: text-shadow 0.4s ease;
+}
+
+/* ==========================================================================
+ * PHASE 2, 3 & 4: ARSENAL, AUDIO & PROJECT RED MODULES
+ * ========================================================================== */
+
+/* Typography */
+.malayalam-subtitle {
+    font-family: var(--font-story);
+    font-size: 0.9rem;
+    color: var(--gold);
+    display: block;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.asset-tier-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.1em;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.syndicate-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.25rem;
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.syndicate-footer strong {
+    color: #ffffff;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.syndicate-cta {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.syndicate-cta:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Button Variants */
+.btn-ghost-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.65rem;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-ghost:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(197, 160, 89, 0.05); /* very soft gold tint */
+}
+
+.btn-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-negotiating {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tooltip overlay for negotiating status */
+.btn-negotiating::after {
+    content: "NEGOTIATING EXCLUSIVE RIGHTS";
+    position: absolute;
+    inset: 0;
+    background: #0a0a0a;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-family: 'Space Mono', monospace;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 0.25rem;
+}
+
+.btn-negotiating:hover::after {
+    opacity: 1;
+}
+
+.btn-spotify {
+    background: #1DB954;
+    color: #000000;
+    border: none;
+    font-weight: 700;
+    padding: 0.8rem 1.5rem;
+    display: inline-flex;
+    border-radius: 30px;
+    font-size: 0.8rem;
+}
+
+.btn-spotify:hover {
+    background: #1ed760;
+    box-shadow: 0 0 20px rgba(29, 185, 84, 0.3);
+    color: #000;
+}
+
+/* Status Badges */
+.status-pulse-red {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #D62828;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.status-pulse-red::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #D62828;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #D62828;
+    animation: redPulse 2s infinite;
+}
+
+@keyframes redPulse {
+    0% { box-shadow: 0 0 0 0 rgba(214, 40, 40, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(214, 40, 40, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(214, 40, 40, 0); }
+}
+
+/* Project Red typography */
+.project-red-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: #D62828;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-shadow: 0 0 40px rgba(214, 40, 40, 0.3);
+}
+
+.podcast-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.podcast-card {
+    background: var(--bg-surface);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 4px;
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+
+.podcast-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(29, 185, 84, 0.3);
+}
+
+.podcast-cover {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+    .podcast-grid {
+        grid-template-columns: 1fr;
+    }
+}
