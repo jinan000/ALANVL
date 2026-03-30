@@ -189,6 +189,37 @@ document.addEventListener("DOMContentLoaded", () => {
         tlJourney.fromTo(".spotlight-effect", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.12 }, 0.88);
     }
 
+    // --- FILM ROLL QUOTE ANIMATION ---
+    const quoteText = document.querySelector('.ecg-quote-text');
+    if (quoteText) {
+        const text = quoteText.innerText;
+        quoteText.innerHTML = '';
+        const words = text.split(' ');
+        words.forEach((word) => {
+            const span = document.createElement('span');
+            span.innerText = word + ' ';
+            quoteText.appendChild(span);
+        });
+
+        const spans = quoteText.querySelectorAll('span');
+        
+        // Create an infinite timeline for a continuous sweeping wave
+        const tl = gsap.timeline({ repeat: -1, repeatDelay: 1.5 });
+        
+        tl.to(spans, {
+            color: '#ff2222', // Cinematic red
+            duration: 0.5,
+            stagger: 0.15,
+            ease: "power2.inOut"
+        })
+        .to(spans, {
+            color: '#ffffff', // Smoothly sweep back to white
+            duration: 0.5,
+            stagger: 0.15,
+            ease: "power2.inOut"
+        }, 0.5); // Starts the white sweep exactly after the first word turns red
+    }
+
     // --- MAGIC BENTO: DETECTIVE INTELLIGENCE CARDS ---
     const detectiveSection = document.querySelector('.detective');
     const intelCards = document.querySelectorAll('.intel-card');

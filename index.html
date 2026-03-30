@@ -171,11 +171,11 @@
             style="background: var(--bg-surface, #080808); padding: 5rem 2rem; text-align: center; border-top: 1px solid rgba(212,175,55,0.12); border-bottom: 1px solid rgba(212,175,55,0.12);">
             <blockquote style="max-width: 900px; margin: 0 auto;">
                 <p class="ecg-quote-text"
-                    style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-style: italic; line-height: 1.6; letter-spacing: 0.02em; margin-bottom: 1.8rem;">
+                    style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.8vw, 2.3rem); font-style: italic; line-height: 1.6; letter-spacing: 0.02em; margin-bottom: 1.8rem;">
                     "It doesn't matter where your life began; what truly matters is where it stands today."
                 </p>
                 <cite
-                    style="font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.2em; color: var(--gold, #D4AF37); text-transform: uppercase;">
+                    style="font-family: 'Space Mono', monospace; font-size: 1.1rem; letter-spacing: 0.2em; color: var(--gold, #D4AF37); text-transform: uppercase;">
                     — Alan V.L, The Rich Ambulance Driver
                 </cite>
             </blockquote>
@@ -186,12 +186,73 @@
             <div class="container">
                 <h2 class="section-title center gold-text animate-up">Not every doctor treats.<br>Some decode.</h2>
 
-                <div class="detective-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                <div class="detective-grid"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; position: relative;">
+                    <style>
+                        @keyframes watermarkFloat {
+
+                            0%,
+                            100% {
+                                transform: translate(-50%, -50%) rotate(0deg);
+                            }
+
+                            50% {
+                                transform: translate(-50%, calc(-50% - 15px)) rotate(2deg);
+                            }
+                        }
+
+                        @keyframes watermarkPulse {
+
+                            0%,
+                            100% {
+                                opacity: 0.05;
+                                transform: scale(1);
+                            }
+
+                            50% {
+                                opacity: 0.08;
+                                transform: scale(1.05);
+                            }
+                        }
+
+                        .watermark-float {
+                            animation: watermarkFloat 8s ease-in-out infinite;
+                        }
+
+                        .watermark-pulse {
+                            animation: watermarkPulse 6s ease-in-out infinite;
+                        }
+
+                        .watermark-text {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            font-family: 'Space Mono', monospace;
+                            font-weight: 700;
+                            color: #ffffff;
+                            opacity: 0.05;
+                            z-index: 1;
+                            user-select: none;
+                            line-height: 0.8;
+                        }
+
+                        .watermark-icon {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            opacity: 0.05;
+                            z-index: 1;
+                            color: #ffffff;
+                        }
+                    </style>
 
                     <!-- Card 1: 12 Medical Textbooks -->
                     <div class="intel-card" style="position: relative; overflow: hidden;">
-                        <div class="card-bg"
-                            style="position: absolute; inset: 0; background-image: url('images/NSMU_casefiles.jpeg'); background-size: cover; background-position: center; opacity: 0.12; z-index: 1;">
+                        <div class="card-bg watermark-float watermark-text"
+                            style="font-size: clamp(10rem, 20vw, 15rem);">
+                            12
                         </div>
                         <div class="card-border" style="z-index: 2;"></div>
                         <div class="card-content" style="position: relative; z-index: 3;">
@@ -208,8 +269,9 @@
 
                     <!-- Card 2: Pvt Ltd & Brands -->
                     <div class="intel-card" style="position: relative; overflow: hidden;">
-                        <div class="card-bg"
-                            style="position: absolute; inset: 0; background-image: url('images/NSMU_casefiles.jpeg'); background-size: cover; background-position: center; opacity: 0.1; z-index: 1;">
+                        <div class="card-bg watermark-float watermark-text"
+                            style="font-size: clamp(8rem, 16vw, 12rem); white-space: nowrap;">
+                            50+
                         </div>
                         <div class="card-border" style="z-index: 2;"></div>
                         <div class="card-content" style="position: relative; z-index: 3;">
@@ -221,8 +283,8 @@
 
                     <!-- Card 3: Clinical Intelligence Agency -->
                     <div class="intel-card" style="position: relative; overflow: hidden;">
-                        <div class="card-bg"
-                            style="position: absolute; inset: 0; background-image: url('images/NSMU_casefiles.jpeg'); background-size: cover; background-position: center; opacity: 0.1; z-index: 1;">
+                        <div class="card-bg watermark-pulse"
+                            style="position: absolute; inset: 0; background-image: url('images/NSMU_casefiles.jpeg'); background-size: cover; background-position: center; opacity: 0.05; z-index: 1;">
                         </div>
                         <div class="card-border" style="z-index: 2;"></div>
                         <div class="card-content" style="position: relative; z-index: 3;">
@@ -236,14 +298,24 @@
 
                     <!-- Card 4: Public Speaker & Author -->
                     <div class="intel-card" style="position: relative; overflow: hidden;">
-                        <div class="card-bg"
-                            style="position: absolute; inset: 0; background-image: url('images/NSMU_casefiles.jpeg'); background-size: cover; background-position: center; opacity: 0.1; z-index: 1;">
+                        <div class="card-bg watermark-float watermark-icon"
+                            style="width: clamp(150px, 30vw, 250px); height: auto;">
+                            <!-- Premium thin-line microphone SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                                style="width: 100%; height: 100%;">
+                                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                <line x1="12" x2="12" y1="19" y2="22"></line>
+                                <line x1="8" x2="16" y1="22" y2="22"></line>
+                            </svg>
                         </div>
                         <div class="card-border" style="z-index: 2;"></div>
                         <div class="card-content" style="position: relative; z-index: 3;">
                             <h3>Public Speaker &amp; Author of Fiction &amp; Non-Fiction Books</h3>
                             <p>Author of Fiction &amp; Non-Fiction books including <em>The Rich Ambulance
-                                    Driver</em>and<em>Forbidden Sex Education</em>.<br>Delivering high-impact talks that
+                                    Driver</em> and <em>Forbidden Sex Education</em>.<br>Delivering high-impact talks
+                                that
                                 merge raw street intelligence with unspoken clinical truths.</p>
                         </div>
                     </div>
@@ -740,7 +812,7 @@
                     <!-- Mentor Card 1 -->
                     <div class="mentor-card animate-up"
                         style="min-width: 380px; flex: 1; aspect-ratio: 3/4; position: relative; border-radius: 8px; overflow: hidden; scroll-snap-align: center; border: 1px solid rgba(255,255,255,0.1);">
-                        <img src="images/struggle1.png" alt="Teaching Medical Students"
+                        <img src="images/teaching_medical_students.jpeg" alt="Teaching Medical Students"
                             style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.2) brightness(0.8);"
                             class="hover-color">
                         <div
@@ -758,7 +830,7 @@
                     <!-- Mentor Card 2 -->
                     <div class="mentor-card animate-up"
                         style="min-width: 380px; flex: 1; aspect-ratio: 3/4; position: relative; border-radius: 8px; overflow: hidden; scroll-snap-align: center; border: 1px solid rgba(255,255,255,0.1);">
-                        <img src="images/NSMU_casefiles.jpeg" alt="NSMU Case Files"
+                        <img src="images/nsmu_mentorship.jpeg" alt="NSMU Mentorship"
                             style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.2) brightness(0.8);"
                             class="hover-color">
                         <div
@@ -776,7 +848,7 @@
                     <!-- Mentor Card 3 -->
                     <div class="mentor-card animate-up"
                         style="min-width: 380px; flex: 1; aspect-ratio: 3/4; position: relative; border-radius: 8px; overflow: hidden; scroll-snap-align: center; border: 1px solid rgba(255,255,255,0.1);">
-                        <img src="images/struggle2.png" alt="Corporate Leadership Workshops"
+                        <img src="images/corporate_leadership.jpeg" alt="Corporate Leadership Workshops"
                             style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.2) brightness(0.8);"
                             class="hover-color">
                         <div
@@ -788,7 +860,7 @@
                                 Corporate Leadership</h4>
                             <span
                                 style="color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">Commanding
-                                the Boardroom.</span>
+                                the Russian Youth Center</span>
                         </div>
                     </div>
                 </div>
@@ -854,8 +926,7 @@
                                     Outbreak Intelligence Framework</h3>
                                 <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
                                     Delivering advanced epidemiological frameworks to international medical forums.
-                                    Standardizing crisis responses and mapping zero-hour containment structures (e.g.,
-                                    Nipah Virus protocol).</p>
+                                    Standardizing crisis responses and mapping zero-hour containment structures.</p>
                             </div>
 
                             <!-- Case File 02 -->
@@ -893,13 +964,28 @@
             <div class="container"
                 style="position: relative; z-index: 10; width: 100%; max-width: 1200px; display: flex; flex-direction: column; align-items: center;">
 
-                <div class="text-center animate-up" style="margin-bottom: 2rem;">
+                <div class="text-center animate-up" style="margin-bottom: 4rem;">
                     <div
-                        style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 1rem;">
-                        [ STRATEGIC INTELLIGENCE CORE ]</div>
+                        style="font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 1rem; text-transform: uppercase;">
+                        [ ARCHITECTURE OF AN EMPIRE ]
+                    </div>
+                    <h2 class="section-title center" style="color: #fff; font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.2;">
+                        The 6 Strategic Pillars Powering the Medmelo Ecosystem
+                    </h2>
                 </div>
 
                 <!-- THE PILLARS MATRIX GRID -->
+                <style>
+                    a.cyber-domain {
+                        display: inline-block !important; /* Required for transform scaling */
+                        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+                    }
+                    a.cyber-domain:hover {
+                        transform: scale(1.15);
+                        text-shadow: 0 0 15px rgba(212,175,55,0.8);
+                        /* Optional: add a slight color tint on hover if desired */
+                    }
+                </style>
                 <div class="ecosystem-network matrix-grid animate-up"
                     style="width: 100%; position: relative; padding: 2rem 0; z-index: 10;">
 
@@ -907,7 +993,7 @@
                         <!-- Card 1 -->
                         <div class="cyber-card">
                             <div class="cyber-card-inner">
-                                <div class="cyber-domain">medmelo.com</div>
+                                <a href="https://medmelo.com" target="_blank" rel="noopener" class="cyber-domain" style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmelo.com</a>
                                 <h3 class="cyber-title">[ ULTIMATE AUTHORITY LAYER ]</h3>
                                 <p class="cyber-desc">The core enterprise engine driving healthcare execution and global
                                     business infrastructure.</p>
@@ -917,7 +1003,7 @@
                         <!-- Card 2 -->
                         <div class="cyber-card">
                             <div class="cyber-card-inner">
-                                <div class="cyber-domain">medmelobooks.com</div>
+                                <a href="https://medmelobooks.com" target="_blank" rel="noopener" class="cyber-domain" style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmelobooks.com</a>
                                 <h3 class="cyber-title">[ MASS INTELLECTUAL DISTRIBUTION ]</h3>
                                 <p class="cyber-desc">The publishing syndicate distributing blueprints of survival,
                                     strategy, and mastermind-level success.</p>
@@ -927,7 +1013,7 @@
                         <!-- Card 3 -->
                         <div class="cyber-card">
                             <div class="cyber-card-inner">
-                                <div class="cyber-domain">medmelolearning.com</div>
+                                <a href="https://medmelolearning.com" target="_blank" rel="noopener" class="cyber-domain" style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmelolearning.com</a>
                                 <h3 class="cyber-title">[ SYSTEMATIZED DOCTOR CREATION ]</h3>
                                 <p class="cyber-desc">The razor-edge medical ed-tech platform engineering the next
                                     generation of elite global doctors.</p>
@@ -937,7 +1023,7 @@
                         <!-- Card 4 -->
                         <div class="cyber-card">
                             <div class="cyber-card-inner">
-                                <div class="cyber-domain">medmeloinvestments.com</div>
+                                <a href="https://medmeloinvestments.com" target="_blank" rel="noopener" class="cyber-domain" style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmeloinvestments.com</a>
                                 <h3 class="cyber-title">[ WEALTH ARCHITECTURE ]</h3>
                                 <p class="cyber-desc">The financial command center architecting wealth creation and
                                     scaling strategic global investments.</p>
@@ -947,17 +1033,19 @@
                         <!-- Card 5 -->
                         <div class="cyber-card">
                             <div class="cyber-card-inner">
-                                <div class="cyber-domain">medmeloenergy.com</div>
+                                <a href="https://medmeloenergy.com" target="_blank" rel="noopener" class="cyber-domain" style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmeloenergy.com</a>
                                 <h3 class="cyber-title">[ FUTURE POWER INFRASTRUCTURE ]</h3>
                                 <p class="cyber-desc">Pioneering sustainable power innovations and high-scale energy
                                     solutions for the future.</p>
                             </div>
                         </div>
 
-                        <!-- 3 DOTS PLACEHOLDER (as requested by the user: "dont delete the 3 dots one") -->
-                        <div class="cyber-card cyber-dots-card">
+                        <!-- Card 6 -->
+                        <div class="cyber-card">
                             <div class="cyber-card-inner">
-                                <div class="cyber-dots">...</div>
+                                <a href="https://medmelostudyabroad.com" target="_blank" rel="noopener" class="cyber-domain" style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmelostudyabroad.com</a>
+                                <h3 class="cyber-title">[ GLOBAL PHYSICIAN PIPELINE ]</h3>
+                                <p class="cyber-desc">The strategic international gateway deploying ambitious minds into elite global universities to forge the healthcare leaders of tomorrow.</p>
                             </div>
                         </div>
                     </div>
@@ -1021,50 +1109,71 @@
             </script>
         </section>
         <!-- CLINICAL MENTORING CORE -->
-        <section class="section clinical-mentoring" style="background: var(--bg-surface); padding: 8rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
-            <div class="container mentoring-grid" style="max-width: 1400px; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                
+        <section class="section clinical-mentoring"
+            style="background: var(--bg-surface); padding: 8rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container mentoring-grid"
+                style="max-width: 1400px; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+
                 <!-- Text Content -->
                 <div class="mentoring-content animate-up">
-                    <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 1.5rem;">
+                    <div
+                        style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 1.5rem;">
                         [ CLINICAL MENTORING CORE ]
                     </div>
-                    <h2 class="section-title" style="font-size: clamp(2rem, 3vw, 3.5rem); margin-bottom: 2rem; line-height: 1.2;">
+                    <h2 class="section-title"
+                        style="font-size: clamp(2rem, 3vw, 3.5rem); margin-bottom: 2rem; line-height: 1.2;">
                         ENGINEERING THE NEXT GENERATION OF DOCTORS
                     </h2>
-                    <div class="mentoring-quote" style="border-left: 2px solid var(--gold); padding-left: 2rem; margin-top: 3rem;">
-                        <p style="font-family: var(--font-story); font-size: clamp(1rem, 1.5vw, 1.3rem); color: var(--text-secondary); font-style: italic; line-height: 1.8;">
-                            "Most medical students try to survive the syllabus. I decided to decode it, systemize it, and teach it. Through the Medmelo Learning App, we are not just sharing lectures; we are architecting clinical minds capable of zero-hour decision making."
+                    <div class="mentoring-quote"
+                        style="border-left: 2px solid var(--gold); padding-left: 2rem; margin-top: 3rem;">
+                        <p
+                            style="font-family: var(--font-story); font-size: clamp(1rem, 1.5vw, 1.3rem); color: var(--text-secondary); font-style: italic; line-height: 1.8;">
+                            "Most medical students try to survive the syllabus. I decided to decode it, systemize it,
+                            and teach it. Through the Medmelo Learning App, we are not just sharing lectures; we are
+                            architecting clinical minds capable of zero-hour decision making."
                         </p>
                     </div>
                 </div>
 
                 <!-- Sliding Photos Showcase (WebGL) -->
-                <div id="mentoring-slider" class="mentoring-showcase auto-slider animate-up" style="position: relative; aspect-ratio: 4/5; border-radius: 4px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5); background: #0a0a0a;">
-                    
+                <div id="mentoring-slider" class="mentoring-showcase auto-slider animate-up"
+                    style="position: relative; aspect-ratio: 4/5; border-radius: 4px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5); background: #0a0a0a;">
+
                     <!-- WebGL Canvas Mount -->
                     <div id="slider-canvas-mount" style="position: absolute; inset: 0; z-index: 0;"></div>
-                    
+
                     <!-- Overlay gradient for depth & contrast -->
-                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%); z-index: 10; pointer-events: none;"></div>
+                    <div
+                        style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%); z-index: 10; pointer-events: none;">
+                    </div>
 
                     <!-- Slide Content Overlay Removed -->
 
                     <!-- Pagination Controls -->
-                    <div class="slider-pagination" style="position: absolute; bottom: 3rem; right: 2rem; z-index: 20; display: flex; flex-direction: column; gap: 2rem;">
+                    <div class="slider-pagination"
+                        style="position: absolute; bottom: 3rem; right: 2rem; z-index: 20; display: flex; flex-direction: column; gap: 2rem;">
                         <!-- Buttons injected via JS -->
                     </div>
 
                     <!-- Loading Spinner -->
-                    <div id="slider-loader" style="position: absolute; inset: 0; z-index: 100; background: black; display: flex; align-items: center; justify-content: center; transition: opacity 1s;">
-                        <div style="width: 3rem; height: 1px; background: rgba(255,255,255,0.2); position: relative; overflow: hidden;">
-                            <div style="position: absolute; inset: 0; background: white; animation: loadingSlider 1.5s infinite;"></div>
+                    <div id="slider-loader"
+                        style="position: absolute; inset: 0; z-index: 100; background: black; display: flex; align-items: center; justify-content: center; transition: opacity 1s;">
+                        <div
+                            style="width: 3rem; height: 1px; background: rgba(255,255,255,0.2); position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; inset: 0; background: white; animation: loadingSlider 1.5s infinite;">
+                            </div>
                         </div>
                     </div>
                     <style>
                         @keyframes loadingSlider {
-                            0% { transform: translateX(-100%); }
-                            100% { transform: translateX(100%); }
+                            0% {
+                                transform: translateX(-100%);
+                            }
+
+                            100% {
+                                transform: translateX(100%);
+                            }
                         }
                     </style>
                 </div>
