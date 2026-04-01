@@ -116,7 +116,7 @@
                     </div>
 
                     <p
-                        style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 1.8rem); font-style: italic; line-height: 1.7; color: var(--text-secondary); margin: 0; position: relative; z-index: 2;">
+                        style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 1.8rem); font-style: italic; line-height: 1.9; color: rgba(255,255,255,0.85); margin: 0; position: relative; z-index: 2; letter-spacing: 0.01em;">
                         "Since 2020, I have actively listened to and analyzed the life stories of over <strong
                             style="color: #fff; font-weight: 500;">1000+ individuals</strong>. This wasn't just
                         interaction; it was a masterclass in human psychology. Connecting with so many diverse minds has
@@ -208,6 +208,14 @@
                         <div class="frame-number">08</div>
                         <div class="frame-caption">The Ambulance Driver</div>
                     </div>
+                    <div class="film-frame">
+                        <div class="frame-content">
+                            <img src="images/struggle9.png" alt="TAXI DRIVER IN RUSSIA" />
+                            <div class="frame-spotlight"></div>
+                        </div>
+                        <div class="frame-number">09</div>
+                        <div class="frame-caption">TAXI DRIVER IN RUSSIA</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -223,7 +231,7 @@
                     filter: blur(6px);
                     transition: none;
                     margin-right: 0.3em;
-                    background: linear-gradient(135deg, #5BC0EB 0%, #D62828 30%, #A8DADC 60%, #D62828 100%);
+                    background: linear-gradient(135deg, #0A2463 0%, #D62828 25%, #1B3A6B 50%, #FF1E1E 75%, #0A2463 100%);
                     background-size: 250% 250%;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -352,8 +360,11 @@
                             transform: translate(-50%, -50%);
                             font-family: 'Space Mono', monospace;
                             font-weight: 700;
-                            color: #ffffff;
-                            opacity: 0.05;
+                            background: linear-gradient(135deg, #D62828, #0A2463);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                            opacity: 0.12;
                             z-index: 1;
                             user-select: none;
                             line-height: 0.8;
@@ -364,9 +375,9 @@
                             left: 50%;
                             top: 50%;
                             transform: translate(-50%, -50%);
-                            opacity: 0.05;
+                            opacity: 0.12;
                             z-index: 1;
-                            color: #ffffff;
+                            color: #D62828;
                         }
                     </style>
 
@@ -406,7 +417,7 @@
                     <!-- Card 3: Clinical Intelligence Agency -->
                     <div class="intel-card" style="position: relative; overflow: hidden;">
                         <div class="card-bg watermark-pulse"
-                            style="position: absolute; inset: 0; background-image: url('images/NSMU_casefiles.jpeg'); background-size: cover; background-position: center; opacity: 0.05; z-index: 1;">
+                            style="position: absolute; inset: 0; background-image: url('images/nsmu.jpeg'); background-size: cover; background-position: center; opacity: 0.05; z-index: 1;">
                         </div>
                         <div class="card-border" style="z-index: 2;"></div>
                         <div class="card-content" style="position: relative; z-index: 3;">
@@ -423,13 +434,19 @@
                         <div class="card-bg watermark-float watermark-icon"
                             style="width: clamp(150px, 30vw, 250px); height: auto;">
                             <!-- Premium thin-line microphone SVG -->
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                                style="width: 100%; height: 100%;">
-                                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
-                                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                                <line x1="12" x2="12" y1="19" y2="22"></line>
-                                <line x1="8" x2="16" y1="22" y2="22"></line>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1"
+                                stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;">
+                                <defs>
+                                    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#D62828" />
+                                        <stop offset="100%" stop-color="#0A2463" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" stroke="url(#iconGrad)">
+                                </path>
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke="url(#iconGrad)"></path>
+                                <line x1="12" x2="12" y1="19" y2="22" stroke="url(#iconGrad)"></line>
+                                <line x1="8" x2="16" y1="22" y2="22" stroke="url(#iconGrad)"></line>
                             </svg>
                         </div>
                         <div class="card-border" style="z-index: 2;"></div>
@@ -468,6 +485,11 @@
                 <div class="logoloop__track" id="financial-loop-track"></div>
             </div>
 
+            <!-- ARSENAL / INTELLIGENCE CTA -->
+            <div class="container animate-up" style="display: flex; justify-content: center; margin-top: 3rem; margin-bottom: 2rem;">
+                <a href="arsenal.html" class="btn btn-outline hover-gold" style="font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.15em; border-color: rgba(255,215,0,0.4); color: var(--gold); padding: 1.25rem 2.5rem;">[ Click to view full intelligence report ]</a>
+            </div>
+
         </section>
 
         <!-- THE ARSENAL SECTION -->
@@ -500,11 +522,17 @@
                             <div class="asset-tier">
                                 <p class="asset-tier-title">[ 01 : SECURE THE PHYSICAL ASSET ]</p>
                                 <a href="contact.html#get-the-book" class="btn btn-gold-glow"
-                                    style="width: 100%; text-align: center; margin-bottom: 0.5rem; font-size: 0.75rem;">[
-                                    📦 BUY ON MEDMELO BOOKS ]</a>
+                                    style="width: 100%; text-align: center; margin-bottom: 0.5rem; font-size: 0.75rem; gap: 0.5rem;">
+                                    <img src="images/medmelo learning app.png" alt="Medmelo"
+                                        style="height: 20px; object-fit: contain; vertical-align: middle;"> BUY ON
+                                    MEDMELO BOOKS </a>
                                 <div class="btn-ghost-group">
-                                    <a href="#" class="btn-ghost" style="flex:1;">[ 🛒 AMAZON ]</a>
-                                    <a href="#" class="btn-ghost" style="flex:1;">[ 🛒 FLIPKART ]</a>
+                                    <a href="https://www.amazon.in" target="_blank" class="btn-ghost btn-platform"
+                                        style="flex:1;"><img src="images/amazon_logo.png" alt="Amazon"
+                                            class="platform-logo"></a>
+                                    <a href="https://www.flipkart.com" target="_blank" class="btn-ghost btn-platform"
+                                        style="flex:1;"><img src="images/flipkart_logo.png" alt="Flipkart"
+                                            class="platform-logo"></a>
                                 </div>
                             </div>
 
@@ -512,12 +540,15 @@
                             <div class="asset-tier">
                                 <p class="asset-tier-title">[ 02 : AUDIO INTELLIGENCE ]</p>
                                 <div class="btn-ghost-group">
-                                    <a href="#negotiating" class="btn-ghost btn-negotiating"
-                                        style="flex:1; padding: 0.4rem 0.5rem;">[ 🎧 KUKU FM ]</a>
-                                    <a href="#negotiating" class="btn-ghost btn-negotiating"
-                                        style="flex:1; padding: 0.4rem 0.5rem;">[ 🎧 STORYTEL ]</a>
-                                    <a href="#negotiating" class="btn-ghost btn-negotiating"
-                                        style="flex:1; padding: 0.4rem 0.5rem;">[ 🎧 AUDIBLE ]</a>
+                                    <a href="https://kukufm.com" target="_blank"
+                                        class="btn-ghost btn-platform btn-negotiating" style="flex:1;"><img
+                                            src="images/Kukufm_logo.png" alt="Kuku FM" class="platform-logo"></a>
+                                    <a href="https://www.storytel.com" target="_blank"
+                                        class="btn-ghost btn-platform btn-negotiating" style="flex:1;"><img
+                                            src="images/storytel_logo.png" alt="Storytel" class="platform-logo"></a>
+                                    <a href="https://www.audible.in" target="_blank"
+                                        class="btn-ghost btn-platform btn-negotiating" style="flex:1;"><img
+                                            src="images/audible_logo.png" alt="Audible" class="platform-logo"></a>
                                 </div>
                             </div>
 
@@ -526,12 +557,14 @@
                                 <p class="asset-tier-title">[ 03 : THE DIGITAL BLUEPRINT ]</p>
                                 <span class="status-pulse-red" style="margin-bottom: 0.5rem;">COMING SOON</span>
                                 <div class="btn-ghost-group">
-                                    <span class="btn-ghost btn-disabled" style="flex:1; padding: 0.4rem 0.5rem;">[ 📱
-                                        KINDLE ]</span>
-                                    <span class="btn-ghost btn-disabled" style="flex:1; padding: 0.4rem 0.5rem;">[ 🍏
-                                        APPLE BOOKS ]</span>
-                                    <span class="btn-ghost btn-disabled" style="flex:1; padding: 0.4rem 0.5rem;">[ 📚
-                                        GOOGLE PLAY ]</span>
+                                    <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
+                                            src="images/kindle_logo.png" alt="Kindle" class="platform-logo"></span>
+                                    <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
+                                            src="images/apple_books_logo.png" alt="Apple Books"
+                                            class="platform-logo"></span>
+                                    <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
+                                            src="images/google_play_logo.png" alt="Google Play"
+                                            class="platform-logo"></span>
                                 </div>
                             </div>
 
@@ -549,7 +582,7 @@
 
                     <div class="arsenal-card bonus-card">
                         <div class="arsenal-image">
-                            <img src="images/book2.jpeg" alt="Forbidden Sex Education" />
+                            <img src="images/restricted_sexual_education.jpeg" alt="Forbidden Sex Education" />
                         </div>
                         <div class="arsenal-content">
                             <h4>FORBIDDEN SEX EDUCATION</h4>
@@ -569,8 +602,10 @@
                                     style="width: 100%; text-align: center; margin-bottom: 0.5rem; font-size: 0.75rem;">[
                                     ⚡ PRE-ORDER VOL 1 NOW ]</a>
                                 <div class="btn-ghost-group">
-                                    <span class="btn-ghost btn-disabled" style="flex:1;">[ AMAZON – SOON ]</span>
-                                    <span class="btn-ghost btn-disabled" style="flex:1;">[ FLIPKART – SOON ]</span>
+                                    <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
+                                            src="images/amazon_logo.png" alt="Amazon" class="platform-logo"></span>
+                                    <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
+                                            src="images/flipkart_logo.png" alt="Flipkart" class="platform-logo"></span>
                                 </div>
                             </div>
 
@@ -578,12 +613,15 @@
                             <div class="asset-tier">
                                 <p class="asset-tier-title">[ 02 : AUDIO INTELLIGENCE (NEGOTIATING) ]</p>
                                 <div class="btn-ghost-group">
-                                    <a href="#negotiating" class="btn-ghost btn-negotiating"
-                                        style="flex:1; padding: 0.4rem 0.5rem;">[ 🎧 KUKU FM ]</a>
-                                    <a href="#negotiating" class="btn-ghost btn-negotiating"
-                                        style="flex:1; padding: 0.4rem 0.5rem;">[ 🎧 STORYTEL ]</a>
-                                    <a href="#negotiating" class="btn-ghost btn-negotiating"
-                                        style="flex:1; padding: 0.4rem 0.5rem;">[ 🎧 AUDIBLE ]</a>
+                                    <a href="https://kukufm.com" target="_blank"
+                                        class="btn-ghost btn-platform btn-negotiating" style="flex:1;"><img
+                                            src="images/Kukufm_logo.png" alt="Kuku FM" class="platform-logo"></a>
+                                    <a href="https://www.storytel.com" target="_blank"
+                                        class="btn-ghost btn-platform btn-negotiating" style="flex:1;"><img
+                                            src="images/storytel_logo.png" alt="Storytel" class="platform-logo"></a>
+                                    <a href="https://www.audible.in" target="_blank"
+                                        class="btn-ghost btn-platform btn-negotiating" style="flex:1;"><img
+                                            src="images/audible_logo.png" alt="Audible" class="platform-logo"></a>
                                 </div>
                             </div>
 
@@ -591,10 +629,11 @@
                             <div class="asset-tier">
                                 <p class="asset-tier-title">[ 03 : DIGITAL BLUEPRINT (COMING SOON) ]</p>
                                 <div class="btn-ghost-group">
-                                    <span class="btn-ghost btn-disabled" style="flex:1; padding: 0.4rem 0.5rem;">[ 📱
-                                        KINDLE ]</span>
-                                    <span class="btn-ghost btn-disabled" style="flex:1; padding: 0.4rem 0.5rem;">[ 🍏
-                                        APPLE BOOKS ]</span>
+                                    <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
+                                            src="images/kindle_logo.png" alt="Kindle" class="platform-logo"></span>
+                                    <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
+                                            src="images/apple_books_logo.png" alt="Apple Books"
+                                            class="platform-logo"></span>
                                 </div>
                             </div>
 
@@ -613,7 +652,7 @@
                     <!-- REGULAR CARDS (BOTTOM) -->
                     <div class="arsenal-card">
                         <div class="arsenal-image">
-                            <img src="images/book1.jpeg" alt="From Blue Collar To White Coat" />
+                            <img src="images/from_blue_collar_to_white_coat.jpeg" alt="From Blue Collar To White Coat" />
                         </div>
                         <div class="arsenal-content">
                             <h4>FROM BLUE COLLAR TO WHITE COAT 🥼</h4>
@@ -630,7 +669,7 @@
 
                     <div class="arsenal-card">
                         <div class="arsenal-image">
-                            <img src="images/NSMU_casefiles.jpeg" alt="Detective Tox" />
+                            <img src="images/TOX.png" alt="Detective Tox" />
                         </div>
                         <div class="arsenal-content">
                             <h4>DETECTIVE TOX: CASEBOOK OF MEDICAL CRIMES 🩸</h4>
@@ -648,7 +687,7 @@
 
                     <div class="arsenal-card">
                         <div class="arsenal-image">
-                            <img src="images/taxi_driver_in_russia.jpeg"
+                            <img src="images/dairy_ambulance.jpeg"
                                 alt="Diary of the Rich Ambulance Driver Trilogy" />
                         </div>
                         <div class="arsenal-content">
@@ -672,6 +711,23 @@
                                 <a href="contact.html#waitlist" class="btn btn-gold-glow"
                                     style="width: 100%; text-align: center; margin-top: 0.5rem; font-size: 0.75rem;">[
                                     🗄️ UNLOCK THE TRILOGY (WAITLIST) ]</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arsenal-card">
+                        <div class="arsenal-image">
+                            <img src="images/TOX.png" alt="Detective Tox" />
+                        </div>
+                        <div class="arsenal-content">
+                            <h4>DETECTIVE TOX: CASEBOOK OF MEDICAL CRIMES 🩸</h4>
+                            <p class="tagline">"Some murders leave no wounds." Step into the dark intersection of
+                                clinical intelligence and untraceable crimes. An elite medical thriller decoding the
+                                anatomy of the perfect murder.</p>
+                            <p class="status">Medical Crime Thriller &amp; Fiction (English &amp; Malayalam)</p>
+                            <div class="arsenal-actions">
+                                <a href="contact.html#waitlist" class="btn btn-gold-glow"
+                                    style="width: 100%; text-align: center; margin-top: 1rem; font-size: 0.75rem;">[ 🚨
+                                    ENTER THE CRIME SCENE (WAITLIST) ]</a>
                             </div>
                         </div>
                     </div>
@@ -726,7 +782,7 @@
                 <div class="podcast-grid animate-up">
                     <!-- Podcast 1 -->
                     <div class="podcast-card">
-                        <img src="images/book1.jpeg" alt="Vitals and Villains Podcast" class="podcast-cover" />
+                        <img src="images/vitals-and-vitamins.jpeg" alt="Vitals and Villains Podcast" class="podcast-cover" />
                         <h3
                             style="font-family: var(--font-heading); font-size: 1.5rem; letter-spacing: 0.1em; margin-bottom: 0.5rem; color: #fff;">
                             VITALS AND VILLAINS</h3>
@@ -734,12 +790,13 @@
                             style="color: rgba(255,255,255,0.6); font-family: 'Inter', sans-serif; font-size: 0.9rem; margin-bottom: 2rem;">
                             Unfiltered conversations on peak performance and survival.</p>
                         <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer"
-                            class="btn-spotify">🎧 LISTEN ON SPOTIFY</a>
+                            class="btn-spotify btn-platform"><img
+                                src="images/spotify_logo.png" alt="Spotify" class="platform-logo"></a>
                     </div>
 
                     <!-- Podcast 2 -->
                     <div class="podcast-card">
-                        <img src="images/vitals-and-vitamins.jpeg" alt="Echoes of Evidence Podcast"
+                        <img src="images/NSMU_casefiles.jpeg" alt="Echoes of Evidence Podcast"
                             class="podcast-cover" />
                         <h3
                             style="font-family: var(--font-heading); font-size: 1.5rem; letter-spacing: 0.1em; margin-bottom: 0.5rem; color: #fff;">
@@ -748,7 +805,8 @@
                             style="color: rgba(255,255,255,0.6); font-family: 'Inter', sans-serif; font-size: 0.9rem; margin-bottom: 2rem;">
                             Mastering the unspoken clinical truths.</p>
                         <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer"
-                            class="btn-spotify">🎧 LISTEN ON SPOTIFY</a>
+                            class="btn-spotify btn-platform"><img
+                                src="images/spotify_logo.png" alt="Spotify" class="platform-logo"></a>
                     </div>
                 </div>
             </div>
@@ -1067,37 +1125,25 @@
                                 </a>
 
                                 <!-- Amazon -->
-                                <a href="#" style="
-                                    display: inline-flex; align-items: center; gap: 0.6rem;
-                                    background: #111; border: 1px solid rgba(255,153,0,0.3);
-                                    padding: 0.6rem 1.1rem; border-radius: 6px;
-                                    color: #ff9900; text-decoration: none;
-                                    font-family: 'Space Mono', monospace; font-size: 0.7rem;
-                                    letter-spacing: 0.08em; transition: all 0.3s;
-                                " onmouseover="this.style.borderColor='rgba(255,153,0,0.8)';this.style.background='rgba(255,153,0,0.08)'"
-                                    onmouseout="this.style.borderColor='rgba(255,153,0,0.3)';this.style.background='#111'">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#ff9900">
-                                        <path
-                                            d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.747.076-1.051-.872-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.732-1.641-4.732-4.927 0-2.565 1.391-4.309 3.371-5.164 1.715-.754 4.11-.891 5.942-1.097v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.819-1.773-.819-1.205 0-2.277.618-2.54 1.897-.054.285-.262.567-.549.582l-3.064-.333c-.259-.058-.548-.266-.474-.661C5.9 2.686 8.771 1.875 11.35 1.875c1.316 0 3.034.349 4.072 1.347 1.316 1.228 1.191 2.869 1.191 4.654v4.215c0 1.267.525 1.825 1.02 2.509.174.245.212.535-.009.716l-2.471 2.479h.001zm3.049 2.408c-.218-.169-.231-.405-.012-.601 1.493-1.245 1.763-1.819 1.763-2.716v-.265c0-.912-.617-1.386-1.512-1.386H19.4c-.277 0-.494-.224-.494-.501V13.62c0-.277.217-.501.494-.501H20.432c1.487 0 2.568.996 2.568 2.623 0 1.614-.762 2.818-2.807 4.461z" />
-                                    </svg>
-                                    Amazon
+                                <a href="https://www.amazon.in" target="_blank" style="
+                                    display: inline-flex; align-items: center; justify-content: center;
+                                    background: none; border: none; padding: 0.5rem;
+                                    transition: transform 0.3s; text-decoration: none; cursor: pointer;
+                                " onmouseover="this.style.transform='scale(1.12)'"
+                                    onmouseout="this.style.transform='scale(1)'">
+                                    <img src="images/amazon_logo.png" alt="Amazon"
+                                        style="height: 90px; width: auto; object-fit: contain;">
                                 </a>
 
                                 <!-- Flipkart -->
-                                <a href="#" style="
-                                    display: inline-flex; align-items: center; gap: 0.6rem;
-                                    background: #111; border: 1px solid rgba(40,116,240,0.3);
-                                    padding: 0.6rem 1.1rem; border-radius: 6px;
-                                    color: #2874f0; text-decoration: none;
-                                    font-family: 'Space Mono', monospace; font-size: 0.7rem;
-                                    letter-spacing: 0.08em; transition: all 0.3s;
-                                " onmouseover="this.style.borderColor='rgba(40,116,240,0.8)';this.style.background='rgba(40,116,240,0.08)'"
-                                    onmouseout="this.style.borderColor='rgba(40,116,240,0.3)';this.style.background='#111'">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#2874f0">
-                                        <path
-                                            d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm5 14l-4-4h2.5V8h3v4H16l-4 4z" />
-                                    </svg>
-                                    Flipkart
+                                <a href="https://www.flipkart.com" target="_blank" style="
+                                    display: inline-flex; align-items: center; justify-content: center;
+                                    background: none; border: none; padding: 0.5rem;
+                                    transition: transform 0.3s; text-decoration: none; cursor: pointer;
+                                " onmouseover="this.style.transform='scale(1.12)'"
+                                    onmouseout="this.style.transform='scale(1)'">
+                                    <img src="images/flipkart_logo.png" alt="Flipkart"
+                                        style="height: 90px; width: auto; object-fit: contain;">
                                 </a>
 
                                 <!-- WhatsApp -->
@@ -1217,19 +1263,115 @@
                 style="padding: 6rem 0; background: #050505; position: relative; border-top: 1px solid rgba(255,255,255,0.05);">
                 <div class="container relative z-10">
 
-                    <!-- HIGH-LEVEL BADGE: PEDIATRICS OLYMPIAD -->
-                    <div class="olympiad-badge animate-up"
-                        style="display: flex; justify-content: center; margin-bottom: 5rem;">
-                        <div
-                            style="background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 60%); padding: 3rem; border-radius: 50%; display: flex; flex-direction: column; align-items: center; border: 1px solid rgba(212,175,55,0.15); box-shadow: 0 0 50px rgba(212,175,55,0.05);">
-                            <div
-                                style="font-size: 3.5rem; margin-bottom: 0.8rem; text-shadow: 0 0 30px rgba(212,175,55,0.6); line-height: 1;">
-                                🏅</div>
-                            <h3
-                                style="color: var(--gold); font-family: var(--font-heading); letter-spacing: 0.2em; text-transform: uppercase; font-size: 1.1rem; text-align: center; line-height: 1.5;">
-                                PEDIATRICS OLYMPIAD 2025<br><span
-                                    style="color: #fff; font-size: 1.5rem; letter-spacing: 0.1em;">GLOBAL RANK 2</span>
-                            </h3>
+                    <!-- HIGH-LEVEL BADGES: OLYMPIAD AND CHESS -->
+                    <style>
+                        .achievement-card {
+                            background: #0b0b0b;
+                            backdrop-filter: blur(12px);
+                            -webkit-backdrop-filter: blur(12px);
+                            border-radius: 20px;
+                            padding: 2.5rem;
+                            border: 1px solid rgba(255, 255, 255, 0.04);
+                            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+                            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+                            display: flex;
+                            flex-direction: column;
+                            position: relative;
+                            overflow: hidden;
+                        }
+
+                        .achievement-card::before {
+                            content: '';
+                            position: absolute;
+                            inset: 0;
+                            border-radius: 20px;
+                            padding: 1px;
+                            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0) 60%);
+                            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                            -webkit-mask-composite: xor;
+                            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                            mask-composite: exclude;
+                            pointer-events: none;
+                        }
+
+                        .achievement-card:hover {
+                            transform: translateY(-6px);
+                            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.1);
+                            border-color: rgba(212, 175, 55, 0.2);
+                        }
+
+                        .achievement-card:hover::before {
+                            background: linear-gradient(135deg, rgba(212,175,55,0.4), rgba(212,175,55,0) 60%);
+                        }
+
+                        .achievement-icon {
+                            font-size: 2.2rem;
+                            color: #ffffff;
+                            margin-bottom: 1.5rem;
+                            line-height: 1;
+                        }
+                        
+                        .ac-golden-icon {
+                            text-shadow: 0 0 20px rgba(212,175,55,0.5);
+                        }
+
+                        .achievement-title {
+                            font-family: 'Inter', sans-serif;
+                            font-size: 1.25rem;
+                            font-weight: 700;
+                            color: #ffffff;
+                            text-transform: uppercase;
+                            letter-spacing: 0.05em;
+                            margin-bottom: 0.6rem;
+                            line-height: 1.35;
+                        }
+
+                        .achievement-rank {
+                            font-family: 'Inter', sans-serif;
+                            font-size: 0.75rem;
+                            color: #888888;
+                            text-transform: uppercase;
+                            letter-spacing: 0.1em;
+                            margin-bottom: 1.5rem;
+                        }
+
+                        .achievement-desc {
+                            font-family: 'Inter', sans-serif;
+                            font-size: 0.95rem;
+                            color: #aaaaaa;
+                            line-height: 1.6;
+                            margin-bottom: 2rem;
+                        }
+
+                        .achievement-highlight {
+                            margin-top: auto;
+                            font-family: 'Inter', sans-serif;
+                            font-size: 0.85rem;
+                            font-weight: 600;
+                            color: #D4AF37;
+                            text-transform: uppercase;
+                            letter-spacing: 0.05em;
+                        }
+                    </style>
+
+                    <div class="achievements-grid animate-up" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 5rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                        
+                        <!-- PEDIATRICS OLYMPIAD -->
+                        <div class="achievement-card">
+                            <div class="achievement-icon ac-golden-icon">🏅</div>
+                            <h3 class="achievement-title">PEDIATRICS OLYMPIAD 2025</h3>
+                            <p class="achievement-rank">GLOBAL RANK 2 • INTERNATIONAL</p>
+                            <p class="achievement-desc">2nd Prize – Global Pediatrics Clinical Olympiad, showcasing top-tier diagnostic acumen.</p>
+                            <p class="achievement-highlight">ELITE CLINICAL RECOGNITION</p>
+                        </div>
+
+                        <!-- CHESS CHAMPIONSHIP -->
+                        <div class="achievement-card">
+                            <div class="achievement-icon">♞</div>
+                            <h3 class="achievement-title">INTERFACULTY CHESS CHAMPIONSHIP 2025</h3>
+                            <p class="achievement-rank">RANK 3 • ARKHANGELSK, RUSSIA</p>
+                            <p class="achievement-desc">3rd Prize – Interfaculty Chess Tournament, demonstrating strategic intelligence and foresight.</p>
+                            <p class="achievement-highlight">THE ONLY INDIAN IN THE TOP 3</p>
                         </div>
                     </div>
 
@@ -1307,9 +1449,12 @@
                                     style="font-family: var(--font-heading); font-size: 1.8rem; color: #fff; margin-bottom: 1.2rem;">
                                     Pediatrics Olympiad 2025 — Global Rank 2</h3>
                                 <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
-                                    Competed against thousands of medical students worldwide in an elite-level pediatrics
-                                    examination — securing <strong style="color: #fff;">Global Rank 2</strong>. A clinical
-                                    display of diagnostic mastery, pattern recognition, and zero-margin-of-error decision-making
+                                    Competed against thousands of medical students worldwide in an elite-level
+                                    pediatrics
+                                    examination — securing <strong style="color: #fff;">Global Rank 2</strong>. A
+                                    clinical
+                                    display of diagnostic mastery, pattern recognition, and zero-margin-of-error
+                                    decision-making
                                     under pressure.</p>
                             </div>
 

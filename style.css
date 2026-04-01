@@ -1,3 +1,12 @@
+/* CUSTOM FONT: Malayalam */
+@font-face {
+    font-family: 'FN Mahitha';
+    src: url('FN-Mahitha-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* ROOT VARIABLES */
 :root {
     --bg-dark: #000000;
@@ -582,7 +591,7 @@ body.loader-hidden .cinematic-loader {
 /* GLOBAL AUTHORITY */
 .authority-showcase {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2px;
     background: rgba(255, 255, 255, 0.05);
     /* Thin borders effect */
@@ -637,7 +646,7 @@ body.loader-hidden .cinematic-loader {
 
 .arsenal-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
 }
 
@@ -1582,7 +1591,7 @@ body.loader-hidden .cinematic-loader {
 
 .evidence-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     padding: 0 4vw;
 }
@@ -2037,12 +2046,14 @@ body.loader-hidden .cinematic-loader {
 
 /* Typography */
 .malayalam-subtitle {
-    font-family: var(--font-story);
-    font-size: 0.9rem;
-    color: var(--gold);
+    font-family: 'FN Mahitha', var(--font-story);
+    font-size: 1.75rem;
+    letter-spacing: 0.08em;
+    color: #D4AF37;
     display: block;
-    margin-top: 0.25rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.6rem;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
 }
 
 .asset-tier-title {
@@ -2113,6 +2124,68 @@ body.loader-hidden .cinematic-loader {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+.btn-platform {
+    padding: 0.2rem !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-platform:hover {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: scale(1.12);
+}
+
+.btn-platform img.platform-logo {
+    display: block;
+    height: 90px;
+    width: auto;
+    max-width: 250px;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.btn-platform:hover img.platform-logo {
+    opacity: 1;
+}
+
+.btn-platform.btn-disabled {
+    opacity: 0.3 !important;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.btn-platform.btn-disabled img.platform-logo {
+    opacity: 0.6;
+}
+
+.btn-spotify {
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0.5rem !important;
+    box-shadow: none !important;
+}
+
+.btn-spotify:hover {
+    background: none !important;
+    box-shadow: none !important;
+    transform: scale(1.12);
+}
+
+.btn-spotify img.platform-logo {
+    filter: none;
+    height: 140px;
 }
 
 .btn-ghost:hover {
@@ -2249,4 +2322,149 @@ body.loader-hidden .cinematic-loader {
     .podcast-grid {
         grid-template-columns: 1fr;
     }
+}
+/* --- THE ARSENAL GRID SYSTEM --- */
+.arsenal-page {
+    padding-top: 150px;
+    background: var(--bg-dark, #020202);
+    min-height: 100vh;
+}
+
+.hero-quote {
+    font-size: 2rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    max-width: 800px;
+    margin: 0 auto 5rem;
+}
+
+.hero-quote .dramatic-pause {
+    display: block;
+    font-style: italic;
+    opacity: 0.9;
+    font-size: 2.2rem;
+    margin: 4.5rem 0;
+}
+
+.hero-quote .golden-highlight {
+    color: var(--bg-dark, #020202);
+    background: linear-gradient(120deg, #FFD700, #B8860B);
+    padding: 0.1rem 0.6rem;
+    font-weight: 700;
+}
+
+.arsenal-category-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,215,0,0.2);
+    padding-bottom: 1rem;
+}
+
+.arsenal-category-subtitle {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-top: -1rem;
+    margin-bottom: 4rem;
+}
+
+.arsenal-grid {
+    display: grid;
+    gap: 3rem;
+    margin-bottom: 6rem;
+}
+
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+
+@media (max-width: 992px) {
+    .grid-cols-4, .grid-cols-5, .grid-cols-6 { grid-template-columns: repeat(2, 1fr); }
+    .grid-cols-3 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .grid-cols-2, .grid-cols-4, .grid-cols-5, .grid-cols-6 { grid-template-columns: 1fr; }
+}
+
+.arsenal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.arsenal-logo-container {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 4px 15px rgba(255,255,255,0.05));
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.arsenal-logo-container:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0 8px 25px rgba(255,255,255,0.1));
+}
+
+.arsenal-logo-container img, .arsenal-logo-container svg {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.arsenal-logo-container.grayscale {
+    filter: grayscale(100%) opacity(0.8) drop-shadow(0 4px 15px rgba(255,255,255,0.05));
+}
+.arsenal-logo-container.grayscale:hover {
+    filter: grayscale(0%) opacity(1) drop-shadow(0 8px 25px rgba(255,255,255,0.1));
+}
+
+.app-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.micro-skill {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.creative-sub-category {
+    margin-bottom: 5rem;
+}
+
+.creative-sub-category h4 {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.creative-sub-category .sub-desc {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
 }
