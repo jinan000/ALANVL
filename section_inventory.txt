@@ -1,0 +1,17 @@
+54: <section class="journey-scroll" id="journey">
+89: <section class="section philosophy" id="about"
+135: <section class="section film-strip-journey" id="journey-reel"
+315: <section class="section detective" id="intelligence">
+491: <section class="section arsenal" id="arsenal">
+717: <section
+750: <section class="section audio-intelligence" id="audio"
+794: <section class="section project-red" id="classified"
+818: <section class="section empathy">
+832: <section class="section book" id="book"
+1154: <section class="section mega-authority"
+1350: <section class="section empire" id="ecosystem"
+1518: <section class="section clinical-mentoring"
+1591: <section class="section achievements" id="evolution">
+1641: <section class="section evidence-room" id="archives">
+1674: <section class="section live-command"
+1694: <section style="background: #020202; padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
