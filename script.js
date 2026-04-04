@@ -359,6 +359,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // --- INSTAGRAM COUNTER ANIMATION ---
+    const instaCounters = document.querySelectorAll('.insta-counter');
+    if (instaCounters.length > 0) {
+        instaCounters.forEach(counter => {
+            const target = parseFloat(counter.getAttribute('data-target'));
+            let obj = { val: 0 };
+            
+            ScrollTrigger.create({
+                trigger: counter,
+                start: "top 90%",
+                once: true,
+                onEnter: () => {
+                    gsap.to(obj, {
+                        val: target,
+                        duration: 2.5,
+                        ease: "power2.out",
+                        onUpdate: () => {
+                            counter.innerText = obj.val.toFixed(1);
+                        }
+                    });
+                }
+            });
+        });
+    }
+
     // ---- LOGO LOOP ----
     function createLogoLoop(containerId, trackId, logosArray, speed) {
         const container = document.getElementById(containerId);
@@ -457,19 +482,19 @@ document.addEventListener("DOMContentLoaded", () => {
         { src: 'images/stanford.png', alt: 'Stanford University' },
         { src: 'images/who.png',      alt: 'World Health Organization' },
         { src: 'images/iarc.png',     alt: 'IARC' }
-    ], 100);
+    ], 60);
 
     // Initialize Financial Loop
     createLogoLoop('financial-loop', 'financial-loop-track', [1,2,3,4].map(n => ({
         src: `images/finance_logo${n}.png`,
         alt: `Financial Institution ${n}`
-    })), 80);
+    })), 130);
 
     // Initialize Ecosystem Loop
     createLogoLoop('ecosystem-loop', 'ecosystem-loop-track', [8,9,11,12,13,15,16].map(n => ({
         src: `images/logo${n}.png`,
         alt: `Medmelo Brand ${n}`
-    })), 90);
+    })), 95);
 
     // --- EMPIRE NEURAL NETWORK INTERFACE (DEPRECATED) ---
     // Section replaced with native SVG network and standalone Canvas architecture in DOM.

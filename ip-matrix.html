@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASSIFIED: Corporate Asset Registry</title>
+
+    <!-- Luxury 4-Font System -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400;1,6..96,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background: #000; color: #fff; line-height: 1.6; min-height: 100vh; overflow-x: hidden; padding: 0; margin: 0; }
+        .ip-header { padding: 4rem 2rem 2rem; border-bottom: 1px solid rgba(212,175,55,0.2); background: linear-gradient(to bottom, #0a0a0a, #000); text-align: center; position: relative; }
+        .ip-header::after { content: ''; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%); width: 100px; height: 1px; background: var(--gold); box-shadow: 0 0 15px var(--gold); }
+        
+        .registry-container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+        
+        .ip-section-title { font-family: 'Space Mono', monospace; font-size: 1.1rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+        .ip-section-title::after { content: ''; flex-grow: 1; height: 1px; background: rgba(255,255,255,0.1); }
+        
+        .asset-group { margin-bottom: 3rem; }
+        .asset-group-title { font-family: var(--font-heading); font-size: 1.2rem; color: #fff; margin-bottom: 1rem; letter-spacing: 0.1em; text-transform: uppercase; border-left: 3px solid var(--gold); padding-left: 1rem; }
+        
+        .asset-list { list-style: none; padding: 0; margin: 0; }
+        .asset-item { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem; transition: background 0.3s; }
+        .asset-item:hover { background: rgba(255,255,255,0.02); }
+        .asset-name { font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 500; color: rgba(255,255,255,0.9); }
+        .asset-meta { font-family: 'Space Mono', monospace; font-size: 0.75rem; color: rgba(212,175,55,0.8); }
+        .asset-desc { font-family: 'Inter', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.4); width: 100%; margin-top: 0.2rem; }
+        
+        .domain-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+        .domain-item { background: #050505; border: 1px solid rgba(255,255,255,0.05); padding: 1rem; border-radius: 4px; font-family: 'Space Mono', monospace; font-size: 0.85rem; color: rgba(255,255,255,0.7); text-align: center; transition: all 0.3s; }
+        .domain-item:hover { border-color: rgba(212,175,55,0.4); color: var(--gold); background: #0a0a0a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        
+        .iso-card { background: linear-gradient(135deg, #0a0a0a, #050505); border: 1px solid rgba(212,175,55,0.2); border-radius: 8px; padding: 2rem; flex: 1; min-width: 200px; text-align: center; box-shadow: inset 0 1px 0 rgba(255,255,255,0.05); }
+        .iso-title { font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.05em; }
+        
+        .return-btn { display: inline-flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.6); font-family: 'Space Mono', monospace; font-size: 0.8rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; transition: color 0.3s; position: absolute; left: 2rem; top: 2rem; }
+        .return-btn:hover { color: var(--gold); }
+        
+        @media (max-width: 768px) {
+            .return-btn { position: relative; left: 0; top: 0; margin-bottom: 2rem; justify-content: center; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="ip-header">
+        <a href="index.html" class="return-btn">← TERMINATE SESSION</a>
+        <h1 style="font-family: 'Space Mono', monospace; font-size: 1rem; color: rgba(255,255,255,0.5); letter-spacing: 0.3em; margin-bottom: 1rem;">CLASSIFIED: CORPORATE ASSET REGISTRY</h1>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-style: italic; color: #fff; max-width: 700px; margin: 0 auto; line-height: 1.4;">"True power isn't just in building a brand; it's in owning its existence."</p>
+    </header>
+
+    <div class="registry-container">
+        
+        <!-- SECTION I: TRADEMARKS -->
+        <div style="margin-bottom: 5rem;">
+            <h2 class="ip-section-title">🛡️ I. GLOBAL TRADEMARK REGISTRY (36 ASSETS)</h2>
+            
+            <div class="asset-group">
+                <h3 class="asset-group-title">The Medmelo Ecosystem (Healthcare, Tech & Corporate)</h3>
+                <ul class="asset-list">
+                    <li class="asset-item">
+                        <span class="asset-name">Medmelo</span>
+                        <span class="asset-meta">[Class 9, 41] Registered · [Class 5, 35, 37, 42, 44] Pending</span>
+                        <div class="asset-desc">Healthcare, Tech, Pharmacy, Energy & Clinical Services</div>
+                    </li>
+                    <li class="asset-item">
+                        <span class="asset-name">Medmelo Empire</span>
+                        <span class="asset-meta">[Class 35]</span>
+                        <div class="asset-desc">Corporate Management</div>
+                    </li>
+                    <li class="asset-item">
+                        <span class="asset-name">Medmelo Hope</span>
+                        <span class="asset-meta">[Class 45]</span>
+                        <div class="asset-desc">Charitable Operations</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="asset-group">
+                <h3 class="asset-group-title">Artificial Intelligence & Tech</h3>
+                <ul class="asset-list">
+                    <li class="asset-item">
+                        <span class="asset-name">Melo AI</span>
+                        <span class="asset-meta">[Class 9, 42]</span>
+                    </li>
+                    <li class="asset-item">
+                        <span class="asset-name">Melogence</span>
+                        <span class="asset-meta">[Class 9, 42]</span>
+                    </li>
+                    <li class="asset-item">
+                        <span class="asset-name">Zaibrate</span>
+                        <span class="asset-meta">[Class 9] Registered</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="asset-group">
+                <h3 class="asset-group-title">Lifestyle, Food & Hospitality</h3>
+                <ul class="asset-list">
+                    <li class="asset-item"><span class="asset-name">Neem Rosa</span><span class="asset-meta">[Class 43, 44]</span></li>
+                    <li class="asset-item"><span class="asset-name">The Curry Chapter</span><span class="asset-meta">[Class 43]</span></li>
+                    <li class="asset-item"><span class="asset-name">Alfaquino</span><span class="asset-meta">[Class 32, 35]</span></li>
+                    <li class="asset-item"><span class="asset-name">Picklio</span><span class="asset-meta">[Class 29]</span></li>
+                    <li class="asset-item"><span class="asset-name">Super Chantha</span><span class="asset-meta">[Class 35]</span></li>
+                </ul>
+            </div>
+
+            <div class="asset-group">
+                <h3 class="asset-group-title">Real Estate, Logistics & Finance</h3>
+                <ul class="asset-list">
+                    <li class="asset-item"><span class="asset-name">Harbor29</span><span class="asset-meta">[Class 35, 39, 42]</span></li>
+                    <li class="asset-item"><span class="asset-name">Grandline Builders</span><span class="asset-meta">[Class 37]</span></li>
+                    <li class="asset-item"><span class="asset-name">Raftel Projects</span><span class="asset-meta">[Class 42]</span></li>
+                    <li class="asset-item"><span class="asset-name">Aurex / Aura of Aurex</span><span class="asset-meta">[Class 36, 35]</span></li>
+                </ul>
+            </div>
+
+            <div class="asset-group">
+                <h3 class="asset-group-title">Luxury & Matrimony</h3>
+                <ul class="asset-list">
+                    <li class="asset-item"><span class="asset-name">Aurex Jewels</span><span class="asset-meta">[Class 14, 35]</span></li>
+                    <li class="asset-item"><span class="asset-name">Findmyatma</span><span class="asset-meta">[Class 45]</span></li>
+                    <li class="asset-item"><span class="asset-name">Detox Days Tours & Travels</span><span class="asset-meta">[Class 39]</span></li>
+                </ul>
+            </div>
+
+            <div class="asset-group">
+                <h3 class="asset-group-title">Publishing & Literature</h3>
+                <ul class="asset-list">
+                    <li class="asset-item">
+                        <span class="asset-name">Medmelo Publishing Assets</span>
+                        <span class="asset-meta">[Class 16]</span>
+                        <div class="asset-desc">The Rich Ambulance Driver / The Forbidden Sex Education / From Blue Collar to White Coat</div>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <!-- SECTION II: DOMAINS -->
+        <div style="margin-bottom: 5rem;">
+            <h2 class="ip-section-title">🌐 II. THE DIGITAL REAL ESTATE (34 DOMAINS)</h2>
+            
+            <div class="asset-group">
+                <h3 class="asset-group-title">The Persona & Literature</h3>
+                <div class="domain-grid">
+                    <div class="domain-item">alanvl.com</div>
+                    <div class="domain-item">dralanvl.com</div>
+                    <div class="domain-item">therichambulancedriver.com</div>
+                    <div class="domain-item">toxicxposer.com</div>
+                    <div class="domain-item">toxicxposer.in</div>
+                    <div class="domain-item">forbiddensexed.com</div>
+                    <div class="domain-item">medmelobooks.com</div>
+                    <div class="domain-item">frombluecollartowhitecoat.com</div>
+                </div>
+            </div>
+
+            <div class="asset-group">
+                <h3 class="asset-group-title">The Medmelo Core</h3>
+                <div class="domain-grid">
+                    <div class="domain-item">medmelo.com</div>
+                    <div class="domain-item">medmelo.in</div>
+                    <div class="domain-item">medmeloenergy.com</div>
+                    <div class="domain-item">medmelohealthcare.com</div>
+                    <div class="domain-item">medmelohope.com</div>
+                    <div class="domain-item">medmeloinvestments.com</div>
+                    <div class="domain-item">medmelolabs.com</div>
+                    <div class="domain-item">medmelolearning.com</div>
+                    <div class="domain-item">medmelonexus.com</div>
+                    <div class="domain-item">medmelopharmacy.com</div>
+                    <div class="domain-item">medmeloplacements.com</div>
+                    <div class="domain-item">medmelostudyabroad.com</div>
+                </div>
+            </div>
+
+            <div class="asset-group">
+                <h3 class="asset-group-title">The AI & Tech Fleet</h3>
+                <div class="domain-grid">
+                    <div class="domain-item">meloai.in</div>
+                    <div class="domain-item">harbor29.com</div>
+                    <div class="domain-item">raftelprojects.com</div>
+                    <div class="domain-item">grandlinebuilders.com</div>
+                </div>
+            </div>
+
+            <div class="asset-group">
+                <h3 class="asset-group-title">The Lifestyle Fleet</h3>
+                <div class="domain-grid">
+                    <div class="domain-item">alfaquino.com</div>
+                    <div class="domain-item">alfaquino.in</div>
+                    <div class="domain-item">aurex.com</div>
+                    <div class="domain-item">detoxdays.in</div>
+                    <div class="domain-item">findmyatma.com</div>
+                    <div class="domain-item">healthierindia.org</div>
+                    <div class="domain-item">neemrosa.com</div>
+                    <div class="domain-item">picklio.in</div>
+                    <div class="domain-item">superchantha.com</div>
+                    <div class="domain-item">thecurrychapter.com</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION III: ISO CERTIFICATIONS -->
+        <div>
+            <h2 class="ip-section-title">🏅 III. GLOBAL STANDARD CERTIFICATIONS (ISO)</h2>
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                <div class="iso-card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--gold);">📜</div>
+                    <div class="iso-title">Medmelo Ventures Private Limited</div>
+                </div>
+                <div class="iso-card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--gold);">📜</div>
+                    <div class="iso-title">Medmelo Pharmacy</div>
+                </div>
+                <div class="iso-card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--gold);">📜</div>
+                    <div class="iso-title">Neem Rosa</div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 6rem;">
+            <a href="index.html" class="btn btn-outline-gold" style="font-family: 'Space Mono', monospace; letter-spacing: 0.1em; display: inline-block;">[ RETURN TO COMMAND CENTER ]</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
