@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Intel Vault | Medmelo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #020202;
+            --gold: #d4af37;
+            --text-main: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.6);
+            --border-glow: rgba(212, 175, 55, 0.15);
+            --red-alert: #D62828;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            /* Scanline effect over entire page */
+            background-image: 
+                linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: #000;
+        }
+
+        /* Nav Override */
+        .vault-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .btn-override {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            background: rgba(0,0,0,0.5);
+        }
+        .btn-override:hover {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .system-status {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .pulse-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--gold);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        /* Section Layouts */
+        .vault-section {
+            padding: 8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-id {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--gold);
+            letter-spacing: 0.25em;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* Specific Modules (To be filled) */
+        
+    </style>
+</head>
+<body>
+
+    <nav class="vault-nav">
+        <a href="index.html" class="btn-override">[ &#60; OVERRIDE // RETURN TO COMMAND CENTER ]</a>
+        <div class="system-status">
+            <div class="pulse-dot"></div>
+            DATABASE: SECURE
+        </div>
+    </nav>
+
+    <!-- HERO / TITLE -->
+    <header class="vault-section" style="padding-top: 15rem; border-bottom: none; text-align: center; background: radial-gradient(circle at center, rgba(212,175,55,0.05) 0%, transparent 60%);">
+        <div class="container">
+            <h1 style="font-family: 'Cinzel', serif; font-size: clamp(3rem, 7vw, 6rem); letter-spacing: 0.1em; color: #fff; text-shadow: 0 0 30px rgba(255,255,255,0.1); margin-bottom: 1.5rem;">THE INTEL VAULT</h1>
+            <p style="font-family: 'Space Mono', monospace; font-size: clamp(0.9rem, 2vw, 1.2rem); color: var(--gold); letter-spacing: 0.25em; text-transform: uppercase;">Decoded Assets &amp; Tactical Frameworks</p>
+            <div style="width: 1px; height: 100px; background: linear-gradient(180deg, var(--gold) 0%, transparent 100%); margin: 4rem auto 0;"></div>
+        </div>
+    </header>
+
+    <!-- 1. THE LITERATURE COMMAND (Carousel) -->
+    <section class="vault-section" id="literature">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-id">[ 01 ]</div>
+                <h2 class="section-title">THE LITERATURE COMMAND</h2>
+                <div class="section-subtitle" style="color: #fff;">Forging Future Doctors through Uncompromised Medical Literature.</div>
+            </div>
+            
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Books 1-11 -->
+                    <img src="images/book1.jpeg" alt="Medical Textbook 1" class="carousel-book">
+                    <img src="images/book2.jpeg" alt="Medical Textbook 2" class="carousel-book">
+                    <img src="images/book3.jpeg" alt="Medical Textbook 3" class="carousel-book">
+                    <img src="images/book4.jpeg" alt="Medical Textbook 4" class="carousel-book">
+                    <img src="images/book5.jpeg" alt="Medical Textbook 5" class="carousel-book">
+                    <img src="images/book6.jpeg" alt="Medical Textbook 6" class="carousel-book">
+                    <img src="images/book7.jpeg" alt="Medical Textbook 7" class="carousel-book">
+                    <img src="images/book8.jpeg" alt="Medical Textbook 8" class="carousel-book">
+                    <img src="images/book9.jpeg" alt="Medical Textbook 9" class="carousel-book">
+                    <img src="images/book10.jpeg" alt="Medical Textbook 10" class="carousel-book">
+                    <img src="images/book11.jpeg" alt="Medical Textbook 11" class="carousel-book">
+                    <!-- Duplicate for infinite loop -->
+                    <img src="images/book1.jpeg" alt="Medical Textbook 1" class="carousel-book">
+                    <img src="images/book2.jpeg" alt="Medical Textbook 2" class="carousel-book">
+                    <img src="images/book3.jpeg" alt="Medical Textbook 3" class="carousel-book">
+                    <img src="images/book4.jpeg" alt="Medical Textbook 4" class="carousel-book">
+                    <img src="images/book5.jpeg" alt="Medical Textbook 5" class="carousel-book">
+                    <img src="images/book6.jpeg" alt="Medical Textbook 6" class="carousel-book">
+                    <img src="images/book7.jpeg" alt="Medical Textbook 7" class="carousel-book">
+                    <img src="images/book8.jpeg" alt="Medical Textbook 8" class="carousel-book">
+                    <img src="images/book9.jpeg" alt="Medical Textbook 9" class="carousel-book">
+                    <img src="images/book10.jpeg" alt="Medical Textbook 10" class="carousel-book">
+                    <img src="images/book11.jpeg" alt="Medical Textbook 11" class="carousel-book">
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .carousel-container {
+                width: 100vw;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                overflow: hidden;
+                padding: 4rem 0;
+                background: linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.8) 50%, rgba(10,10,10,0) 100%);
+            }
+            .carousel-container::before, .carousel-container::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 20vw;
+                height: 100%;
+                z-index: 10;
+                pointer-events: none;
+            }
+            .carousel-container::before {
+                left: 0;
+                background: linear-gradient(90deg, var(--bg-dark) 0%, transparent 100%);
+            }
+            .carousel-container::after {
+                right: 0;
+                background: linear-gradient(-90deg, var(--bg-dark) 0%, transparent 100%);
+            }
+            .carousel-track {
+                display: flex;
+                gap: 3rem;
+                width: max-content;
+                animation: scrollBooks 45s linear infinite;
+            }
+            .carousel-track:hover {
+                animation-play-state: paused;
+            }
+            .carousel-book {
+                height: 400px;
+                width: auto;
+                border-radius: 4px;
+                box-shadow: 10px 10px 30px rgba(0,0,0,0.9), 0 0 0 1px rgba(255,255,255,0.05);
+                transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), filter 0.6s ease, box-shadow 0.6s ease;
+                filter: brightness(0.4) saturate(0.5);
+                cursor: pointer;
+            }
+            .carousel-book:hover {
+                transform: translateY(-15px) scale(1.03);
+                filter: brightness(1.1) saturate(1.2);
+                z-index: 20;
+                box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 30px rgba(212,175,55,0.15), 0 0 0 1px rgba(212,175,55,0.4);
+            }
+            @keyframes scrollBooks {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(calc(-50% - 1.5rem)); }
+            }
+            
+            @media (max-width: 768px) {
+                .carousel-book { height: 280px; gap: 1.5rem; }
+            }
+        </style>
+    </section>
+    
+    <!-- 2. AUDIO INTELLIGENCE (Waveform) -->
+    <section class="vault-section" id="audio" style="background: #010101;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-id">[ 02 ]</div>
+                <h2 class="section-title" style="color: var(--gold);">AUDIO INTELLIGENCE</h2>
+                <div class="section-subtitle" style="color: #fff;">Classified Transmissions &amp; Audiobooks</div>
+            </div>
+
+            <!-- Waveform Animation -->
+            <div class="waveform-container" style="display: flex; align-items: center; justify-content: center; gap: 4px; height: 100px; margin-bottom: 4rem;">
+                <script>
+                    for(let i=0; i<50; i++) {
+                        let delay = Math.random() * -1.5;
+                        document.write(`<div class="waveform-bar" style="animation-delay: ${delay}s"></div>`);
+                    }
+                </script>
+            </div>
+
+            <style>
+                .waveform-bar {
+                    width: 3px;
+                    height: 10px;
+                    background: linear-gradient(180deg, var(--gold) 0%, rgba(212,175,55,0.2) 100%);
+                    border-radius: 4px;
+                    animation: waveformAnim 1.2s ease-in-out infinite alternate;
+                }
+                @keyframes waveformAnim {
+                    0% { height: 15px; opacity: 0.3; }
+                    100% { height: 80px; opacity: 1; filter: drop-shadow(0 0 10px var(--gold)); }
+                }
+            </style>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <!-- Audio Subcard 1 -->
+                <div style="background: rgba(10,10,10,0.6); border: 1px solid rgba(212,175,55,0.1); padding: 2.5rem; text-align: center; border-radius: 4px; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top:0; left:0; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent);"></div>
+                    <h3 style="font-family: 'Space Mono', monospace; color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase;">VITALS AND VILLAINS</h3>
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 2rem; font-weight: 500; letter-spacing: 0.1em;">[ The Medical Podcast ]</div>
+                    <a href="#" class="btn-override" style="display: inline-block;">[ INTERCEPT SIGNAL ]</a>
+                </div>
+                <!-- Audio Subcard 2 -->
+                <div style="background: rgba(10,10,10,0.6); border: 1px solid rgba(212,175,55,0.1); padding: 2.5rem; text-align: center; border-radius: 4px; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top:0; left:0; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent);"></div>
+                    <h3 style="font-family: 'Space Mono', monospace; color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase;">ECHOES OF EVIDENCE</h3>
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 2rem; font-weight: 500; letter-spacing: 0.1em;">[ Medical Audiobook ]</div>
+                    <a href="#" class="btn-override" style="display: inline-block;">[ INITIATE PLAYBACK ]</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 3. TACTICAL & CLINICAL DEPLOYMENT (Split Grid) -->
+    <section class="vault-section" id="tactical" style="background: var(--bg-dark);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-id">[ 03 ]</div>
+                <h2 class="section-title">TACTICAL &amp; CLINICAL DEPLOYMENT</h2>
+                <div class="section-subtitle" style="color: #fff;">Strategic Architecture &amp; System Domination</div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: stretch;">
+                
+                <!-- Left: Chess -->
+                <div style="border: 1px solid rgba(255,255,255,0.05); padding: 3rem; position: relative; background: radial-gradient(circle at top left, rgba(212,175,55,0.03) 0%, transparent 60%); overflow: hidden;">
+                    <!-- subtle background grid -->
+                    <div style="position: absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 20px 20px; pointer-events:none;"></div>
+                    
+                    <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 1.5rem; text-transform: uppercase;">[ STRATEGIC DOMINANCE ]</div>
+                    <h3 style="font-family: 'Cinzel', serif; font-size: 2rem; color: #fff; margin-bottom: 1rem; line-height: 1.2;">International Chess Competitor</h3>
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+                        Achieved Rank 3 globally in rigorous analytical warfare. A prior competitor in the Russia Olympiad, applying master-level cognitive frameworks directly into medical diagnostics and high-stakes business scaling.
+                    </div>
+                    
+                    <div style="background: rgba(212,175,55,0.05); border-left: 2px solid var(--gold); padding: 1rem; font-family: 'Space Mono', monospace; font-size: 0.8rem; color: #fff; text-transform: uppercase; letter-spacing: 0.1em;">
+                        STATUS: VERIFIED <span style="color: var(--gold);">// RANK 03</span>
+                    </div>
+                </div>
+
+                <!-- Right: Medmelo Framework -->
+                <div style="border: 1px solid rgba(255,255,255,0.05); padding: 3rem; position: relative; background: radial-gradient(circle at top right, rgba(214,40,40,0.03) 0%, transparent 60%); overflow: hidden;">
+                    <!-- abstract geometric bg -->
+                    <div style="position: absolute; width: 200px; height: 200px; border-radius: 50%; opacity: 0.02; border: 1px solid #fff; bottom: -50px; right: -50px;"></div>
+                    <div style="position: absolute; width: 300px; height: 300px; border-radius: 50%; opacity: 0.02; border: 1px solid #fff; bottom: -100px; right: -100px;"></div>
+
+                    <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 1.5rem; text-transform: uppercase;">[ THE MEDMELO FRAMEWORK ]</div>
+                    <h3 style="font-family: 'Cinzel', serif; font-size: 2rem; color: #fff; margin-bottom: 1rem; line-height: 1.2;">App-Based Education Revolution</h3>
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+                        Engineered the Medmelo Learning App to systematically eradicate barriers in medical education. Transforming average medical students into high-level diagnosticians through an uncompromising clinical teaching architecture.
+                    </div>
+
+                    <div style="background: rgba(214,40,40,0.05); border-left: 2px solid var(--red-alert); padding: 1rem; font-family: 'Space Mono', monospace; font-size: 0.8rem; color: #fff; text-transform: uppercase; letter-spacing: 0.1em;">
+                        DEPLOYMENT: ACTIVE <span style="color: var(--red-alert);">// 2022</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. THE DETECTIVE'S FILES -->
+    <section class="vault-section" id="detective" style="background: #000; position: relative; overflow: hidden; border-bottom: none;">
+        <!-- grainy texture -->
+        <div style="position: absolute; inset:0; opacity: 0.04; background: url('https://www.transparenttextures.com/patterns/cream-pixels.png'); pointer-events: none;"></div>
+        
+        <div class="container">
+            <div class="section-header">
+                <div class="section-id" style="color: #666;">[ CLASSIFIED: LEVEL 4 ]</div>
+                <h2 class="section-title" style="color: #eee;">THE DETECTIVE'S FILES</h2>
+                <div class="section-subtitle" style="color: #888;">High-Security Field Research Archives</div>
+            </div>
+
+            <div class="intel-document" style="max-width: 800px; margin: 0 auto; background: #fafafa; padding: 4rem; color: #111; font-family: 'Courier Prime', Courier, monospace; box-shadow: 0 0 30px rgba(0,0,0,0.6); position: relative;">
+                
+                <div style="position: absolute; top: 2rem; right: 2rem; border: 3px solid #a00; padding: 0.5rem 1rem; color: #a00; font-weight: bold; font-family: sans-serif; transform: rotate(12deg); letter-spacing: 0.2em; opacity: 0.8; font-size: 1.5rem;">TOP SECRET</div>
+                
+                <div style="border-bottom: 2px solid #111; margin-bottom: 2.5rem; padding-bottom: 1rem; display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1rem;">
+                    <div>FILE DECLASSIFIED: <span style="font-weight: normal;">2026-X</span></div>
+                    <div>AUTHOR: <span style="font-weight: normal;">CEO ALAN</span></div>
+                </div>
+
+                <div style="line-height: 1.8; font-size: 1rem;">
+                    <p style="margin-bottom: 1.5rem;"><strong>SUBJECT_01:</strong> Clinical Pathology &amp; Human Analysis.</p>
+                    <p style="margin-bottom: 1.5rem;"><span style="background: #111; color: #111; user-select: none;">[REDACTED]</span> Field research decoding the behavioral psychology behind clinical presentation. By analyzing and interrogating over <span style="background: #e6e6e6; padding: 0 5px;">1000+ patients</span>, the architecture of societal trauma and physical morbidity was fully mapped.</p>
+                    <p style="margin-bottom: 1.5rem;"><strong>OBSERVATION:</strong> Medicine is an analytical detective process mapping somatic symptoms to cellular malfunction. Emotional contamination corrupts the diagnostic grid.</p>
+                    
+                    <div style="text-align: center; margin: 4rem 0;">
+                        <span style="display:inline-block; padding: 1rem; border: 1px solid #ccc; background: white; box-shadow: 0 8px 20px rgba(0,0,0,0.2); transform: rotate(-2deg);">
+                            <img src="images/radiology1.jpeg" alt="Field Intel" style="max-width: 100%; height: auto; filter: grayscale(100%) contrast(1.2); display: block;" onerror="this.src=''; this.alt='[ ATTACHMENT MISSION START ]'; this.style.padding='4rem';">
+                        </span>
+                    </div>
+
+                    <p style="font-weight: bold;">CONCLUSION: <em style="font-weight: normal;">"The absolute truth is written strictly in the silence of the X-Ray."</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. THE RED FILES OF DETECTIVE TOX -->
+    <section class="vault-section" id="tox" style="background: radial-gradient(circle at center, #1c0202 0%, #000 80%); border-top: 1px solid rgba(214,40,40,0.1); padding: 12rem 0;">
+        <div class="container text-center">
+            <h2 style="font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 6vw, 5rem); color: var(--red-alert); font-weight: 700; margin-bottom: 1rem; text-shadow: 0 0 50px rgba(214,40,40,0.4); line-height: 1.1;">THE RED FILES</h2>
+            <div style="font-family: 'Space Mono', monospace; font-size: 0.9rem; color: #fff; letter-spacing: 0.3em; margin-bottom: 3rem; text-transform: uppercase;">[ ACCESS GRANTED. YOU ARE NOW INSIDE. ]</div>
+            
+            <p style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.7); max-width: 750px; margin: 0 auto 4rem; line-height: 1.8;">
+                You've read the credentials. You've accessed the vault. Now cross the final threshold. <strong>Detective Tox</strong> isn't just a clinical alias—it is the absolute apex of medical intuition combined with psychological dominance. Welcome to the inner circle.
+            </p>
+
+            <a href="contact.html#waitlist" class="btn-tox" style="display: inline-block; font-family: 'Space Mono', monospace; background: var(--red-alert); color: #fff; padding: 1.5rem 3.5rem; text-decoration: none; font-size: 1rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; border: 1px solid #ff4d4d; box-shadow: 0 0 30px rgba(214,40,40,0.4); transition: all 0.3s; position: relative; overflow: hidden;">
+                <span style="position: relative; z-index: 2;">[ JOIN THE UNDERGROUND INTELLIGENCE ]</span>
+            </a>
+            
+            <style>
+                .btn-tox::before {
+                    content: '';
+                    position: absolute;
+                    top: 0; left: -100%;
+                    width: 100%; height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+                    transition: 0.5s;
+                    z-index: 1;
+                }
+                .btn-tox:hover::before {
+                    left: 100%;
+                }
+                .btn-tox:hover {
+                    box-shadow: 0 0 50px rgba(214,40,40,0.8);
+                    transform: scale(1.05);
+                    background: #e60000;
+                }
+            </style>
+        </div>
+    </section>
+
+</body>
+</html>
