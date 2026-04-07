@@ -1,91 +1,42 @@
-9: <!-- Luxury 4-Font System: Bodoni, Playfair, Cormorant, Inter -->
-19: <!-- WebGL Dependencies -->
-27: <!-- CINEMATIC PRELOADER -->
-53: <!-- JOURNEY SCROLL SECTION -->
-88: <!-- ABOUT ALAN V.L. / THE PHILOSOPHY -->
-134: <!-- THE JOURNEY FILM STRIP -->
-223: <!-- FILM ROLL QUOTE -->
-314: <!-- THE MEDICAL DETECTIVE SECTION -->
-384: <!-- Card 1: 12 Medical Textbooks -->
-403: <!-- Card 2: Pvt Ltd & Brands -->
-417: <!-- Card 3: Clinical Intelligence Agency -->
-432: <!-- Card 4: Public Speaker & Author -->
-436: <!-- Premium thin-line microphone SVG -->
-466: <!-- Medical Clearances & Credentials Loop -->
-477: <!-- Financial Clearances & Credentials Loop -->
-490: <!-- THE ARSENAL SECTION -->
-501: <!-- BONUS CARDS (TOP) -->
-516: <!-- Section 01: Physical -->
-534: <!-- Section 02: Audio -->
-550: <!-- Section 03: Digital -->
-566: <!-- Syndicate Footer -->
-593: <!-- Section 01: Physical -->
-607: <!-- Section 02: Audio -->
-623: <!-- Section 03: Digital -->
-635: <!-- Syndicate Footer -->
-647: <!-- REGULAR CARDS (BOTTOM) -->
-716: <!-- GLOBAL PUBLISHING & MEDIA RIGHTS -->
-749: <!-- PHASE 3: AUDIO INTELLIGENCE -->
-761: <!-- Podcast 1 -->
-775: <!-- Podcast 2 -->
-793: <!-- PHASE 4: THE VISUAL COMMAND -->
-796: <!-- Subtle background glow -->
-817: <!-- THE EMPATHY CORE SECTION -->
-831: <!-- BOOK SHOWCASE SECTION -->
-843: <!-- BOOK MARQUEE STRIP –– Pure CSS Infinite Scroll -->
-917: <!-- Set 1 -->
-954: <!-- Set 2 (seamless loop clone) -->
-994: <!-- FEATURED BOOK: FORBIDDEN SEX EDUCATION VOL 1 -->
-997: <!-- Top label -->
-1005: <!-- Card -->
-1016: <!-- Book cover placeholder -->
-1026: <!-- Red glow overlay -->
-1030: <!-- MALAYALAM badge -->
-1040: <!-- Right content -->
-1044: <!-- Title block -->
-1064: <!-- Primary CTA -->
-1080: <!-- Divider -->
-1083: <!-- Buy buttons -->
-1090: <!-- MedMelo Books -->
-1105: <!-- Amazon -->
-1116: <!-- Flipkart -->
-1127: <!-- WhatsApp -->
-1153: <!-- MEGA AUTHORITY SECTION -->
-1171: <!-- PART 1: THE MENTOR & EDUCATOR -->
-1182: <!-- Mentor Card 1 -->
-1200: <!-- Mentor Card 2 -->
-1218: <!-- Mentor Card 3 -->
-1239: <!-- PART 2: THE SCIENTIFIC INVESTIGATOR -->
-1244: <!-- HIGH-LEVEL BADGE: PEDIATRICS OLYMPIAD -->
-1267: <!-- Dossier Presentation Layout -->
-1271: <!-- Visual Panel -->
-1283: <!-- Case Files Panel -->
-1286: <!-- Case File 01 -->
-1303: <!-- Case File 02 -->
-1321: <!-- Case File 03: Pediatrics Olympiad -->
-1349: <!-- THE EMPIRE SECTION (THE CORPORATE ECOSYSTEM) -->
-1353: <!-- Atmospheric Particle Canvas -->
-1371: <!-- THE PILLARS MATRIX GRID -->
-1389: <!-- Card 1 -->
-1400: <!-- Card 2 -->
-1411: <!-- Card 3 -->
-1423: <!-- Card 4 -->
-1435: <!-- Card 5 -->
-1446: <!-- Card 6 -->
-1461: <!-- Standalone Canvas & Trigger Script -->
-1517: <!-- CLINICAL MENTORING CORE -->
-1523: <!-- Text Content -->
-1544: <!-- Sliding Photos Showcase (WebGL) -->
-1548: <!-- WebGL Canvas Mount -->
-1551: <!-- Overlay gradient for depth & contrast -->
-1556: <!-- Slide Content Overlay Removed -->
-1558: <!-- Pagination Controls -->
-1561: <!-- Buttons injected via JS -->
-1564: <!-- Loading Spinner -->
-1590: <!-- EVOLUTION TIMELINE SECTION -->
-1640: <!-- THE EVIDENCE ROOM SECTION -->
-1673: <!-- LIVE COMMAND CENTER -->
-1693: <!-- TRUST SIGNAL LOOPS — Just Above Footer -->
-1695: <!-- Medmelo Ecosystem Loop -->
-1707: <!-- FINAL CULT CONVERSION FOOTER -->
-1741: <!-- Scripts -->
+### WEBSITE SECTION INVENTORY (Current Order)
+
+Copy and paste this list, then rearrange the items to your preferred order. Give the final list back to me, and I will reorder the website accordingly.
+
+1.  **JOURNEY SCROLL** (#journey) - "This is not just a website. This is my journey from nothing."
+2.  **PHILOSOPHY** (#about) - Psychology of Destiny / About Alan V.L.
+3.  **JOURNEY REEL** (#journey-reel) - 30+ Identities. One Empire. (Film Strip)
+4.  **FILM ROLL QUOTE** (#film-roll-quote) - "It doesn't matter where your life began..."
+5.  **INTELLIGENCE** (#intelligence) - The Medical Detective Section (Textbooks, Pvt Ltd, etc.)
+6.  **RUSSIA BACKSTORY** (#russia-backstory) - The Backstory (Kerala to Russia)
+7.  **ORIGIN HOOK** (#origin-hook) - One Punch Teaser ("Society says you need an army...")
+8.  **ARSENAL (BOOKS 1)** (#arsenal) - IP Arsenal: The Rich Ambulance Driver Section
+9.  **CLINICAL DECODER** (#decoder) - The Clinical Decoder & Taboo Breaker (1000+ Decoded)
+10. **ARSENAL (BOOKS 2)** (.arsenal) - Forbidden Sex Education, Blue Collar to White Coat, etc.
+11. **RICH AMBULANCE DRIVER NARRATIVE** (#rich-ambulance-driver) - The Matrix Breaker & Empire Architect
+12. **DIGITAL COMMUNITY** (#community) - Commanding a Community of Thinkers (Social Stats)
+13. **CLIMAX MANIFESTO** (#climax) - Identity Manifesto (Author, CEO, Doctor, etc.)
+14. **DECODING RESULT** (#decoding-result) - Forbidden Sex Education Dramatic Reveal
+15. **GLOBAL PUBLISHING** (.section) - Global Publishing & Media Rights
+16. **IP TEASER** (.ip-teaser) - The Empire's Architecture: Legal & Digital Assets
+17. **AUDIO INTELLIGENCE** (#audio) - Podcasts (Vitals and Villains, Echoes of Evidence)
+18. **PROJECT RED** (#classified) - The Red Files of Detective Tox
+19. **EMPATHY CORE** (.empathy) - "It is One thing to study medicine..."
+20. **FORGING FUTURE DOCTORS** (#book) - Book Showcase (Author of 12 Textbooks Marquee)
+21. **MEDMELO PROTOCOL** (#medmelo) - The Medmelo Protocol (Survival story, Version X)
+22. **EMPIRE EXPANSION** (#empire-expansion) - 50-Brand Ecosystem DNA
+23. **DIGITAL CLINICS** (.digital-clinics) - YouTube Mentorship Masterclasses
+24. **MENTOR & EDUCATOR** (.mega-authority) - Mentorship Gallery (Teaching, NSMU, Corporate)
+25. **SCIENTIFIC INVESTIGATOR** (.mega-authority) - Achievements & Case Files (Olympiad, Chess, Neural Mapping)
+26. **ECOSYSTEM MATRIX** (#ecosystem) - The 6 Strategic Pillars (Domains)
+27. **CLINICAL MENTORING CORE** (.clinical-mentoring) - WebGL Slider Showcase
+28. **EVOLUTION TIMELINE** (#evolution) - 2015-2026 Evolution Timeline
+29. **EVIDENCE ROOM** (#archives) - Photographic Archives
+30. **GLOBAL GRID DASHBOARD** (#global-grid) - Operational Grid (18.6K to 15M Vision)
+31. **TRUST LOOPS** (Section) - 50+ Brands Trust Signal Loop
+32. **CORPORATE RELATIONS** (#corporate-relations) - Corporate & Investor Relations Gateway
+33. **WAR-ROOM CTA** (.war-room-cta) - [ ENTER THE WAR-ROOM ] Newsletter
+34. **FOOTER** (#contact) - Final Cult Conversion Footer
+
+---
+**How to reorder:**
+Simply cut and paste these lines in the order you want them to appear on the homepage. Send the new list to me when you're ready!

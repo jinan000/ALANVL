@@ -496,6 +496,12 @@ document.addEventListener("DOMContentLoaded", () => {
         alt: `Medmelo Brand ${n}`
     })), 95);
 
+    // Initialize Soul Ecosystem Loop (under "original soul" quote)
+    createLogoLoop('soul-ecosystem-loop', 'soul-ecosystem-loop-track', [8,9,11,12,13,15,16].map(n => ({
+        src: `images/logo${n}.png`,
+        alt: `Medmelo Brand ${n}`
+    })), 80);
+
     // --- EMPIRE NEURAL NETWORK INTERFACE (DEPRECATED) ---
     // Section replaced with native SVG network and standalone Canvas architecture in DOM.
 
