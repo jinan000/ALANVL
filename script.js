@@ -53,7 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (canvas) {
         const ctx = canvas.getContext("2d");
         const frameCount = 400;
-        const currentFrame = index => `frames/storytelling_scroll_${(index).toString().padStart(4, '0')}.webp`;
+        const currentFrame = index => {
+            const frameFolder = window.innerWidth <= 768 ? "frames1" : "frames";
+            return `${frameFolder}/storytelling_scroll_${(index).toString().padStart(4, '0')}.webp`;
+        };
 
         const images = [];
         const journeyScrollObj = { frame: 0 };
