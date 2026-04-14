@@ -267,53 +267,93 @@
         </style>
     </section>
     
-    <!-- 2. AUDIO INTELLIGENCE (Waveform) -->
-    <section class="vault-section" id="audio" style="background: #010101;">
+    <!-- PHASE 3: AUDIO INTELLIGENCE -->
+    <section class="section audio-intelligence" id="audio"
+        style="padding: 6rem 0; background: #020202; position: relative;">
         <div class="container">
-            <div class="section-header">
-                <div class="section-id">[ 02 ]</div>
-                <h2 class="section-title" style="color: var(--gold);">AUDIO INTELLIGENCE</h2>
-                <div class="section-subtitle" style="color: #fff;">Classified Transmissions &amp; Audiobooks</div>
-            </div>
-
-            <!-- Waveform Animation -->
-            <div class="waveform-container" style="display: flex; align-items: center; justify-content: center; gap: 4px; height: 100px; margin-bottom: 4rem;">
-                <script>
-                    for(let i=0; i<50; i++) {
-                        let delay = Math.random() * -1.5;
-                        document.write(`<div class="waveform-bar" style="animation-delay: ${delay}s"></div>`);
-                    }
-                </script>
+            <div class="text-center animate-up" style="margin: 0 auto 5rem; display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 900px;">
+                <h2 class="section-title center" style="color: #fff; font-family: 'Cinzel', serif; font-size: clamp(2rem, 3.5vw, 3.5rem); line-height: 1.25; text-transform: uppercase;">
+                    AUDIO INTELLIGENCE:CREATOR OF <span style="text-transform: none;">The</span> GLOBAL BROADCAST
+                </h2>
+                <p class="font-heading"
+                    style="color: rgba(255,255,255,0.6); font-family: 'Inter', sans-serif; font-size: 0.85rem; letter-spacing: 0.05em; margin-top: 1.5rem; text-align: center;">
+                    Decoding the mindset of the 1%.
+                </p>
             </div>
 
             <style>
-                .waveform-bar {
-                    width: 3px;
-                    height: 10px;
-                    background: linear-gradient(180deg, var(--gold) 0%, rgba(212,175,55,0.2) 100%);
-                    border-radius: 4px;
-                    animation: waveformAnim 1.2s ease-in-out infinite alternate;
+                .custom-podcast-card {
+                    display: flex; flex-direction: column; text-align: center;
+                    border-radius: 6px; overflow: hidden; height: 100%;
+                    border: 1px solid rgba(255, 255, 255, 0.03); 
+                    background: rgba(10, 10, 10, 0.5);
+                    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
                 }
-                @keyframes waveformAnim {
-                    0% { height: 15px; opacity: 0.3; }
-                    100% { height: 80px; opacity: 1; filter: drop-shadow(0 0 10px var(--gold)); }
+                .custom-podcast-card:hover {
+                    transform: translateY(-8px) scale(1.02);
+                    box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 30px rgba(0,255,50,0.08) inset, 0 0 40px rgba(0,255,50,0.05);
+                    border-color: rgba(0, 200, 50, 0.6) !important;
+                    background: rgba(5, 12, 5, 0.8);
+                }
+                .custom-podcast-card img.podcast-cover {
+                    width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; padding: 1px; border-radius: 6px 6px 0 0;
+                }
+                .custom-podcast-card .card-content {
+                    padding: 2.5rem 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; flex: 1;
                 }
             </style>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
-                <!-- Audio Subcard 1 -->
-                <div style="background: rgba(10,10,10,0.6); border: 1px solid rgba(212,175,55,0.1); padding: 2.5rem; text-align: center; border-radius: 4px; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top:0; left:0; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent);"></div>
-                    <h3 style="font-family: 'Space Mono', monospace; color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase;">VITALS AND VILLAINS</h3>
-                    <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 2rem; font-weight: 500; letter-spacing: 0.1em;">[ The Medical Podcast ]</div>
-                    <a href="#" class="btn-override" style="display: inline-block;">[ INTERCEPT SIGNAL ]</a>
+            <div class="podcast-grid animate-up" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                <!-- Podcast 1 -->
+                <div class="custom-podcast-card">
+                    <img src="images/vitals-and-vitamins.jpeg" alt="Vitals and Villains Podcast" class="podcast-cover" />
+                    <div class="card-content">
+                        <h3 style="font-family: 'Cinzel', serif; font-size: 1.25rem; letter-spacing: 0.1em; margin-bottom: 0.8rem; color: #fff; font-weight: 600; text-align: center;">
+                            VITALS AND VILLAINS</h3>
+                        <p style="color: rgba(255,255,255,0.6); font-family: 'Inter', sans-serif; font-size: 0.75rem; margin-bottom: 3.5rem; max-width: 250px; line-height: 1.6; text-align: center;">
+                            Unfiltered conversations on peak performance and survival.</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 2.2rem; align-items: center; width: 100%; margin-top: auto;">
+                            <!-- Spotify -->
+                            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <img src="images/spotify_logo.png" alt="Listen on Spotify" style="height: 110px; width: auto;">
+                            </a>
+
+                            <!-- Apple Podcast Coming Soon -->
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.85;">
+                                <div style="background: #D4AF37; color: #000; font-family: 'Space Mono', monospace; font-size: 0.55rem; padding: 3px 10px; border-radius: 4px; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase;">
+                                    COMING SOON
+                                </div>
+                                <img src="images/apple_podcast_logo.png" alt="Apple Podcasts Coming Soon" style="height: 130px; width: auto; filter: grayscale(100%); opacity: 0.6;">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Audio Subcard 2 -->
-                <div style="background: rgba(10,10,10,0.6); border: 1px solid rgba(212,175,55,0.1); padding: 2.5rem; text-align: center; border-radius: 4px; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top:0; left:0; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent);"></div>
-                    <h3 style="font-family: 'Space Mono', monospace; color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase;">ECHOES OF EVIDENCE</h3>
-                    <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 2rem; font-weight: 500; letter-spacing: 0.1em;">[ Medical Audiobook ]</div>
-                    <a href="#" class="btn-override" style="display: inline-block;">[ INITIATE PLAYBACK ]</a>
+
+                <!-- Podcast 2 -->
+                <div class="custom-podcast-card">
+                    <img src="images/NSMU_casefiles.jpeg" alt="Echoes of Evidence Podcast" class="podcast-cover" />
+                    <div class="card-content">
+                        <h3 style="font-family: 'Cinzel', serif; font-size: 1.25rem; letter-spacing: 0.1em; margin-bottom: 0.8rem; color: #fff; text-transform: uppercase; font-weight: 600; text-align: center;">
+                            ECHOES OF EVIDENCE</h3>
+                        <p style="color: rgba(255,255,255,0.6); font-family: 'Inter', sans-serif; font-size: 0.75rem; margin-bottom: 3.5rem; max-width: 250px; line-height: 1.6; text-align: center;">
+                            Mastering the unspoken clinical truths.</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 2.2rem; align-items: center; width: 100%; margin-top: auto;">
+                            <!-- Spotify -->
+                            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <img src="images/spotify_logo.png" alt="Listen on Spotify" style="height: 110px; width: auto;">
+                            </a>
+
+                            <!-- Apple Podcast Coming Soon -->
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.85;">
+                                <div style="background: #D4AF37; color: #000; font-family: 'Space Mono', monospace; font-size: 0.55rem; padding: 3px 10px; border-radius: 4px; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase;">
+                                    COMING SOON
+                                </div>
+                                <img src="images/apple_podcast_logo.png" alt="Apple Podcasts Coming Soon" style="height: 130px; width: auto; filter: grayscale(100%); opacity: 0.6;">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -430,39 +470,32 @@
         </div>
     </section>
 
-    <!-- 5. THE RED FILES OF DETECTIVE TOX -->
-    <section class="vault-section" id="tox" style="background: radial-gradient(circle at center, #1c0202 0%, #000 80%); border-top: 1px solid rgba(214,40,40,0.1); padding: 12rem 0;">
-        <div class="container text-center">
-            <h2 style="font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 6vw, 5rem); color: var(--red-alert); font-weight: 700; margin-bottom: 1rem; text-shadow: 0 0 50px rgba(214,40,40,0.4); line-height: 1.1;">THE RED FILES</h2>
-            <div style="font-family: 'Space Mono', monospace; font-size: 0.9rem; color: #fff; letter-spacing: 0.3em; margin-bottom: 3rem; text-transform: uppercase;">[ ACCESS GRANTED. YOU ARE NOW INSIDE. ]</div>
-            
-            <p style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.7); max-width: 750px; margin: 0 auto 4rem; line-height: 1.8;">
-                You've read the credentials. You've accessed the vault. Now cross the final threshold. <strong>Detective Tox</strong> isn't just a clinical alias—it is the absolute apex of medical intuition combined with psychological dominance. Welcome to the inner circle.
+    <!-- PHASE 4: THE VISUAL COMMAND -->
+    <section class="section project-red" id="classified"
+        style="padding: 10rem 0; background: radial-gradient(circle at center, #0c0202 0%, #030101 100%); border-top: 1px solid rgba(214, 40, 40, 0.1); border-bottom: 1px solid rgba(214, 40, 40, 0.1); text-align: center; position: relative; overflow: hidden;">
+        <!-- Subtle background glow -->
+        <div
+            style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(230, 43, 43, 0.03) 0%, rgba(0,0,0,0) 60%); pointer-events: none;">
+        </div>
+
+        <div class="container animate-up">
+            <p
+                style="font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.3em; color: rgba(100, 160, 190, 0.8); margin-bottom: 2rem;">
+                [ CLASSIFIED: PROJECT RED ]
+            </p>
+            <h2 style="font-family: 'Cinzel', serif; font-size: clamp(3rem, 7vw, 5.5rem); line-height: 1.1; color: #e62b2b; font-weight: 700; margin-bottom: 1.5rem; text-shadow: 0 0 50px rgba(230,43,43,0.3);">
+                THE RED FILES<br>OF DETECTIVE TOX
+            </h2>
+            <p
+                style="font-family: 'Inter', sans-serif; font-size: 1.25rem; color: #8baebf; font-style: italic; margin-bottom: 3.5rem;">
+                An Exclusive Medical Series.
             </p>
 
-            <a href="contact.html#waitlist" class="btn-tox" style="display: inline-block; font-family: 'Space Mono', monospace; background: var(--red-alert); color: #fff; padding: 1.5rem 3.5rem; text-decoration: none; font-size: 1rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; border: 1px solid #ff4d4d; box-shadow: 0 0 30px rgba(214,40,40,0.4); transition: all 0.3s; position: relative; overflow: hidden;">
-                <span style="position: relative; z-index: 2;">[ JOIN THE UNDERGROUND INTELLIGENCE ]</span>
-            </a>
-            
-            <style>
-                .btn-tox::before {
-                    content: '';
-                    position: absolute;
-                    top: 0; left: -100%;
-                    width: 100%; height: 100%;
-                    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-                    transition: 0.5s;
-                    z-index: 1;
-                }
-                .btn-tox:hover::before {
-                    left: 100%;
-                }
-                .btn-tox:hover {
-                    box-shadow: 0 0 50px rgba(214,40,40,0.8);
-                    transform: scale(1.05);
-                    background: #e60000;
-                }
-            </style>
+            <div
+                style="display: inline-flex; align-items: center; justify-content: center; padding: 0.8rem 2.5rem; border: 1px solid rgba(230, 43, 43, 0.4); border-radius: 4px; background: rgba(230, 43, 43, 0.05); color: #e62b2b; font-family: 'Inter', sans-serif; font-size: 0.85rem; letter-spacing: 0.15em; font-weight: 700;">
+                <span style="display:inline-block; width:8px; height:8px; background:#e62b2b; border-radius:50%; margin-right:12px; box-shadow: 0 0 10px #e62b2b;"></span>
+                COMING SOON • LIVE
+            </div>
         </div>
     </section>
 
