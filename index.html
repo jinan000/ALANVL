@@ -64,7 +64,7 @@
                     <div class="journey-text text-0" style="opacity: 1;">
                         <h2 class="font-heading">This is not just a website.<br>This is my journey from nothing.</h2>
                         <div class="scroll-prompt">
-                            [ <span class="heartbeat-arrow">&darr;</span> SCROLL TO WALK THE PATH ]
+                            <span class="heartbeat-arrow">&darr;</span> SCROLL TO WALK THE PATH
                         </div>
                     </div>
                     <div class="journey-text text-30" style="opacity: 0;">
@@ -366,8 +366,71 @@
                             Not just a practitioner — a system builder shaping minds.</p>
                     </div>
 
+                    <!-- Mentor Gallery with Navigation Arrows -->
+                    <div class="mentor-slider-wrapper" style="position: relative;">
+
+                        <!-- Left Arrow -->
+                        <button class="mentor-nav mentor-nav-left" aria-label="Scroll left" onclick="document.querySelector('.mentor-gallery').scrollBy({left: -420, behavior: 'smooth'})">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+
+                        <!-- Right Arrow -->
+                        <button class="mentor-nav mentor-nav-right" aria-label="Scroll right" onclick="document.querySelector('.mentor-gallery').scrollBy({left: 420, behavior: 'smooth'})">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 6 15 12 9 18"></polyline>
+                            </svg>
+                        </button>
+
+                        <style>
+                            .mentor-nav {
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                z-index: 20;
+                                width: 48px;
+                                height: 48px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: rgba(0, 0, 0, 0.6);
+                                backdrop-filter: blur(12px);
+                                -webkit-backdrop-filter: blur(12px);
+                                border: 1px solid rgba(197, 160, 89, 0.25);
+                                border-radius: 50%;
+                                color: rgba(255, 255, 255, 0.7);
+                                cursor: pointer;
+                                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                            }
+
+                            .mentor-nav:hover {
+                                background: rgba(197, 160, 89, 0.15);
+                                border-color: rgba(197, 160, 89, 0.6);
+                                color: #fff;
+                                transform: translateY(-50%) scale(1.08);
+                                box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(197, 160, 89, 0.15);
+                            }
+
+                            .mentor-nav:active {
+                                transform: translateY(-50%) scale(0.95);
+                            }
+
+                            .mentor-nav-left { left: -24px; }
+                            .mentor-nav-right { right: -24px; }
+
+                            @media (max-width: 768px) {
+                                .mentor-nav-left { left: 8px; }
+                                .mentor-nav-right { right: 8px; }
+                                .mentor-nav { width: 40px; height: 40px; }
+                            }
+
+                            .mentor-gallery::-webkit-scrollbar { display: none; }
+                        </style>
+
                     <div class="mentor-gallery"
-                        style="display: flex; gap: 2rem; overflow-x: auto; padding: 2rem 0; scroll-snap-type: x mandatory; align-items: center; scrollbar-width: none;">
+                        style="display: flex; gap: 2rem; overflow-x: auto; padding: 2rem 0; scroll-snap-type: x mandatory; align-items: center; scrollbar-width: none; scroll-behavior: smooth;">
                         <!-- Mentor Card 1 -->
                         <div class="mentor-card animate-up"
                             style="min-width: 380px; flex: 1; aspect-ratio: 3/4; position: relative; border-radius: 8px; overflow: hidden; scroll-snap-align: center; border: 1px solid rgba(255,255,255,0.1);">
@@ -422,7 +485,8 @@
                                     the Russian Youth Center</span>
                             </div>
                         </div>
-                    </div>
+                    </div> <!-- end mentor-gallery -->
+                    </div> <!-- end mentor-slider-wrapper -->
                 </div>
 
                 <div class="detective-grid"
@@ -2833,235 +2897,87 @@
                             </div>
                         </div>
                     </div>
+                </div> <!-- CLOSE arsenal-grid-premium -->
 
-                    <!-- ═══ Cinematic Divider ═══ -->
-                    <!-- ═ ═ ═ PREMIUM CONTINUATION HEADER ═ ═ ═  -->
-                    <div class="arsenal-continuation text-center animate-up"
-                        style="margin-top: 64px; margin-bottom: 64px; padding-top: 32px;">
-                        <div
-                            style="font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.25em; color: var(--gold, #D4AF37); text-transform: uppercase; margin-bottom: 1rem;">
-                            THE ARSENAL CONTINUES
-                        </div>
+                <!-- GLOBAL PUBLISHING & MEDIA RIGHTS -->
+                <div style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); margin-top: 3rem;">
+                    <div class="text-center animate-up">
                         <p
-                            style="font-family: 'Inter', sans-serif; font-size: 1.05rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.7;">
-                            Unlock more intellectual assets, exclusive releases, and upcoming titles.
-                        </p>
-                        <a href="#arsenal-grid" class="btn-explore-more">
-                            📚 EXPLORE MORE BOOKS
-                        </a>
-\n                    <!-- ═══════ REGULAR CARDS (3 Books) ═══════ -->
-                    <div class="arsenal-regular-grid lang-content showing">
+                            style="font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.75rem;">
+                            [ GLOBAL PUBLISHING &amp; MEDIA RIGHTS ]</p>
+                        <p
+                            style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.55); max-width: 700px; margin: 0 auto 2.5rem;">
+                            The Intellectual Property (IP) of Dr. Alan V.L. is now open for international acquisition and
+                            regional licensing.</p>
 
-                        <!-- Card 1: From Blue Collar to White Coat -->
-                        <div class="arsenal-card-premium">
-                            <div class="card-cover-premium">
-                                <img src="images/from_blue_collar_to_white_coat.jpeg"
-                                    alt="From Blue Collar To White Coat" />
-                            </div>
-                            <div class="card-info-premium">
-                                <!-- Mini Toggle -->
-                                <div class="lang-toggle mini arsenal-mini-toggle" data-active="en" role="tablist">
-                                    <div class="toggle-slider" aria-hidden="true"></div>
-                                    <button class="toggle-btn active" data-lang="en" role="tab"
-                                        aria-selected="true">English</button>
-                                    <button class="toggle-btn" data-lang="ml" role="tab"
-                                        aria-selected="false">മലയാളം</button>
-                                </div>
-                                <h4>FROM BLUE COLLAR TO WHITE COAT 🥼</h4>
-                                <p class="card-desc">The raw, unedited journey of a Matrix Breaker. Decoding the exact
-                                    architecture of transitioning from ground-level survival to elite global dominance.
-                                </p>
-                                <p class="card-genre">Global Memoir &amp; Tactical Blueprint</p>
-                                <div class="arsenal-actions">
-                                    <a href="contact.html#waitlist" class="btn btn-gold-glow"
-                                        style="width: 100%; text-align: center; margin-top: 0.5rem; font-size: 0.75rem;">[
-                                        🌍
-                                        JOIN THE 1% (ENGLISH WAITLIST) ]</a>
-                                </div>
-
-                                <!-- Star Rating -->
-                                <div class="book-rating" data-book="bctowc">
-                                    <div class="rating-display">
-                                        <span class="rating-score">4.8</span>
-                                        <div class="stars">
-                                            <span class="star filled" data-value="1">★</span>
-                                            <span class="star filled" data-value="2">★</span>
-                                            <span class="star filled" data-value="3">★</span>
-                                            <span class="star filled" data-value="4">★</span>
-                                            <span class="star half" data-value="5">★</span>
-                                        </div>
-                                    <div class="rating-meta"><span>112</span> votes · Rate this book</div>
-                                </div>
-                            </div>
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                            <span class="btn-ghost"
+                                style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[ 🌍
+                                GLOBAL ENGLISH RIGHTS: OPEN ]</span>
+                            <span class="btn-ghost"
+                                style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[ 🗺️
+                                REGIONAL LANGUAGE TRANSLATIONS: OPEN ]</span>
+                            <span class="btn-ghost"
+                                style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[ 🎬 AUDIO
+                                RIGHTS: OPEN ]</span>
                         </div>
 
-                        <!-- Card 2: Detective Tox -->
-                        <div class="arsenal-card-premium">
-                            <div class="card-cover-premium">
-                                <img src="images/TOX.png" alt="Detective Tox" />
-                            </div>
-                            <div class="card-info-premium">
-                                <!-- Mini Toggle -->
-                                <div class="lang-toggle mini arsenal-mini-toggle" data-active="en" role="tablist">
-                                    <div class="toggle-slider" aria-hidden="true"></div>
-                                    <button class="toggle-btn active" data-lang="en" role="tab"
-                                        aria-selected="true">English</button>
-                                    <button class="toggle-btn" data-lang="ml" role="tab"
-                                        aria-selected="false">മലയാളം</button>
-                                </div>
-                                <h4>DETECTIVE TOX: CASEBOOK OF MEDICAL CRIMES 🩸</h4>
-                                <p class="card-desc">"Some murders leave no wounds." Step into the dark intersection of
-                                    clinical intelligence and untraceable crimes. An elite medical thriller decoding the
-                                    anatomy of the perfect murder.</p>
-                                <p class="card-genre">Medical Crime Thriller &amp; Fiction (English &amp; Malayalam)</p>
-                                <div class="arsenal-actions">
-                                    <a href="contact.html#waitlist" class="btn btn-gold-glow"
-                                        style="width: 100%; text-align: center; margin-top: 0.5rem; font-size: 0.75rem;">[
-                                        🚨
-                                        ENTER THE CRIME SCENE (WAITLIST) ]</a>
-                                </div>
+                        <p
+                            style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 0.75rem;">
+                            FOR DIRECT NEGOTIATIONS &amp; ACQUISITION ENQUIRIES:</p>
+                        <a href="mailto:hi@alanvl.com"
+                            style="font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600; color: #fff; text-decoration: none; letter-spacing: 0.05em; transition: color 0.3s ease;">📧
+                            hi@alanvl.com</a>
+                    </div>
+                </div>
 
-                                <!-- Star Rating -->
-                                <div class="book-rating" data-book="tox">
-                                    <div class="rating-display">
-                                        <span class="rating-score">4.6</span>
-                                        <div class="stars">
-                                            <span class="star filled" data-value="1">★</span>
-                                            <span class="star filled" data-value="2">★</span>
-                                            <span class="star filled" data-value="3">★</span>
-                                            <span class="star filled" data-value="4">★</span>
-                                            <span class="star half" data-value="5">★</span>
-                                        </div>
-                                    </div>
-                                    <div class="rating-meta"><span>108</span> votes · Rate this book</div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Card 3: Detective Tox (Copy) -->
-                        <div class="arsenal-card-premium">
-                            <div class="card-cover-premium">
-                                <img src="images/TOX.png" alt="Detective Tox" />
-                            </div>
-                            <div class="card-info-premium">
-                                <!-- Mini Toggle -->
-                                <div class="lang-toggle mini arsenal-mini-toggle" data-active="en" role="tablist">
-                                    <div class="toggle-slider" aria-hidden="true"></div>
-                                    <button class="toggle-btn active" data-lang="en" role="tab"
-                                        aria-selected="true">English</button>
-                                    <button class="toggle-btn" data-lang="ml" role="tab"
-                                        aria-selected="false">മലയാളം</button>
-                                </div>
-                                <h4>DETECTIVE TOX: CASEBOOK OF MEDICAL CRIMES 🩸</h4>
-                                <p class="card-desc">"Some murders leave no wounds." Step into the dark intersection of
-                                    clinical intelligence and untraceable crimes. An elite medical thriller decoding the
-                                    anatomy of the perfect murder.</p>
-                                <p class="card-genre">Medical Crime Thriller &amp; Fiction (English &amp; Malayalam)</p>
-                                <div class="arsenal-actions">
-                                    <a href="contact.html#waitlist" class="btn btn-gold-glow"
-                                        style="width: 100%; text-align: center; margin-top: 0.5rem; font-size: 0.75rem;">[
-                                        🚨
-                                        ENTER THE CRIME SCENE (WAITLIST) ]</a>
-                                </div>
 
-                                <!-- Star Rating -->
-                                <div class="book-rating" data-book="tox-copy">
-                                    <div class="rating-display">
-                                        <span class="rating-score">4.6</span>
-                                        <div class="stars">
-                                            <span class="star filled" data-value="1">★</span>
-                                            <span class="star filled" data-value="2">★</span>
-                                            <span class="star filled" data-value="3">★</span>
-                                            <span class="star filled" data-value="4">★</span>
-                                            <span class="star half" data-value="5">★</span>
-                                        </div>
-                                    </div>
-                                    <div class="rating-meta"><span>108</span> votes · Rate this book</div>
-                                </div>
-                            </div>
-                        </div>
+                <!-- ═ ═ ═  Cinematic Divider ═ ═ ═  -->
+                <!-- ═ ═ ═ PREMIUM CONTINUATION HEADER ═ ═ ═  -->
+                <div class="arsenal-continuation text-center animate-up"
+                    style="margin-top: 64px; margin-bottom: 64px; padding-top: 32px;">
+                    <div
+                        style="font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.25em; color: var(--gold, #D4AF37); text-transform: uppercase; margin-bottom: 1rem;">
+                        THE ARSENAL CONTINUES
+                    </div>
+                    <p
+                        style="font-family: 'Inter', sans-serif; font-size: 1.05rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.7;">
+                        Unlock more intellectual assets, exclusive releases, and upcoming titles.
+                    </p>
+                    <a href="explore-more-books.html" class="btn-explore-more">
+                        📚 EXPLORE MORE BOOKS
+                    </a>
+                </div>
 
-                        <!-- Card 4: Diary Trilogy -->
-                        <div class="arsenal-card-premium">
-                            <div class="card-cover-premium">
-                                <img src="images/dairy_ambulance.jpeg"
-                                    alt="Diary of the Rich Ambulance Driver Trilogy" />
-                            </div>
-                            <div class="card-info-premium">
-                                <!-- Mini Toggle -->
-                                <div class="lang-toggle mini arsenal-mini-toggle" data-active="en" role="tablist">
-                                    <div class="toggle-slider" aria-hidden="true"></div>
-                                    <button class="toggle-btn active" data-lang="en" role="tab"
-                                        aria-selected="true">English</button>
-                                    <button class="toggle-btn" data-lang="ml" role="tab"
-                                        aria-selected="false">മലയാളം</button>
-                                </div>
-                                <h4>DIARY OF THE RICH AMBULANCE DRIVER: THE TRILOGY 🗺️</h4>
-                                <p class="card-desc" style="margin-bottom: 0.5rem; line-height: 1.7;">
-                                    <span
-                                        style="color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.68rem;">VOL
-                                        I:</span> The Kerala Times<br>
-                                    <span
-                                        style="color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.68rem;">VOL
-                                        II:</span> The Bangalore Days<br>
-                                    <span
-                                        style="color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.68rem;">VOL
-                                        III:</span> The Russian Years<br><br>
-                                    An unfiltered 3-part saga of building an empire across borders. Decoding the raw,
-                                    unedited architecture of a Matrix Breaker's journey from ground zero to global
-                                    medical
-                                    dominance.
-                                </p>
-                                <p class="card-genre">Autobiographical Saga / 3-Part Box Set<br>(Global English Edition)
-                                </p>
-                                <div class="arsenal-actions">
-                                    <a href="contact.html#waitlist" class="btn btn-gold-glow"
-                                        style="width: 100%; text-align: center; margin-top: 0.5rem; font-size: 0.75rem;">[
-                                        🗄️ UNLOCK THE TRILOGY (WAITLIST) ]</a>
-                                </div>
 
-                                <!-- Star Rating -->
-                                <div class="book-rating" data-book="diary">
-                                    <div class="rating-display">
-                                        <span class="rating-score">4.9</span>
-                                        <div class="stars">
-                                            <span class="star filled" data-value="1">★</span>
-                                            <span class="star filled" data-value="2">★</span>
-                                            <span class="star filled" data-value="3">★</span>
-                                            <span class="star filled" data-value="4">★</span>
-                                            <span class="star half" data-value="5">★</span>
-                                        </div>
-                                    </div>
-                                    <div class="rating-meta"><span>119</span> votes · Rate this book</div>
-                                </div>
-                            </div>
-\n                    </div> <!-- end arsenal-regular-grid -->\n                </div> <!-- end arsenal-continuation -->\n\n                    <style>
-                        .btn-explore-more {
-                            display: inline-flex;
-                            align-items: center;
-                            justify-content: center;
-                            padding: 0.8rem 2.2rem;
-                            font-family: 'Space Mono', monospace;
-                            font-size: 0.85rem;
-                            font-weight: 600;
-                            color: #fff;
-                            background: rgba(10, 10, 10, 0.8);
-                            border: 1px solid rgba(212, 175, 55, 0.4);
-                            border-radius: 6px;
-                            text-decoration: none;
-                            letter-spacing: 0.1em;
-                            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-                            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-                        }
 
-                        .btn-explore-more:hover {
-                            transform: translateY(-3px);
-                            border-color: rgba(212, 175, 55, 0.9);
-                            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-                            color: #fff;
-                        }
-                    </style>
-\n                </div> <!-- end parent container -->\n\n                <!-- ═══ Extended Arsenal Vault CTA ═══ -->
+                <style>
+                    .btn-explore-more {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0.8rem 2.2rem;
+                        font-family: 'Space Mono', monospace;
+                        font-size: 0.85rem;
+                        font-weight: 600;
+                        color: #fff;
+                        background: rgba(10, 10, 10, 0.8);
+                        border: 1px solid rgba(212, 175, 55, 0.4);
+                        border-radius: 6px;
+                        text-decoration: none;
+                        letter-spacing: 0.1em;
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+                        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                    }
+
+                    .btn-explore-more:hover {
+                        transform: translateY(-3px);
+                        border-color: rgba(212, 175, 55, 0.9);
+                        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+                        color: #fff;
+                    }
+                </style> <!-- ═══ Extended Arsenal Vault CTA ═══ -->
                 <div class="animate-up" style="margin-top: 6rem; text-align: center; padding-bottom: 2rem;">
                     <div
                         style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 1rem; text-transform: uppercase; opacity: 0.7;">
@@ -3343,8 +3259,6 @@
 
                 });
             </script>
-
-            </div>
         </section>
         <!-- IP ARSENAL TEASER -->
         <section class="section ip-teaser" style="padding: 4rem 0 6rem 0; background: #020202;">
@@ -3521,9 +3435,9 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═  -->
         <!-- SECTION: THE BACKSTORY (KERALA TO RUSSIA) -->
-        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═  -->
         <section class="section global-broadcast" id="russia-backstory"
             style="padding: 8rem 0; background: #0a0a0a; position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
 
@@ -3541,25 +3455,29 @@
                     ИНТЕРНАЦИОНАЛЬНАЯ ВЕСНА
                 </h2>
                 <h3
-                    style="font-family: 'Inter', sans-serif; font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.4); font-weight: 300; letter-spacing: 0.05em; margin-bottom: 4.5rem;">
-                    International Spring: Intercultural Festival
+                    style="font-family: 'Inter', sans-serif; font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.4); font-weight: 300; letter-spacing: 0.05em; margin-bottom: 2rem;">
+                    International Spring Festival
                 </h3>
 
-                <!-- THE HOOK -->
-                <div style="border-left: 3px solid var(--gold); padding-left: 1.8rem; margin-bottom: 3rem;">
+                <!-- THE HOOK QUOTE -->
+                <div style="border-left: 3px solid var(--gold); padding-left: 1.8rem; margin-bottom: 1.5rem;">
                     <p
                         style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-style: italic; color: #fff; line-height: 1.6; max-width: 800px;">
                         <span style="color: var(--gold); font-size: 1.4rem; line-height: 0;">&ldquo;</span>True global
-                        dominance isn’t about speaking to the world in your language. It’s about <span
-                            style="color: var(--gold);">conquering their minds in theirs.</span><span
+                        influence doesn't require forcing the world to understand you. It requires the audacity to <span
+                            style="color: var(--gold);">conquer their minds in their own language.</span><span
                             style="color: var(--gold); font-size: 1.4rem; line-height: 0;">&rdquo;</span>
                     </p>
                 </div>
+                <!-- Attribution -->
+                <p
+                    style="font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); margin-bottom: 4.5rem; text-transform: uppercase;">
+                    — Alan V.L., International Author &amp; Speaker
+                </p>
 
                 <!-- CINEMATIC VIDEO PLAYER -->
                 <div class="cinematic-video-wrapper"
                     style="position: relative; width: 100%; border-radius: 4px; overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,0.8); margin-bottom: 6rem; border: 1px solid rgba(255,255,255,0.05);">
-                    <!-- Cinematic video playback via aspect ratio and video element -->
                     <video id="russiaVideo" src="images/russian.mp4" poster="images/backcoverofrussia.jpeg"
                         style="width: 100%; display: block; filter: brightness(0.6) contrast(1.1); aspect-ratio: 21/9; object-fit: cover; transition: filter 0.5s ease;"
                         playsinline preload="metadata"></video>
@@ -3581,41 +3499,76 @@
                     <div style="flex: 1; min-width: 250px;">
                         <h4
                             style="font-family: 'Space Mono', monospace; font-size: 1.25rem; color: #fff; letter-spacing: 0.1em; line-height: 1.5; margin-top: 0.5rem;">
-                            THE BACKSTORY<br>
-                            <span style="color: rgba(255,255,255,0.4); font-size: 0.85rem;">(KERALA TO RUSSIA)</span>
+                            THE KEYNOTE<br>
+                            <span style="color: rgba(255,255,255,0.4); font-size: 0.85rem;">THE ARCHITECTURE OF
+                                DESTINY</span>
                         </h4>
+                        <p
+                            style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gold); margin-top: 1rem; text-transform: uppercase; opacity: 0.7;">
+                            (Delivered 100% in Russian Language)
+                        </p>
                     </div>
 
                     <!-- Right Column (70% visual weight) -->
                     <div style="flex: 2.5; min-width: 300px;">
+                        <h5
+                            style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; opacity: 0.8;">
+                            THE ULTIMATE LINGUISTIC CHALLENGE
+                        </h5>
                         <p
-                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 2rem; font-weight: 300;">
-                            From the grinding streets of Kerala to the freezing stages of Russia’s northernmost medical
-                            university.
+                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
+                            When you step onto a global stage, you are faced with a choice: play it safe, or take
+                            absolute control.
                         </p>
                         <p
-                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 2rem; font-weight: 300;">
-                            At the <em style="color: #fff;">International Spring</em> intercultural festival, I didn’t
-                            just participate — <strong style="color: #fff; font-weight: 500;">I took command of the
-                                room.</strong>
+                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
+                            At the <em style="color: #fff;">International Spring</em> intercultural festival in Russia,
+                            I stood before a massive native audience as an international author and speaker. It would
+                            have been incredibly easy for me to deliver my keynote in English or my mother tongue. That
+                            is the standard, comfortable protocol for most international speakers.
                         </p>
                         <p
-                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 2rem; font-weight: 300;">
-                            Standing before a native audience, I spoke their mother tongue to deliver one raw,
+                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
+                            But <strong style="color: #fff; font-weight: 500;">true leaders don’t seek comfort; they
+                                seek friction.</strong>
+                        </p>
+                        <p
+                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
+                            I completely discarded the safety net of translation. Instead, I took on the ultimate
+                            psychological and linguistic challenge: delivering my entire keynote <strong
+                                style="color: #fff; font-weight: 500;">completely in native Russian.</strong>
+                        </p>
+                        <p
+                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
+                            Standing before them, I stripped away every cultural and linguistic barrier. I didn’t just
+                            speak to the audience; I <strong style="color: #fff; font-weight: 500;">commanded the room
+                                in their own language.</strong> I looked into their eyes and delivered one raw,
                             unfiltered truth:
                         </p>
+
+                        <!-- Keynote Quote -->
                         <p
-                            style="font-family: 'Inter', sans-serif; font-size: 1.35rem; color: #fff; line-height: 1.6; margin-bottom: 2rem; font-weight: 600; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+                            style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #fff; line-height: 1.6; margin-bottom: 2.5rem; font-weight: 600; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); text-align: center; font-style: italic;">
                             “It is never too late to forge your destiny.”
                         </p>
+
                         <p
-                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.6; font-weight: 300;">
-                            This wasn’t just a speech; it was a <strong
-                                style="color: #fff; font-weight: 500;">masterclass in cross-cultural demographic
-                                decoding.</strong>
+                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
+                            This wasn’t just a speech. It was a <strong
+                                style="color: #fff; font-weight: 500;">masterclass in cross-cultural authority.</strong>
+                            When you refuse the easy path and deliver raw conviction in the exact language of your
+                            listeners, you don’t just win their applause—you <strong
+                                style="color: var(--gold); font-weight: 500;">conquer their minds.</strong>
+                        </p>
+
+                        <!-- Closing Statement -->
+                        <p
+                            style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: rgba(255,255,255,0.5); line-height: 1.7; font-style: italic; font-weight: 300; margin-top: 1rem;">
+                            The stage is no longer just a platform. It is an empire waiting to be claimed.
                         </p>
                     </div>
                 </div>
+            </div>
 
             </div>
         </section>
