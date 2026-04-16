@@ -99,10 +99,6 @@
 
             <div class="container animate-up"
                 style="position: relative; z-index: 10; max-width: 1200px; text-align: center;">
-                <div
-                    style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 1.2rem; text-transform: uppercase;">
-                    [ ABOUT ALAN V.L. ]
-                </div>
 
                 <h2 class="section-title center"
                     style="color: #fff; font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.2; margin-bottom: 2rem;">
@@ -370,15 +366,19 @@
                     <div class="mentor-slider-wrapper" style="position: relative;">
 
                         <!-- Left Arrow -->
-                        <button class="mentor-nav mentor-nav-left" aria-label="Scroll left" onclick="document.querySelector('.mentor-gallery').scrollBy({left: -420, behavior: 'smooth'})">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <button class="mentor-nav mentor-nav-left" aria-label="Scroll left"
+                            onclick="document.querySelector('.mentor-gallery').scrollBy({left: -420, behavior: 'smooth'})">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="15 18 9 12 15 6"></polyline>
                             </svg>
                         </button>
 
                         <!-- Right Arrow -->
-                        <button class="mentor-nav mentor-nav-right" aria-label="Scroll right" onclick="document.querySelector('.mentor-gallery').scrollBy({left: 420, behavior: 'smooth'})">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <button class="mentor-nav mentor-nav-right" aria-label="Scroll right"
+                            onclick="document.querySelector('.mentor-gallery').scrollBy({left: 420, behavior: 'smooth'})">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="9 6 15 12 9 18"></polyline>
                             </svg>
                         </button>
@@ -417,75 +417,91 @@
                                 transform: translateY(-50%) scale(0.95);
                             }
 
-                            .mentor-nav-left { left: -24px; }
-                            .mentor-nav-right { right: -24px; }
-
-                            @media (max-width: 768px) {
-                                .mentor-nav-left { left: 8px; }
-                                .mentor-nav-right { right: 8px; }
-                                .mentor-nav { width: 40px; height: 40px; }
+                            .mentor-nav-left {
+                                left: -24px;
                             }
 
-                            .mentor-gallery::-webkit-scrollbar { display: none; }
+                            .mentor-nav-right {
+                                right: -24px;
+                            }
+
+                            @media (max-width: 768px) {
+                                .mentor-nav-left {
+                                    left: 8px;
+                                }
+
+                                .mentor-nav-right {
+                                    right: 8px;
+                                }
+
+                                .mentor-nav {
+                                    width: 40px;
+                                    height: 40px;
+                                }
+                            }
+
+                            .mentor-gallery::-webkit-scrollbar {
+                                display: none;
+                            }
                         </style>
 
-                    <div class="mentor-gallery"
-                        style="display: flex; gap: 2rem; overflow-x: auto; padding: 2rem 0; scroll-snap-type: x mandatory; align-items: center; scrollbar-width: none; scroll-behavior: smooth;">
-                        <!-- Mentor Card 1 -->
-                        <div class="mentor-card animate-up"
-                            style="min-width: 380px; flex: 1; aspect-ratio: 3/4; position: relative; border-radius: 8px; overflow: hidden; scroll-snap-align: center; border: 1px solid rgba(255,255,255,0.1);">
-                            <img src="images/teaching_medical_students.jpeg" alt="Teaching Medical Students"
-                                style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.2) brightness(0.8);"
-                                class="hover-color">
-                            <div
-                                style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);">
+                        <div class="mentor-gallery"
+                            style="display: flex; gap: 2rem; overflow-x: auto; padding: 2rem 0; scroll-snap-type: x mandatory; align-items: center; scrollbar-width: none; scroll-behavior: smooth;">
+                            <!-- Mentor Card 1 -->
+                            <div class="mentor-card animate-up"
+                                style="min-width: 380px; flex: 1; aspect-ratio: 3/4; position: relative; border-radius: 8px; overflow: hidden; scroll-snap-align: center; border: 1px solid rgba(255,255,255,0.1);">
+                                <img src="images/teaching_medical_students.jpeg" alt="Teaching Medical Students"
+                                    style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.2) brightness(0.8);"
+                                    class="hover-color">
+                                <div
+                                    style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);">
+                                </div>
+                                <div style="position: absolute; bottom: 2rem; left: 2rem; right: 2rem;">
+                                    <h4
+                                        style="color: #fff; font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 0.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
+                                        Teaching Medical Students</h4>
+                                    <span
+                                        style="color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">Forging
+                                        Clinical Intelligence.</span>
+                                </div>
                             </div>
-                            <div style="position: absolute; bottom: 2rem; left: 2rem; right: 2rem;">
-                                <h4
-                                    style="color: #fff; font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 0.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
-                                    Teaching Medical Students</h4>
-                                <span
-                                    style="color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">Forging
-                                    Clinical Intelligence.</span>
+                            <!-- Mentor Card 2 -->
+                            <div class="mentor-card animate-up"
+                                style="min-width: 380px; flex: 1; aspect-ratio: 3/4; position: relative; border-radius: 8px; overflow: hidden; scroll-snap-align: center; border: 1px solid rgba(255,255,255,0.1);">
+                                <img src="images/nsmu_mentorship.jpeg" alt="NSMU Mentorship"
+                                    style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.2) brightness(0.8);"
+                                    class="hover-color">
+                                <div
+                                    style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);">
+                                </div>
+                                <div style="position: absolute; bottom: 2rem; left: 2rem; right: 2rem;">
+                                    <h4
+                                        style="color: #fff; font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 0.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
+                                        NSMU Mentorship</h4>
+                                    <span
+                                        style="color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">Architecting
+                                        Future Leaders.</span>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Mentor Card 2 -->
-                        <div class="mentor-card animate-up"
-                            style="min-width: 380px; flex: 1; aspect-ratio: 3/4; position: relative; border-radius: 8px; overflow: hidden; scroll-snap-align: center; border: 1px solid rgba(255,255,255,0.1);">
-                            <img src="images/nsmu_mentorship.jpeg" alt="NSMU Mentorship"
-                                style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.2) brightness(0.8);"
-                                class="hover-color">
-                            <div
-                                style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);">
+                            <!-- Mentor Card 3 -->
+                            <div class="mentor-card animate-up"
+                                style="min-width: 380px; flex: 1; aspect-ratio: 3/4; position: relative; border-radius: 8px; overflow: hidden; scroll-snap-align: center; border: 1px solid rgba(255,255,255,0.1);">
+                                <img src="images/corporate_leadership.jpeg" alt="Corporate Leadership Workshops"
+                                    style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.2) brightness(0.8);"
+                                    class="hover-color">
+                                <div
+                                    style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);">
+                                </div>
+                                <div style="position: absolute; bottom: 2rem; left: 2rem; right: 2rem;">
+                                    <h4
+                                        style="color: #fff; font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 0.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
+                                        Corporate Leadership</h4>
+                                    <span
+                                        style="color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">Commanding
+                                        the Russian Youth Center</span>
+                                </div>
                             </div>
-                            <div style="position: absolute; bottom: 2rem; left: 2rem; right: 2rem;">
-                                <h4
-                                    style="color: #fff; font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 0.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
-                                    NSMU Mentorship</h4>
-                                <span
-                                    style="color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">Architecting
-                                    Future Leaders.</span>
-                            </div>
-                        </div>
-                        <!-- Mentor Card 3 -->
-                        <div class="mentor-card animate-up"
-                            style="min-width: 380px; flex: 1; aspect-ratio: 3/4; position: relative; border-radius: 8px; overflow: hidden; scroll-snap-align: center; border: 1px solid rgba(255,255,255,0.1);">
-                            <img src="images/corporate_leadership.jpeg" alt="Corporate Leadership Workshops"
-                                style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.2) brightness(0.8);"
-                                class="hover-color">
-                            <div
-                                style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);">
-                            </div>
-                            <div style="position: absolute; bottom: 2rem; left: 2rem; right: 2rem;">
-                                <h4
-                                    style="color: #fff; font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 0.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
-                                    Corporate Leadership</h4>
-                                <span
-                                    style="color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">Commanding
-                                    the Russian Youth Center</span>
-                            </div>
-                        </div>
-                    </div> <!-- end mentor-gallery -->
+                        </div> <!-- end mentor-gallery -->
                     </div> <!-- end mentor-slider-wrapper -->
                 </div>
 
@@ -1489,7 +1505,8 @@
                     </div>
                     <p class="medmelo-narrative-text animate-up"
                         style="font-style: normal; color: rgba(255,255,255,0.85);">
-                        <span class="vow-soul-block" style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="vow-soul-block"
+                            style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                             <span
                                 style="color: var(--gold); font-family: 'Cinzel', serif; font-weight: 400; font-size: clamp(1.1rem, 3vw, 1.8rem); line-height: 1.3; letter-spacing: 0.05em; text-shadow: 0 0 15px rgba(212,175,55,0.3); text-transform: uppercase;">THAT
                                 VOW IS THE SOUL OF</span>
@@ -2955,25 +2972,31 @@
                 </div> <!-- CLOSE arsenal-grid-premium -->
 
                 <!-- GLOBAL PUBLISHING & MEDIA RIGHTS -->
-                <div style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); margin-top: 3rem;">
+                <div
+                    style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); margin-top: 3rem;">
                     <div class="text-center animate-up">
                         <p
                             style="font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.75rem;">
                             [ GLOBAL PUBLISHING &amp; MEDIA RIGHTS ]</p>
                         <p
                             style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.55); max-width: 700px; margin: 0 auto 2.5rem;">
-                            The Intellectual Property (IP) of Dr. Alan V.L. is now open for international acquisition and
+                            The Intellectual Property (IP) of Dr. Alan V.L. is now open for international acquisition
+                            and
                             regional licensing.</p>
 
-                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                        <div
+                            style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
                             <span class="btn-ghost"
-                                style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[ 🌍
+                                style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[
+                                🌍
                                 GLOBAL ENGLISH RIGHTS: OPEN ]</span>
                             <span class="btn-ghost"
-                                style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[ 🗺️
+                                style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[
+                                🗺️
                                 REGIONAL LANGUAGE TRANSLATIONS: OPEN ]</span>
                             <span class="btn-ghost"
-                                style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[ 🎬 AUDIO
+                                style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[
+                                🎬 AUDIO
                                 RIGHTS: OPEN ]</span>
                         </div>
 
@@ -3402,11 +3425,11 @@
 
                 <!-- Social Proof Cards -->
                 <div
-                    style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; max-width: 800px; margin: 0 auto;">
+                    style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
 
                     <!-- Instagram Card -->
                     <a href="https://www.instagram.com/alanvl.md" target="_blank" rel="noopener noreferrer"
-                        style="text-decoration: none; flex: 1; min-width: 300px; max-width: 380px;">
+                        style="text-decoration: none; flex: 1; min-width: 250px; max-width: 350px;">
                         <div class="community-card" style="
                             background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(8,8,8,0.98));
                             border: 1px solid rgba(212,175,55,0.15);
@@ -3425,7 +3448,8 @@
                                 style="position: absolute; top: -60px; right: -60px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(225,48,108,0.08) 0%, transparent 70%); border-radius: 50%;">
                             </div>
 
-                            <div style="font-size: 2.5rem; margin-bottom: 1.2rem;">📸</div>
+                            <img src="images/Instagram_icon.png" alt="Instagram"
+                                style="width: 48px; height: 48px; object-fit: contain; margin-bottom: 1.2rem; filter: drop-shadow(0 0 10px rgba(225,48,108,0.3));">
                             <div
                                 style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 1rem;">
                                 INSTAGRAM
@@ -3448,7 +3472,7 @@
 
                     <!-- Threads Card -->
                     <a href="https://threads.net/@alanvl.md" target="_blank" rel="noopener noreferrer"
-                        style="text-decoration: none; flex: 1; min-width: 300px; max-width: 380px;">
+                        style="text-decoration: none; flex: 1; min-width: 250px; max-width: 350px;">
                         <div class="community-card" style="
                             background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(8,8,8,0.98));
                             border: 1px solid rgba(255,255,255,0.1);
@@ -3467,7 +3491,8 @@
                                 style="position: absolute; bottom: -60px; left: -60px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%); border-radius: 50%;">
                             </div>
 
-                            <div style="font-size: 2.5rem; margin-bottom: 1.2rem;">🧵</div>
+                            <img src="images/threads.png" alt="Threads"
+                                style="width: 48px; height: 48px; object-fit: contain; margin-bottom: 1.2rem;">
                             <div
                                 style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 1rem;">
                                 THREADS
@@ -3486,32 +3511,79 @@
                             </div>
                         </div>
                     </a>
+
+                    <!-- YouTube Card -->
+                    <a href="https://www.youtube.com/@alanvlmd/featured" target="_blank" rel="noopener noreferrer"
+                        style="text-decoration: none; flex: 1; min-width: 250px; max-width: 350px;">
+                        <div class="community-card" style="
+                            background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(8,8,8,0.98));
+                            border: 1px solid rgba(255,0,0,0.15);
+                            border-radius: 16px;
+                            padding: 3rem 2.5rem;
+                            text-align: center;
+                            position: relative;
+                            overflow: hidden;
+                            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+                            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+                            cursor: pointer;
+                        " onmouseover="this.style.transform='translateY(-8px)';this.style.borderColor='rgba(255,0,0,0.4)';this.style.boxShadow='0 30px 60px rgba(0,0,0,0.8), 0 0 40px rgba(255,0,0,0.08)'"
+                            onmouseout="this.style.transform='';this.style.borderColor='rgba(255,0,0,0.15)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.6)'">
+                            <!-- Glow -->
+                            <div
+                                style="position: absolute; top: -60px; left: -60px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(255,0,0,0.08) 0%, transparent 70%); border-radius: 50%;">
+                            </div>
+
+                            <img src="images/youtube0.png" alt="YouTube"
+                                style="width: 48px; height: 48px; object-fit: contain; margin-bottom: 1.2rem; filter: drop-shadow(0 0 10px rgba(255,0,0,0.3));">
+                            <div
+                                style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 1rem;">
+                                YOUTUBE
+                            </div>
+                            <div
+                                style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5vw, 3.8rem); color: #fff; font-weight: 700; font-style: italic; line-height: 1; margin-bottom: 0.3rem; text-shadow: 0 0 30px rgba(255,255,255,0.1);">
+                                <span class="youtube-counter" data-target="36.2">36.2</span>K<span
+                                    style="font-size: 1.2rem; color: var(--gold); vertical-align: super;">+</span>
+                            </div>
+                            <div
+                                style="font-family: var(--font-heading); font-size: 0.85rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem;">
+                                Subscribers
+                            </div>
+                            <div
+                                style="font-family: 'Space Mono', monospace; font-size: 0.75rem; color: rgba(255,255,255,0.5); letter-spacing: 0.1em;">
+                                @alanvlmd
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═  -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- SECTION: THE BACKSTORY (KERALA TO RUSSIA) -->
-        <!-- ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═  -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
         <section class="section global-broadcast" id="russia-backstory"
             style="padding: 8rem 0; background: #0a0a0a; position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
 
             <div class="container animate-up" style="max-width: 1000px; position: relative; z-index: 10;">
 
-                <!-- TOP TAG -->
+                <!-- SECTION 1: THE HERO BANNER -->
                 <div
                     style="font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.2rem; color: var(--gold); margin-bottom: 2.5rem; text-transform: uppercase;">
                     GLOBAL BROADCAST PROTOCOL // VISUAL ASSET
                 </div>
 
-                <!-- HEADLINE -->
+                <div
+                    style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.4); text-transform: uppercase; margin-bottom: 1rem;">
+                    AWARD-WINNING KEYNOTE
+                </div>
+
                 <h2
                     style="font-family: var(--font-heading); font-size: clamp(2.5rem, 6vw, 4.5rem); color: #fff; line-height: 1.1; margin-bottom: 0.5rem; letter-spacing: 0.05em; text-transform: uppercase;">
                     ИНТЕРНАЦИОНАЛЬНАЯ ВЕСНА
                 </h2>
                 <h3
                     style="font-family: 'Inter', sans-serif; font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.4); font-weight: 300; letter-spacing: 0.05em; margin-bottom: 2rem;">
-                    International Spring Festival
+                    International Spring Intercultural Festival
                 </h3>
 
                 <!-- THE HOOK QUOTE -->
@@ -3530,7 +3602,7 @@
                     — Alan V.L., International Author &amp; Speaker
                 </p>
 
-                <!-- CINEMATIC VIDEO PLAYER -->
+                <!-- CINEMATIC VIDEO PLAYER (Original Keynote) -->
                 <div class="cinematic-video-wrapper"
                     style="position: relative; width: 100%; border-radius: 4px; overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,0.8); margin-bottom: 6rem; border: 1px solid rgba(255,255,255,0.05);">
                     <video id="russiaVideo" src="images/russian.mp4" poster="images/backcoverofrussia.jpeg"
@@ -3548,7 +3620,7 @@
                     </div>
                 </div>
 
-                <!-- 2-COLUMN EDITORIAL GRID -->
+                <!-- SECTION 2: THE KEYNOTE & THE VICTORY -->
                 <div style="display: flex; flex-wrap: wrap; gap: 4rem;">
                     <!-- Left Column (30% visual weight) -->
                     <div style="flex: 1; min-width: 250px;">
@@ -3560,16 +3632,12 @@
                         </h4>
                         <p
                             style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gold); margin-top: 1rem; text-transform: uppercase; opacity: 0.7;">
-                            (Delivered 100% in Russian Language)
+                            (Secured 2nd Prize | Delivered 100% in Native Russian)
                         </p>
                     </div>
 
                     <!-- Right Column (70% visual weight) -->
                     <div style="flex: 2.5; min-width: 300px;">
-                        <h5
-                            style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; opacity: 0.8;">
-                            THE ULTIMATE LINGUISTIC CHALLENGE
-                        </h5>
                         <p
                             style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
                             When you step onto a global stage, you are faced with a choice: play it safe, or take
@@ -3578,56 +3646,91 @@
                         <p
                             style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
                             At the <em style="color: #fff;">International Spring</em> intercultural festival in Russia,
-                            I stood before a massive native audience as an international author and speaker. It would
-                            have been incredibly easy for me to deliver my keynote in English or my mother tongue. That
-                            is the standard, comfortable protocol for most international speakers.
+                            I didn't just participate—I <strong style="color: #fff; font-weight: 500;">engineered a
+                                complete cultural takeover.</strong>
+                            Discarding the safety net of translation, I took on the ultimate linguistic challenge:
+                            delivering my entire keynote <strong style="color: #fff; font-weight: 500;">completely in
+                                native Russian.</strong>
                         </p>
                         <p
                             style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
-                            But <strong style="color: #fff; font-weight: 500;">true leaders don’t seek comfort; they
-                                seek friction.</strong>
-                        </p>
-                        <p
-                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
-                            I completely discarded the safety net of translation. Instead, I took on the ultimate
-                            psychological and linguistic challenge: delivering my entire keynote <strong
-                                style="color: #fff; font-weight: 500;">completely in native Russian.</strong>
-                        </p>
-                        <p
-                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
-                            Standing before them, I stripped away every cultural and linguistic barrier. I didn’t just
-                            speak to the audience; I <strong style="color: #fff; font-weight: 500;">commanded the room
-                                in their own language.</strong> I looked into their eyes and delivered one raw,
-                            unfiltered truth:
+                            I stripped away every cultural barrier and <strong
+                                style="color: #fff; font-weight: 500;">commanded the room in their own
+                                language.</strong>
+                            In the climax of my speech, I didn't just share a theory; I revealed the physical
+                            manifestation
+                            of my destiny—my book, <em style="color: var(--gold);">The Rich Ambulance Driver.</em>
                         </p>
 
-                        <!-- Keynote Quote -->
-                        <p
-                            style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #fff; line-height: 1.6; margin-bottom: 2.5rem; font-weight: 600; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); text-align: center; font-style: italic;">
-                            “It is never too late to forge your destiny.”
-                        </p>
+                        <!-- Victory Result -->
+                        <div
+                            style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02)); border: 1px solid rgba(212,175,55,0.2); border-radius: 8px; padding: 2rem; margin-bottom: 2.5rem; text-align: center;">
+                            <div
+                                style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.8rem; opacity: 0.7;">
+                                THE RESULT</div>
+                            <div
+                                style="font-family: var(--font-heading); font-size: clamp(1.8rem, 4vw, 2.5rem); color: #fff; font-weight: 700; line-height: 1.2; text-shadow: 0 0 30px rgba(212,175,55,0.15);">
+                                Securing the <span
+                                    style="background: linear-gradient(90deg, var(--gold), #f0d060); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">2nd
+                                    Prize</span>
+                            </div>
+                            <div
+                                style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 0.5rem; font-weight: 300;">
+                                Out of a massive global lineup</div>
+                        </div>
 
                         <p
                             style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
-                            This wasn’t just a speech. It was a <strong
+                            This wasn't just a speech. It was a <strong
                                 style="color: #fff; font-weight: 500;">masterclass in cross-cultural authority.</strong>
-                            When you refuse the easy path and deliver raw conviction in the exact language of your
-                            listeners, you don’t just win their applause—you <strong
-                                style="color: var(--gold); font-weight: 500;">conquer their minds.</strong>
+                            It proved that when you refuse the easy path and deliver raw conviction in the exact
+                            language of your
+                            listeners, you don't just win their applause—you <strong
+                                style="color: var(--gold); font-weight: 500;">capture their minds and take home the
+                                victory.</strong>
                         </p>
+                    </div>
+                </div>
 
-                        <!-- Closing Statement -->
-                        <p
-                            style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: rgba(255,255,255,0.5); line-height: 1.7; font-style: italic; font-weight: 300; margin-top: 1rem;">
-                            The stage is no longer just a platform. It is an empire waiting to be claimed.
-                        </p>
+                <!-- SECTION 3: THE WINNING MOMENT VIDEO -->
+                <div style="margin-top: 6rem; text-align: center;">
+                    <div
+                        style="font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; opacity: 0.8;">
+                        🎬 THE WINNING MOMENT // THE EMPIRE REVEALED
+                    </div>
+                    <p
+                        style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.55); font-style: italic; max-width: 750px; margin: 0 auto 2.5rem; line-height: 1.6;">
+                        Watch the exact moment the 2nd Prize was secured and the Medmelo Empire was introduced to a
+                        Russian audience.
+                    </p>
+
+                    <!-- Victory Video Player -->
+                    <div class="cinematic-video-wrapper"
+                        style="position: relative; width: 100%; border-radius: 4px; overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 60px rgba(212,175,55,0.05); border: 1px solid rgba(212,175,55,0.15);">
+                        <video id="victoryVideo" poster="images/backcoverofrussia.jpeg"
+                            style="width: 100%; display: block; filter: brightness(0.6) contrast(1.1); aspect-ratio: 16/9; object-fit: cover; transition: filter 0.5s ease;"
+                            playsinline preload="metadata"></video>
+
+                        <!-- Netflix-style Play Button -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 1rem; cursor: pointer;"
+                            onclick="var v = document.getElementById('victoryVideo'); if(v.src) { v.play(); v.controls = true; this.style.display = 'none'; v.style.filter = 'brightness(1) contrast(1)'; }">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: rgba(212,175,55,0.12); border: 2px solid rgba(212,175,55,0.5); border-radius: 50%; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); transition: all 0.3s ease;"
+                                onmouseover="this.style.background='rgba(212,175,55,0.2)'; this.style.transform='scale(1.05)'"
+                                onmouseout="this.style.background='rgba(212,175,55,0.12)'; this.style.transform='scale(1)'">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-left: 4px;">
+                                    <path d="M5 3L19 12L5 21V3Z" fill="var(--gold)" />
+                                </svg>
+                            </div>
+                            <span
+                                style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase; opacity: 0.8;">WATCH
+                                THE WINNING MOMENT</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             </div>
         </section>
-
 
         <!-- GLOBAL GRID DASHBOARD -->
         <section class="section global-grid-dashboard" id="global-grid"
