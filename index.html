@@ -345,86 +345,175 @@
 
             <div class="container animate-up" style="max-width: 1000px; position: relative; z-index: 10;">
 
-                <!-- SECTION HEADER -->
+                <!-- SECTION 1: THE HERO BANNER -->
                 <div
                     style="font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.2rem; color: var(--gold); margin-bottom: 2.5rem; text-transform: uppercase;">
                     GLOBAL BROADCAST PROTOCOL // VISUAL ASSET
                 </div>
 
+                <div
+                    style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.4); text-transform: uppercase; margin-bottom: 1rem;">
+                    AWARD-WINNING KEYNOTE
+                </div>
+
                 <h2
-                    style="font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3.5rem); color: #fff; line-height: 1.15; margin-bottom: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">
-                    THE RUSSIAN CONQUEST:<br>THE ARCHITECTURE OF DESTINY
+                    style="font-family: var(--font-heading); font-size: clamp(2.5rem, 6vw, 4.5rem); color: #fff; line-height: 1.1; margin-bottom: 0.5rem; letter-spacing: 0.05em; text-transform: uppercase;">
+                    ИНТЕРНАЦИОНАЛЬНАЯ ВЕСНА
                 </h2>
+                <h3
+                    style="font-family: 'Inter', sans-serif; font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.4); font-weight: 300; letter-spacing: 0.05em; margin-bottom: 2rem;">
+                    International Spring Intercultural Festival
+                </h3>
+
+                <!-- THE HOOK QUOTE -->
+                <div style="border-left: 3px solid var(--gold); padding-left: 1.8rem; margin-bottom: 1.5rem;">
+                    <p
+                        style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-style: italic; color: #fff; line-height: 1.6; max-width: 800px;">
+                        <span style="color: var(--gold); font-size: 1.4rem; line-height: 0;">&ldquo;</span>True global
+                        influence doesn't require forcing the world to understand you. It requires the audacity to <span
+                            style="color: var(--gold);">conquer their minds in their own language.</span><span
+                            style="color: var(--gold); font-size: 1.4rem; line-height: 0;">&rdquo;</span>
+                    </p>
+                </div>
+                <!-- Attribution -->
                 <p
-                    style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 4rem; text-transform: uppercase; opacity: 0.7;">
-                    (Secured 2nd Prize | Delivered 100% in Native Russian)
+                    style="font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); margin-bottom: 4.5rem; text-transform: uppercase;">
+                    — Alan V.L., International Author &amp; Speaker
                 </p>
 
-                <!-- MAIN TEXT -->
-                <div style="max-width: 850px; margin-bottom: 4rem;">
-                    <p
-                        style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
-                        When you step onto a global stage, you are faced with a choice: play it safe, or take
-                        absolute control.
-                    </p>
-                    <p
-                        style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
-                        Discarding the safety net of translation, I took on the ultimate linguistic challenge:
-                        delivering my entire keynote <strong style="color: #fff; font-weight: 500;">completely in
-                            native Russian.</strong> But I didn't just speak their language; I brought the theory
-                        into reality.
-                    </p>
-                    <p
-                        style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
-                        In the climax of my perfect delivery, I revealed the physical manifestation of my destiny—my
-                        book, <em style="color: var(--gold);">The Rich Ambulance Driver.</em> The result? <strong
-                            style="color: #fff; font-weight: 500;">Securing the 2nd Prize globally</strong> among
-                        native speakers and officially stepping into the <strong
-                            style="color: var(--gold); font-weight: 500;">'Award-Winning International Speaker'</strong>
-                        era.
-                    </p>
-                    <p
-                        style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 2vw, 1.5rem); color: rgba(255,255,255,0.55); font-style: italic; line-height: 1.7; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08);">
-                        This is the raw footage of that exact moment. The ultimate cross-cultural alpha move.
-                    </p>
-                </div>
 
-                <!-- 🎬 VIDEO BLOCK -->
-                <div class="cinematic-video-wrapper"
-                    style="position: relative; width: 100%; border-radius: 4px; overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 60px rgba(212,175,55,0.05); margin-bottom: 4rem; border: 1px solid rgba(212,175,55,0.15);">
-                    <video id="russiaVideo" src="images/russian.mp4" poster="images/backcoverofrussia.jpeg"
-                        style="width: 100%; display: block; filter: brightness(0.6) contrast(1.1); aspect-ratio: 16/9; object-fit: cover; transition: filter 0.5s ease;"
-                        playsinline preload="metadata"></video>
-
-                    <!-- Netflix-style Play Button -->
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 1rem; cursor: pointer;"
-                        onclick="var v = document.getElementById('russiaVideo'); v.play(); v.controls = true; this.style.display = 'none'; v.style.filter = 'brightness(1) contrast(1)';">
-                        <div style="display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: rgba(212,175,55,0.12); border: 2px solid rgba(212,175,55,0.5); border-radius: 50%; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); transition: all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(212,175,55,0.2)'; this.style.transform='scale(1.05)'"
-                            onmouseout="this.style.background='rgba(212,175,55,0.12)'; this.style.transform='scale(1)'">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-left: 4px;">
-                                <path d="M5 3L19 12L5 21V3Z" fill="var(--gold)" />
-                            </svg>
+                <!-- THE VICTORY CREDENTIAL: 2ND PRIZE CERTIFICATE -->
+                <div style="text-align: center; margin-bottom: 5rem;">
+                    <div style="position: relative; display: inline-block; max-width: 700px; width: 100%;">
+                        <!-- Certificate Frame -->
+                        <div
+                            style="border: 1px solid rgba(212,175,55,0.25); border-radius: 6px; padding: 8px; background: rgba(0,0,0,0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 40px rgba(212,175,55,0.04);">
+                            <img src="images/russia-photo.jpeg"
+                                alt="2nd Prize Certificate - International Spring Festival, Arkhangelsk, Russia"
+                                style="width: 100%; display: block; border-radius: 4px; filter: contrast(1.05) brightness(0.95);">
                         </div>
-                        <span
-                            style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase; opacity: 0.8;">WATCH
-                            THE WINNING MOMENT</span>
+                        <!-- Caption -->
+                        <div style="margin-top: 1.8rem;">
+                            <div
+                                style="font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.6rem; opacity: 0.7;">
+                                CLASSIFIED ASSET // THE VICTORY CREDENTIAL
+                            </div>
+                            <p
+                                style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 1.8vw, 1.25rem); color: rgba(255,255,255,0.55); font-style: italic; line-height: 1.6; letter-spacing: 0.02em;">
+                                Official Certification: 2nd Prize, International Spring Festival (Arkhangelsk, Russia).
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 📸 IMAGE BLOCK -->
-                <div style="text-align: center; margin-bottom: 2rem;">
-                    <div style="position: relative; display: inline-block; max-width: 700px; width: 100%; border-radius: 4px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 40px rgba(212,175,55,0.05); border: 1px solid rgba(212,175,55,0.15);">
-                        <img src="images/russia photo.jpeg"
-                            alt="Alan V.L. — Award-Winning International Speaker, Arkhangelsk, Russia"
-                            style="width: 100%; display: block; filter: contrast(1.05) brightness(0.95); transition: filter 0.5s ease;">
+                <!-- SECTION 2: THE KEYNOTE & THE VICTORY -->
+                <div style="display: flex; flex-wrap: wrap; gap: 4rem;">
+                    <!-- Left Column (30% visual weight) -->
+                    <div style="flex: 1; min-width: 250px;">
+                        <h4
+                            style="font-family: 'Space Mono', monospace; font-size: 1.25rem; color: #fff; letter-spacing: 0.1em; line-height: 1.5; margin-top: 0.5rem;">
+                            THE KEYNOTE<br>
+                            <span style="color: rgba(255,255,255,0.4); font-size: 0.85rem;">THE ARCHITECTURE OF
+                                DESTINY</span>
+                        </h4>
+                        <p
+                            style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gold); margin-top: 1rem; text-transform: uppercase; opacity: 0.7;">
+                            (Secured 2nd Prize | Delivered 100% in Native Russian)
+                        </p>
                     </div>
-                    <!-- Caption below the photo -->
-                    <p
-                        style="font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--gold); font-style: italic; margin-top: 1.5rem; letter-spacing: 0.02em; opacity: 0.8;">
-                        Award-Winning International Speaker — Arkhangelsk, Russia
-                    </p>
+
+                    <!-- Right Column (70% visual weight) -->
+                    <div style="flex: 2.5; min-width: 300px;">
+                        <p
+                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
+                            When you step onto a global stage, you are faced with a choice: play it safe, or take
+                            absolute control.
+                        </p>
+                        <p
+                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
+                            At the <em style="color: #fff;">International Spring</em> intercultural festival in Russia,
+                            I didn't just participate—I <strong style="color: #fff; font-weight: 500;">engineered a
+                                complete cultural takeover.</strong>
+                            Discarding the safety net of translation, I took on the ultimate linguistic challenge:
+                            delivering my entire keynote <strong style="color: #fff; font-weight: 500;">completely in
+                                native Russian.</strong>
+                        </p>
+                        <p
+                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
+                            I stripped away every cultural barrier and <strong
+                                style="color: #fff; font-weight: 500;">commanded the room in their own
+                                language.</strong>
+                            In the climax of my speech, I didn't just share a theory; I revealed the physical
+                            manifestation
+                            of my destiny—my book, <em style="color: var(--gold);">The Rich Ambulance Driver.</em>
+                        </p>
+
+                        <!-- Victory Result -->
+                        <div
+                            style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02)); border: 1px solid rgba(212,175,55,0.2); border-radius: 8px; padding: 2rem; margin-bottom: 2.5rem; text-align: center;">
+                            <div
+                                style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.8rem; opacity: 0.7;">
+                                THE RESULT</div>
+                            <div
+                                style="font-family: var(--font-heading); font-size: clamp(1.8rem, 4vw, 2.5rem); color: #fff; font-weight: 700; line-height: 1.2; text-shadow: 0 0 30px rgba(212,175,55,0.15);">
+                                Securing the <span
+                                    style="background: linear-gradient(90deg, var(--gold), #f0d060); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">2nd
+                                    Prize</span>
+                            </div>
+                            <div
+                                style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 0.5rem; font-weight: 300;">
+                                Out of a massive global lineup</div>
+                        </div>
+
+                        <p
+                            style="font-family: 'Inter', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300;">
+                            This wasn't just a speech. It was a <strong
+                                style="color: #fff; font-weight: 500;">masterclass in cross-cultural authority.</strong>
+                            It proved that when you refuse the easy path and deliver raw conviction in the exact
+                            language of your
+                            listeners, you don't just win their applause—you <strong
+                                style="color: var(--gold); font-weight: 500;">capture their minds and take home the
+                                victory.</strong>
+                        </p>
+                    </div>
                 </div>
+
+                <!-- SECTION 3: THE WINNING MOMENT VIDEO -->
+                <div style="margin-top: 6rem; text-align: center;">
+                    <div
+                        style="font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; opacity: 0.8;">
+                        🎬 THE WINNING MOMENT // THE EMPIRE REVEALED
+                    </div>
+                    <p
+                        style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.55); font-style: italic; max-width: 750px; margin: 0 auto 2.5rem; line-height: 1.6;">
+                        Watch the exact moment the 2nd Prize was secured and the Medmelo Empire was introduced to a
+                        Russian audience.
+                    </p>
+
+                    <!-- Victory Video Player -->
+                    <div class="cinematic-video-wrapper"
+                        style="position: relative; width: 100%; border-radius: 4px; overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 60px rgba(212,175,55,0.05); border: 1px solid rgba(212,175,55,0.15);">
+                        <video id="victoryVideo" src="images/russian1.mp4" poster="images/backcoverofrussia.jpeg"
+                            style="width: 100%; display: block; filter: brightness(0.6) contrast(1.1); aspect-ratio: 16/9; object-fit: cover; transition: filter 0.5s ease;"
+                            playsinline preload="metadata"></video>
+
+                        <!-- Netflix-style Play Button -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 1rem; cursor: pointer;"
+                            onclick="var v = document.getElementById('victoryVideo'); v.play(); v.controls = true; this.style.display = 'none'; v.style.filter = 'brightness(1) contrast(1)';">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: rgba(212,175,55,0.12); border: 2px solid rgba(212,175,55,0.5); border-radius: 50%; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); transition: all 0.3s ease;"
+                                onmouseover="this.style.background='rgba(212,175,55,0.2)'; this.style.transform='scale(1.05)'"
+                                onmouseout="this.style.background='rgba(212,175,55,0.12)'; this.style.transform='scale(1)'">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-left: 4px;">
+                                    <path d="M5 3L19 12L5 21V3Z" fill="var(--gold)" />
+                                </svg>
+                            </div>
+                            <span
+                                style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase; opacity: 0.8;">WATCH
+                                THE WINNING MOMENT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             </div>
         </section>
