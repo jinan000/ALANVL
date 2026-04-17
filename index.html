@@ -382,26 +382,38 @@
                 </p>
 
 
-                <!-- THE VICTORY CREDENTIAL: 2ND PRIZE CERTIFICATE -->
-                <div style="text-align: center; margin-bottom: 5rem;">
-                    <div style="position: relative; display: inline-block; max-width: 700px; width: 100%;">
-                        <!-- Certificate Frame -->
-                        <div
-                            style="border: 1px solid rgba(212,175,55,0.25); border-radius: 6px; padding: 8px; background: rgba(0,0,0,0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 40px rgba(212,175,55,0.04);">
-                            <img src="images/russia-photo.jpeg"
-                                alt="2nd Prize Certificate - International Spring Festival, Arkhangelsk, Russia"
-                                style="width: 100%; display: block; border-radius: 4px; filter: contrast(1.05) brightness(0.95);">
-                        </div>
-                        <!-- Caption -->
-                        <div style="margin-top: 1.8rem;">
-                            <div
-                                style="font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.6rem; opacity: 0.7;">
-                                CLASSIFIED ASSET // THE VICTORY CREDENTIAL
+                <!-- SECTION 3: THE WINNING MOMENT VIDEO -->
+                <div style="margin-bottom: 5rem; text-align: center;">
+                    <div
+                        style="font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; opacity: 0.8;">
+                        🎬 THE WINNING MOMENT // THE BOOK REVEAL
+                    </div>
+                    <p
+                        style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.55); font-style: italic; max-width: 750px; margin: 0 auto 2.5rem; line-height: 1.6;">
+                        Watch the exact moment the 2nd Prize was secured and the Rich Ambulance Driver was introduced to
+                        a Russian audience.
+                    </p>
+
+                    <!-- Victory Video Player -->
+                    <div class="cinematic-video-wrapper"
+                        style="position: relative; width: 100%; border-radius: 4px; overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 60px rgba(212,175,55,0.05); border: 1px solid rgba(212,175,55,0.15);">
+                        <video id="victoryVideo" src="images/russian1.mp4" poster="images/backcoverofrussia.jpeg"
+                            style="width: 100%; display: block; filter: brightness(0.6) contrast(1.1); aspect-ratio: 16/9; object-fit: cover; transition: filter 0.5s ease;"
+                            playsinline preload="metadata"></video>
+
+                        <!-- Netflix-style Play Button -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 1rem; cursor: pointer;"
+                            onclick="var v = document.getElementById('victoryVideo'); v.play(); v.controls = true; this.style.display = 'none'; v.style.filter = 'brightness(1) contrast(1)';">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: rgba(212,175,55,0.12); border: 2px solid rgba(212,175,55,0.5); border-radius: 50%; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); transition: all 0.3s ease;"
+                                onmouseover="this.style.background='rgba(212,175,55,0.2)'; this.style.transform='scale(1.05)'"
+                                onmouseout="this.style.background='rgba(212,175,55,0.12)'; this.style.transform='scale(1)'">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-left: 4px;">
+                                    <path d="M5 3L19 12L5 21V3Z" fill="var(--gold)" />
+                                </svg>
                             </div>
-                            <p
-                                style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 1.8vw, 1.25rem); color: rgba(255,255,255,0.55); font-style: italic; line-height: 1.6; letter-spacing: 0.02em;">
-                                Official Certification: 2nd Prize, International Spring Festival (Arkhangelsk, Russia).
-                            </p>
+                            <span
+                                style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase; opacity: 0.8;">WATCH
+                                THE WINNING MOMENT</span>
                         </div>
                     </div>
                 </div>
@@ -478,38 +490,26 @@
                     </div>
                 </div>
 
-                <!-- SECTION 3: THE WINNING MOMENT VIDEO -->
+                <!-- THE VICTORY CREDENTIAL: 2ND PRIZE CERTIFICATE -->
                 <div style="margin-top: 6rem; text-align: center;">
-                    <div
-                        style="font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; opacity: 0.8;">
-                        🎬 THE WINNING MOMENT // THE EMPIRE REVEALED
-                    </div>
-                    <p
-                        style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.55); font-style: italic; max-width: 750px; margin: 0 auto 2.5rem; line-height: 1.6;">
-                        Watch the exact moment the 2nd Prize was secured and the Medmelo Empire was introduced to a
-                        Russian audience.
-                    </p>
-
-                    <!-- Victory Video Player -->
-                    <div class="cinematic-video-wrapper"
-                        style="position: relative; width: 100%; border-radius: 4px; overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 60px rgba(212,175,55,0.05); border: 1px solid rgba(212,175,55,0.15);">
-                        <video id="victoryVideo" src="images/russian1.mp4" poster="images/backcoverofrussia.jpeg"
-                            style="width: 100%; display: block; filter: brightness(0.6) contrast(1.1); aspect-ratio: 16/9; object-fit: cover; transition: filter 0.5s ease;"
-                            playsinline preload="metadata"></video>
-
-                        <!-- Netflix-style Play Button -->
-                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 1rem; cursor: pointer;"
-                            onclick="var v = document.getElementById('victoryVideo'); v.play(); v.controls = true; this.style.display = 'none'; v.style.filter = 'brightness(1) contrast(1)';">
-                            <div style="display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: rgba(212,175,55,0.12); border: 2px solid rgba(212,175,55,0.5); border-radius: 50%; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); transition: all 0.3s ease;"
-                                onmouseover="this.style.background='rgba(212,175,55,0.2)'; this.style.transform='scale(1.05)'"
-                                onmouseout="this.style.background='rgba(212,175,55,0.12)'; this.style.transform='scale(1)'">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-left: 4px;">
-                                    <path d="M5 3L19 12L5 21V3Z" fill="var(--gold)" />
-                                </svg>
+                    <div style="position: relative; display: inline-block; max-width: 700px; width: 100%;">
+                        <!-- Certificate Frame -->
+                        <div
+                            style="border: 1px solid rgba(212,175,55,0.25); border-radius: 6px; padding: 8px; background: rgba(0,0,0,0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 40px rgba(212,175,55,0.04);">
+                            <img src="images/russia-photo.jpeg"
+                                alt="2nd Prize Certificate - International Spring Festival, Arkhangelsk, Russia"
+                                style="width: 100%; display: block; border-radius: 4px; filter: contrast(1.05) brightness(0.95);">
+                        </div>
+                        <!-- Caption -->
+                        <div style="margin-top: 1.8rem;">
+                            <div
+                                style="font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.6rem; opacity: 0.7;">
+                                CLASSIFIED ASSET // THE VICTORY CREDENTIAL
                             </div>
-                            <span
-                                style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase; opacity: 0.8;">WATCH
-                                THE WINNING MOMENT</span>
+                            <p
+                                style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 1.8vw, 1.25rem); color: rgba(255,255,255,0.55); font-style: italic; line-height: 1.6; letter-spacing: 0.02em;">
+                                Official Certification: 2nd Prize, International Spring Festival (Arkhangelsk, Russia).
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1783,173 +1783,6 @@
 
 
         <!-- THE EMPIRE SECTION (THE CORPORATE ECOSYSTEM) -->
-        <section class="section empire" id="ecosystem"
-            style="position: relative; background: #020202; padding: 6rem 0; overflow: hidden; min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; border-top: 1px solid rgba(255,255,255,0.05);">
-
-            <!-- Atmospheric Particle Canvas -->
-            <canvas id="particles-network"
-                style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.3;"></canvas>
-
-            <div class="container"
-                style="position: relative; z-index: 10; width: 100%; max-width: 1200px; display: flex; flex-direction: column; align-items: center;">
-
-                <div class="text-center animate-up" style="margin-bottom: 4rem;">
-                    <div
-                        style="font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 1rem; text-transform: uppercase;">
-                        [ ARCHITECTURE OF AN EMPIRE ]
-                    </div>
-                    <h2 class="section-title center"
-                        style="color: #fff; font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.2;">
-                        The 6 Strategic Pillars Powering the Medmelo Ecosystem
-                    </h2>
-                </div>
-
-                <!-- THE PILLARS MATRIX GRID -->
-                <style>
-                    a.cyber-domain {
-                        display: inline-block !important;
-                        /* Required for transform scaling */
-                        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-                    }
-
-                    a.cyber-domain:hover {
-                        transform: scale(1.15);
-                        text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
-                        /* Optional: add a slight color tint on hover if desired */
-                    }
-                </style>
-                <div class="ecosystem-network matrix-grid animate-up"
-                    style="width: 100%; position: relative; padding: 2rem 0; z-index: 10;">
-
-                    <div class="matrix-cards">
-                        <!-- Card 1 -->
-                        <div class="cyber-card">
-                            <div class="cyber-card-inner">
-                                <a href="https://medmelo.com" target="_blank" rel="noopener" class="cyber-domain"
-                                    style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmelo.com</a>
-                                <h3 class="cyber-title">[ ULTIMATE AUTHORITY LAYER ]</h3>
-                                <p class="cyber-desc">The core enterprise engine driving healthcare execution and global
-                                    business infrastructure.</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div class="cyber-card">
-                            <div class="cyber-card-inner">
-                                <a href="https://medmelobooks.com" target="_blank" rel="noopener" class="cyber-domain"
-                                    style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmelobooks.com</a>
-                                <h3 class="cyber-title">[ MASS INTELLECTUAL DISTRIBUTION ]</h3>
-                                <p class="cyber-desc">The publishing syndicate distributing blueprints of survival,
-                                    strategy, and mastermind-level success.</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="cyber-card">
-                            <div class="cyber-card-inner">
-                                <a href="https://medmelolearning.com" target="_blank" rel="noopener"
-                                    class="cyber-domain"
-                                    style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmelolearning.com</a>
-                                <h3 class="cyber-title">[ SYSTEMATIZED DOCTOR CREATION ]</h3>
-                                <p class="cyber-desc">The razor-edge medical ed-tech platform engineering the next
-                                    generation of elite global doctors.</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 4 -->
-                        <div class="cyber-card">
-                            <div class="cyber-card-inner">
-                                <a href="https://medmeloinvestments.com" target="_blank" rel="noopener"
-                                    class="cyber-domain"
-                                    style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmeloinvestments.com</a>
-                                <h3 class="cyber-title">[ WEALTH ARCHITECTURE ]</h3>
-                                <p class="cyber-desc">The financial command center architecting wealth creation and
-                                    scaling strategic global investments.</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 5 -->
-                        <div class="cyber-card">
-                            <div class="cyber-card-inner">
-                                <a href="https://medmeloenergy.com" target="_blank" rel="noopener" class="cyber-domain"
-                                    style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmeloenergy.com</a>
-                                <h3 class="cyber-title">[ FUTURE POWER INFRASTRUCTURE ]</h3>
-                                <p class="cyber-desc">Pioneering sustainable power innovations and high-scale energy
-                                    solutions for the future.</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 6 -->
-                        <div class="cyber-card">
-                            <div class="cyber-card-inner">
-                                <a href="https://medmelostudyabroad.com" target="_blank" rel="noopener"
-                                    class="cyber-domain"
-                                    style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmelostudyabroad.com</a>
-                                <h3 class="cyber-title">[ GLOBAL PHYSICIAN PIPELINE ]</h3>
-                                <p class="cyber-desc">The strategic international gateway deploying ambitious minds into
-                                    elite global universities to forge the healthcare leaders of tomorrow.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Standalone Canvas & Trigger Script -->
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    // Intersection Observer to trigger SVG animations on scroll
-                    const ecosystemNode = document.querySelector('.ecosystem-network');
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                ecosystemNode.classList.add('is-visible');
-                            }
-                        });
-                    }, { threshold: 0.3 });
-                    if (ecosystemNode) observer.observe(ecosystemNode);
-
-                    // Particle Atmosphere System
-                    const canvas = document.getElementById('particles-network');
-                    if (canvas) {
-                        const ctx = canvas.getContext('2d');
-                        let w, h, particles;
-
-                        function resize() {
-                            w = canvas.width = window.innerWidth;
-                            h = canvas.height = canvas.parentElement.offsetHeight;
-                        }
-                        window.addEventListener('resize', resize);
-                        resize();
-
-                        particles = Array.from({ length: window.innerWidth < 768 ? 40 : 100 }, () => ({
-                            x: Math.random() * w,
-                            y: Math.random() * h,
-                            r: Math.random() * 1.5,
-                            vx: (Math.random() - 0.5) * 0.2,
-                            vy: (Math.random() - 0.5) * 0.2,
-                            speedY: -(Math.random() * 0.2 + 0.05)
-                        }));
-
-                        function animatePoints() {
-                            ctx.clearRect(0, 0, w, h);
-                            ctx.fillStyle = 'rgba(212, 175, 55, 0.8)';
-                            particles.forEach(p => {
-                                p.x += p.vx;
-                                p.y += p.speedY;
-                                if (p.y < 0) p.y = h;
-                                if (p.x < 0) p.x = w;
-                                if (p.x > w) p.x = 0;
-                                ctx.beginPath();
-                                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-                                ctx.fill();
-                            });
-                            requestAnimationFrame(animatePoints);
-                        }
-                        animatePoints();
-                    }
-                });
-            </script>
-        </section>
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- SECTION: THE EMPIRE EXPANSION -->
         <!-- The Floating 50-Brand Ecosystem Architecture -->
@@ -2219,6 +2052,105 @@
             <div
                 style="position: absolute; bottom: 0; left: 0; width: 100%; height: 200px; background: linear-gradient(to top, #030303, transparent); z-index: 5; pointer-events: none;">
             </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- SECTION: THE ECOSYSTEM CONTINUES                            -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <section class="section ecosystem-more" id="ecosystem-more-section" style="padding: 8rem 0; background: #020202; position: relative; overflow: hidden; text-align: center; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.02);">
+
+            <!-- Background effects -->
+            <div style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(212,175,55,0.04) 0%, transparent 60%); pointer-events: none; z-index: 1;"></div>
+            
+            <div class="container" style="position: relative; z-index: 10; max-width: 800px; padding: 0 1rem;">
+            
+                <style>
+                    #ecosystem-more-section .reveal-item {
+                        opacity: 0;
+                        transform: translateY(25px);
+                        transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+                    }
+                    .btn-ecosystem-more {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 0.8rem;
+                        padding: 1rem 2.5rem;
+                        background: rgba(0, 0, 0, 0.4);
+                        border: 1px solid rgba(212, 175, 55, 0.3);
+                        color: #fff;
+                        font-family: 'Space Mono', monospace;
+                        font-size: 0.85rem;
+                        letter-spacing: 0.15em;
+                        text-transform: uppercase;
+                        border-radius: 6px;
+                        text-decoration: none;
+                        transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+                        backdrop-filter: blur(10px);
+                        -webkit-backdrop-filter: blur(10px);
+                        cursor: pointer;
+                    }
+                    .btn-ecosystem-more:hover {
+                        transform: scale(1.03);
+                        background: rgba(212, 175, 55, 0.08);
+                        border-color: var(--gold, #D4AF37);
+                        box-shadow: 0 0 30px rgba(212, 175, 55, 0.15), inset 0 0 15px rgba(212, 175, 55, 0.05);
+                        color: #fff;
+                    }
+                    .btn-ecosystem-more i {
+                        font-style: normal;
+                        transition: transform 0.3s ease;
+                    }
+                    .btn-ecosystem-more:hover i {
+                        transform: translateX(4px);
+                    }
+                </style>
+
+                <!-- 1. Small Label (Top) -->
+                <div class="reveal-item" style="font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.3em; color: rgba(212, 175, 55, 0.6); text-transform: uppercase; margin-bottom: 1.8rem;">
+                    THE ECOSYSTEM CONTINUES
+                </div>
+
+                <!-- 2. Main Title -->
+                <h2 class="reveal-item" style="font-family: var(--font-heading, 'Bodoni Moda'); font-size: clamp(2.5rem, 5vw, 4rem); color: #fff; font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.02em;">
+                    More from Medmelo
+                </h2>
+
+                <!-- 3. Supporting Text -->
+                <p class="reveal-item" style="font-family: 'Inter', sans-serif; font-size: clamp(1.05rem, 1.5vw, 1.25rem); color: rgba(255, 255, 255, 0.65); line-height: 1.8; font-weight: 300; max-width: 650px; margin: 0 auto 3.5rem;">
+                    Explore the expanding ecosystem of ideas, systems, and innovations built beyond the core architecture.
+                </p>
+
+                <!-- 4. CTA BUTTON -->
+                <div class="reveal-item">
+                    <a href="MORE-FROM-MEDMELO.html" class="btn-ecosystem-more">
+                        <i>&rarr;</i> MORE FROM MEDMELO
+                    </a>
+                </div>
+            </div>
+
+            <script>
+                (function() {
+                    const section = document.getElementById('ecosystem-more-section');
+                    if(!section) return;
+                    const items = section.querySelectorAll('.reveal-item');
+                    
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if(entry.isIntersecting) {
+                                items.forEach((item, index) => {
+                                    setTimeout(() => {
+                                        item.style.opacity = '1';
+                                        item.style.transform = 'translateY(0)';
+                                    }, index * 150 + 100);
+                                });
+                                observer.disconnect();
+                            }
+                        });
+                    }, { threshold: 0.3 });
+                    
+                    observer.observe(section);
+                })();
+            </script>
         </section>
 
         <!-- THE ARSENAL SECTION -->
@@ -3155,45 +3087,6 @@
                     </div>
                 </div> <!-- CLOSE arsenal-grid-premium -->
 
-                <!-- GLOBAL PUBLISHING & MEDIA RIGHTS -->
-                <div
-                    style="padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); margin-top: 3rem;">
-                    <div class="text-center animate-up">
-                        <p
-                            style="font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.75rem;">
-                            [ GLOBAL PUBLISHING &amp; MEDIA RIGHTS ]</p>
-                        <p
-                            style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.55); max-width: 700px; margin: 0 auto 2.5rem;">
-                            The Intellectual Property (IP) of Dr. Alan V.L. is now open for international acquisition
-                            and
-                            regional licensing.</p>
-
-                        <div
-                            style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
-                            <span class="btn-ghost"
-                                style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[
-                                🌍
-                                GLOBAL ENGLISH RIGHTS: OPEN ]</span>
-                            <span class="btn-ghost"
-                                style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[
-                                🗺️
-                                REGIONAL LANGUAGE TRANSLATIONS: OPEN ]</span>
-                            <span class="btn-ghost"
-                                style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[
-                                🎬 AUDIO
-                                RIGHTS: OPEN ]</span>
-                        </div>
-
-                        <p
-                            style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 0.75rem;">
-                            FOR DIRECT NEGOTIATIONS &amp; ACQUISITION ENQUIRIES:</p>
-                        <a href="mailto:hi@alanvl.com"
-                            style="font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600; color: #fff; text-decoration: none; letter-spacing: 0.05em; transition: color 0.3s ease;">📧
-                            hi@alanvl.com</a>
-                    </div>
-                </div>
-
-
 
                 <!-- ═ ═ ═  Cinematic Divider ═ ═ ═  -->
                 <!-- ═ ═ ═ PREMIUM CONTINUATION HEADER ═ ═ ═  -->
@@ -3523,62 +3416,6 @@
             </script>
         </section>
         <!-- IP ARSENAL TEASER -->
-        <section class="section ip-teaser" style="padding: 4rem 0 6rem 0; background: #020202;">
-            <div class="container animate-up">
-                <div
-                    style="background: linear-gradient(135deg, rgba(15,15,15,0.9), rgba(5,5,5,0.95)); border: 1px solid rgba(212,175,55,0.2); border-radius: 12px; padding: 4rem 3rem; text-align: center; box-shadow: 0 30px 60px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.05); position: relative; overflow: hidden;">
-                    <!-- Decorative BG -->
-                    <div
-                        style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at center, rgba(212,175,55,0.03) 0%, transparent 60%); pointer-events: none;">
-                    </div>
-
-                    <h2 class="section-title center gold-text"
-                        style="font-size: clamp(1.5rem, 3.5vw, 2.5rem); margin-bottom: 1rem; position: relative; z-index: 2;">
-                        THE EMPIRE'S ARCHITECTURE: LEGAL & DIGITAL ASSETS</h2>
-                    <p
-                        style="font-family: 'Inter', sans-serif; font-size: 1.1rem; color: rgba(255,255,255,0.6); max-width: 700px; margin: 0 auto 3rem; position: relative; z-index: 2;">
-                        The infrastructure of tomorrow's industries, legally fortified today.</p>
-
-                    <div
-                        style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 4rem; position: relative; z-index: 2;">
-                        <!-- Metirc 1 -->
-                        <div
-                            style="padding: 2rem; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; min-width: 200px; flex: 1;">
-                            <div
-                                style="font-family: 'Space Mono', monospace; font-size: 3rem; color: #fff; line-height: 1; margin-bottom: 0.5rem; text-shadow: 0 0 20px rgba(255,255,255,0.2);">
-                                [ 36 ]</div>
-                            <div
-                                style="font-family: var(--font-heading); font-size: 0.85rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase;">
-                                Trademarks<br>Secured & Pending</div>
-                        </div>
-                        <!-- Metirc 2 -->
-                        <div
-                            style="padding: 2rem; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; min-width: 200px; flex: 1;">
-                            <div
-                                style="font-family: 'Space Mono', monospace; font-size: 3rem; color: #fff; line-height: 1; margin-bottom: 0.5rem; text-shadow: 0 0 20px rgba(255,255,255,0.2);">
-                                [ 34 ]</div>
-                            <div
-                                style="font-family: var(--font-heading); font-size: 0.85rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase;">
-                                Premium<br>Digital Domains</div>
-                        </div>
-                        <!-- Metirc 3 -->
-                        <div
-                            style="padding: 2rem; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; min-width: 200px; flex: 1;">
-                            <div
-                                style="font-family: 'Space Mono', monospace; font-size: 3rem; color: #fff; line-height: 1; margin-bottom: 0.5rem; text-shadow: 0 0 20px rgba(255,255,255,0.2);">
-                                [ 03 ]</div>
-                            <div
-                                style="font-family: var(--font-heading); font-size: 0.85rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase;">
-                                ISO<br>Certifications</div>
-                        </div>
-                    </div>
-
-                    <a href="ip-matrix.html" class="btn btn-primary"
-                        style="position: relative; z-index: 2; font-size: 0.85rem; padding: 1.2rem 3rem;">[ DECODE THE
-                        IP MATRIX ]</a>
-                </div>
-            </div>
-        </section>
 
         <!-- ═══════════════════════════════════════════════════════════════ -->
         <!-- SECTION: THE DIGITAL COMMUNITY -->
@@ -4078,38 +3915,7 @@
             </div>
         </section>
 
-        <!-- GLOBAL PUBLISHING & MEDIA RIGHTS -->
-        <section
-            style="padding: 4rem 0; background: #020202; border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04);">
-            <div class="container text-center animate-up">
-                <p
-                    style="font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.75rem;">
-                    [ GLOBAL PUBLISHING &amp; MEDIA RIGHTS ]</p>
-                <p
-                    style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.55); max-width: 700px; margin: 0 auto 2.5rem;">
-                    The Intellectual Property (IP) of Dr. Alan V.L. is now open for international acquisition and
-                    regional licensing.</p>
 
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
-                    <span class="btn-ghost"
-                        style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[ 🌍
-                        GLOBAL ENGLISH RIGHTS: OPEN ]</span>
-                    <span class="btn-ghost"
-                        style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[ 🗺️
-                        REGIONAL LANGUAGE TRANSLATIONS: OPEN ]</span>
-                    <span class="btn-ghost"
-                        style="pointer-events: none; border-color: rgba(197,160,89,0.3); color: var(--gold);">[ 🎬 AUDIO
-                        RIGHTS: OPEN ]</span>
-                </div>
-
-                <p
-                    style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 0.75rem;">
-                    FOR DIRECT NEGOTIATIONS &amp; ACQUISITION ENQUIRIES:</p>
-                <a href="mailto:hi@alanvl.com"
-                    style="font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600; color: #fff; text-decoration: none; letter-spacing: 0.05em; transition: color 0.3s ease;">📧
-                    hi@alanvl.com</a>
-            </div>
-        </section>
         <!-- SECTIONS MIGRATED TO VAULT.HTML -->
 
         <!-- THE EMPATHY CORE SECTION -->
@@ -4290,7 +4096,7 @@
             </div>
 
             <!-- FEATURED BOOK: FORBIDDEN SEX EDUCATION VOL 1 -->
-            <div class="container animate-up" style="margin-top: 5rem; position: relative; z-index: 10;">
+            <div class="container animate-up" style="display: none !important; margin-top: 5rem; position: relative; z-index: 10;">
 
                 <!-- Top label -->
                 <div style="text-align: center; margin-bottom: 3rem;">
@@ -4450,7 +4256,7 @@
 
         <!-- THE YOUTUBE MENTORSHIP SECTION -->
         <section class="section digital-clinics"
-            style="padding: 6rem 0; background: #030303; border-top: 1px solid rgba(255,255,255,0.05);">
+            style="display: none !important; padding: 6rem 0; background: #030303; border-top: 1px solid rgba(255,255,255,0.05);">
             <div class="container animate-up">
                 <div class="text-center" style="margin-bottom: 4rem;">
                     <h2 class="section-title center gold-text" style="font-size: clamp(1.8rem, 4vw, 3rem);">THE DIGITAL
@@ -4567,7 +4373,7 @@
 
 
         <!-- THE EVIDENCE ROOM SECTION -->
-        <section class="section evidence-room" id="archives">
+        <section class="section evidence-room" id="archives" style="display: none !important;">
             <div class="container">
                 <div class="text-center animate-up" style="margin-bottom: 5rem;">
                     <h2 class="section-title center gold-text">THE EVIDENCE ROOM</h2>

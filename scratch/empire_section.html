@@ -1,0 +1,167 @@
+        <section class="section empire" id="ecosystem"
+            style="position: relative; background: #020202; padding: 6rem 0; overflow: hidden; min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; border-top: 1px solid rgba(255,255,255,0.05);">
+
+            <!-- Atmospheric Particle Canvas -->
+            <canvas id="particles-network"
+                style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.3;"></canvas>
+
+            <div class="container"
+                style="position: relative; z-index: 10; width: 100%; max-width: 1200px; display: flex; flex-direction: column; align-items: center;">
+
+                <div class="text-center animate-up" style="margin-bottom: 4rem;">
+                    <div
+                        style="font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 1rem; text-transform: uppercase;">
+                        [ ARCHITECTURE OF AN EMPIRE ]
+                    </div>
+                    <h2 class="section-title center"
+                        style="color: #fff; font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.2;">
+                        The 6 Strategic Pillars Powering the Medmelo Ecosystem
+                    </h2>
+                </div>
+
+                <!-- THE PILLARS MATRIX GRID -->
+                <style>
+                    a.cyber-domain {
+                        display: inline-block !important;
+                        /* Required for transform scaling */
+                        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+                    }
+
+                    a.cyber-domain:hover {
+                        transform: scale(1.15);
+                        text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+                        /* Optional: add a slight color tint on hover if desired */
+                    }
+                </style>
+                <div class="ecosystem-network matrix-grid animate-up"
+                    style="width: 100%; position: relative; padding: 2rem 0; z-index: 10;">
+
+                    <div class="matrix-cards">
+                        <!-- Card 1 -->
+                        <div class="cyber-card">
+                            <div class="cyber-card-inner">
+                                <a href="https://medmelo.com" target="_blank" rel="noopener" class="cyber-domain"
+                                    style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmelo.com</a>
+                                <h3 class="cyber-title">[ ULTIMATE AUTHORITY LAYER ]</h3>
+                                <p class="cyber-desc">The core enterprise engine driving healthcare execution and global
+                                    business infrastructure.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="cyber-card">
+                            <div class="cyber-card-inner">
+                                <a href="https://medmelobooks.com" target="_blank" rel="noopener" class="cyber-domain"
+                                    style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmelobooks.com</a>
+                                <h3 class="cyber-title">[ MASS INTELLECTUAL DISTRIBUTION ]</h3>
+                                <p class="cyber-desc">The publishing syndicate distributing blueprints of survival,
+                                    strategy, and mastermind-level success.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="cyber-card">
+                            <div class="cyber-card-inner">
+                                <a href="https://medmelolearning.com" target="_blank" rel="noopener"
+                                    class="cyber-domain"
+                                    style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmelolearning.com</a>
+                                <h3 class="cyber-title">[ SYSTEMATIZED DOCTOR CREATION ]</h3>
+                                <p class="cyber-desc">The razor-edge medical ed-tech platform engineering the next
+                                    generation of elite global doctors.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="cyber-card">
+                            <div class="cyber-card-inner">
+                                <a href="https://medmeloinvestments.com" target="_blank" rel="noopener"
+                                    class="cyber-domain"
+                                    style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmeloinvestments.com</a>
+                                <h3 class="cyber-title">[ WEALTH ARCHITECTURE ]</h3>
+                                <p class="cyber-desc">The financial command center architecting wealth creation and
+                                    scaling strategic global investments.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="cyber-card">
+                            <div class="cyber-card-inner">
+                                <a href="https://medmeloenergy.com" target="_blank" rel="noopener" class="cyber-domain"
+                                    style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmeloenergy.com</a>
+                                <h3 class="cyber-title">[ FUTURE POWER INFRASTRUCTURE ]</h3>
+                                <p class="cyber-desc">Pioneering sustainable power innovations and high-scale energy
+                                    solutions for the future.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="cyber-card">
+                            <div class="cyber-card-inner">
+                                <a href="https://medmelostudyabroad.com" target="_blank" rel="noopener"
+                                    class="cyber-domain"
+                                    style="text-decoration: none; transition: color 0.3s ease; position: relative; z-index: 20;">medmelostudyabroad.com</a>
+                                <h3 class="cyber-title">[ GLOBAL PHYSICIAN PIPELINE ]</h3>
+                                <p class="cyber-desc">The strategic international gateway deploying ambitious minds into
+                                    elite global universities to forge the healthcare leaders of tomorrow.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standalone Canvas & Trigger Script -->
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    // Intersection Observer to trigger SVG animations on scroll
+                    const ecosystemNode = document.querySelector('.ecosystem-network');
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                ecosystemNode.classList.add('is-visible');
+                            }
+                        });
+                    }, { threshold: 0.3 });
+                    if (ecosystemNode) observer.observe(ecosystemNode);
+
+                    // Particle Atmosphere System
+                    const canvas = document.getElementById('particles-network');
+                    if (canvas) {
+                        const ctx = canvas.getContext('2d');
+                        let w, h, particles;
+
+                        function resize() {
+                            w = canvas.width = window.innerWidth;
+                            h = canvas.height = canvas.parentElement.offsetHeight;
+                        }
+                        window.addEventListener('resize', resize);
+                        resize();
+
+                        particles = Array.from({ length: window.innerWidth < 768 ? 40 : 100 }, () => ({
+                            x: Math.random() * w,
+                            y: Math.random() * h,
+                            r: Math.random() * 1.5,
+                            vx: (Math.random() - 0.5) * 0.2,
+                            vy: (Math.random() - 0.5) * 0.2,
+                            speedY: -(Math.random() * 0.2 + 0.05)
+                        }));
+
+                        function animatePoints() {
+                            ctx.clearRect(0, 0, w, h);
+                            ctx.fillStyle = 'rgba(212, 175, 55, 0.8)';
+                            particles.forEach(p => {
+                                p.x += p.vx;
+                                p.y += p.speedY;
+                                if (p.y < 0) p.y = h;
+                                if (p.x < 0) p.x = w;
+                                if (p.x > w) p.x = 0;
+                                ctx.beginPath();
+                                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                                ctx.fill();
+                            });
+                            requestAnimationFrame(animatePoints);
+                        }
+                        animatePoints();
+                    }
+                });
+            </script>
+        </section>
