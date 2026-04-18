@@ -83,7 +83,136 @@
                     <div class="journey-text text-90" style="opacity: 0;">
                         <div class="spotlight-effect"></div>
                         <h2 class="font-heading">From Surviving the Streets to Awakening a Generation.</h2>
-                        <a href="#origin" class="btn btn-premium-cta mt-4">[ EXPLORE THE ARCHITECTURE ]</a>
+
+                        <!-- Premium Animated Scroll Down Indicator -->
+                        <a href="#origin" class="journey-scroll-cta" aria-label="Scroll to explore">
+                            <span class="scroll-cta-text">EXPLORE THE ARCHITECTURE</span>
+                            <div class="scroll-cta-arrow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <style>
+                            .journey-scroll-cta {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 1rem;
+                                text-decoration: none;
+                                margin-top: 2.5rem;
+                                cursor: pointer;
+                                position: relative;
+                            }
+
+                            .scroll-cta-text {
+                                font-family: 'Space Mono', monospace;
+                                font-size: 0.7rem;
+                                letter-spacing: 0.35em;
+                                color: rgba(212, 175, 55, 0.7);
+                                text-transform: uppercase;
+                                transition: color 0.4s ease, letter-spacing 0.4s ease;
+                            }
+
+                            .journey-scroll-cta:hover .scroll-cta-text {
+                                color: var(--gold);
+                                letter-spacing: 0.45em;
+                            }
+
+                            .scroll-cta-arrow {
+                                width: 48px;
+                                height: 48px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: var(--gold);
+                                position: relative;
+                                animation: scrollFloat 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+                            }
+
+                            .scroll-cta-arrow::before {
+                                content: '';
+                                position: absolute;
+                                inset: 0;
+                                border-radius: 50%;
+                                border: 1px solid rgba(212, 175, 55, 0.2);
+                                animation: scrollPulseRing 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+                            }
+
+                            .scroll-cta-arrow::after {
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                                background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+                                animation: scrollGlow 2.4s ease-in-out infinite;
+                            }
+
+                            .scroll-cta-trail {
+                                width: 1px;
+                                height: 40px;
+                                background: linear-gradient(180deg, rgba(212, 175, 55, 0.4) 0%, transparent 100%);
+                                animation: trailPulse 2.4s ease-in-out infinite;
+                                transform-origin: top center;
+                            }
+
+                            .journey-scroll-cta:hover .scroll-cta-arrow {
+                                animation-duration: 1.6s;
+                            }
+
+                            .journey-scroll-cta:hover .scroll-cta-arrow::before {
+                                border-color: rgba(212, 175, 55, 0.5);
+                                box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+                            }
+
+                            @keyframes scrollFloat {
+                                0%, 100% {
+                                    transform: translateY(0);
+                                }
+                                50% {
+                                    transform: translateY(10px);
+                                }
+                            }
+
+                            @keyframes scrollPulseRing {
+                                0% {
+                                    transform: scale(1);
+                                    opacity: 0.6;
+                                }
+                                50% {
+                                    transform: scale(1.3);
+                                    opacity: 0;
+                                }
+                                100% {
+                                    transform: scale(1);
+                                    opacity: 0;
+                                }
+                            }
+
+                            @keyframes scrollGlow {
+                                0%, 100% {
+                                    opacity: 0.3;
+                                    transform: scale(1);
+                                }
+                                50% {
+                                    opacity: 0.8;
+                                    transform: scale(1.5);
+                                }
+                            }
+
+                            @keyframes trailPulse {
+                                0%, 100% {
+                                    opacity: 0.3;
+                                    transform: scaleY(0.6);
+                                }
+                                50% {
+                                    opacity: 0.8;
+                                    transform: scaleY(1);
+                                }
+                            }
+                        </style>
                     </div>
                 </div>
             </div>
@@ -386,7 +515,7 @@
                 <div style="margin-bottom: 5rem; text-align: center;">
                     <div
                         style="font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; opacity: 0.8;">
-                        🎬 THE WINNING MOMENT // THE BOOK REVEAL
+                        THE WINNING MOMENT // THE BOOK REVEAL
                     </div>
                     <p
                         style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.55); font-style: italic; max-width: 750px; margin: 0 auto 2.5rem; line-height: 1.6;">
@@ -809,7 +938,7 @@
                         <div class="card-content" style="position: relative; z-index: 3;">
                             <div
                                 style="font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.8rem; opacity: 0.7;">
-                                [ CLASSIFIED — ACADEMIC ]</div>
+                                CLASSIFIED — ACADEMIC </div>
                             <h3>Author of 12 Medical Textbooks</h3>
                             <p>Authored 12 highly acclaimed clinical textbooks while still a medical student. A
                                 dedicated medical researcher mapping the unseen patterns of human biology —
@@ -906,7 +1035,7 @@
             <!-- Full Intelligence Report CTA -->
             <div class="container text-center animate-up" style="margin-top: 4rem; margin-bottom: 2rem;">
                 <a href="credentials.html" class="btn btn-gold-glow" style="font-size: 0.85rem; letter-spacing: 0.2em;">
-                    [ Click to view full intelligence report ]
+                    Click to view full intelligence report
                 </a>
             </div>
 
@@ -1074,7 +1203,7 @@
                     </div>
                     <div
                         style="font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 1.5rem; text-transform: uppercase;">
-                        [ THE RICH AMBULANCE DRIVER ]
+                        THE RICH AMBULANCE DRIVER
                     </div>
                     <h2 class="section-title center" style="
                         color: #fff;
@@ -1167,7 +1296,8 @@
 
                         <!-- CTA Buttons -->
                         <div style="text-align: center;">
-                            <a href="contact.html#get-the-book" class="btn btn-gold-glow"
+                            <a href="https://medmelobooks.com/products/the-rich-ambulance-drivermalayalam-1"
+                                target="_blank" class="btn btn-gold-glow"
                                 style="display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.8rem; padding: 1rem 2.5rem; margin-bottom: 1rem;">
                                 <img src="images/logo12.png" alt="Medmelo"
                                     style="height: 18px; object-fit: contain; vertical-align: middle;">
@@ -1262,7 +1392,7 @@
 
                 <div
                     style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 2rem; text-transform: uppercase;">
-                    [ THE CLINICAL DECODER & TABOO BREAKER ]
+                    THE CLINICAL DECODER & TABOO BREAKER
                 </div>
 
                 <!-- Opening Quote -->
@@ -1446,7 +1576,7 @@
 
                 <div
                     style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.25em; color: rgba(214,40,40,0.7); margin-bottom: 1.5rem; text-transform: uppercase;">
-                    [ THE RESULT OF DECODING 1000+ MINDS ]
+                    THE RESULT OF DECODING 1000+ MINDS
                 </div>
 
                 <h2 class="section-title center" style="
@@ -1502,12 +1632,13 @@
 
                         <span
                             style="font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); border: 1px solid rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 2px; display: inline-block; margin-bottom: 1.8rem;">
-                            [ MALAYALAM ] u{2014} വിലക്കപ്പെട്ട ലൈംഗിക വിദ്യാഭ്യാസം
+                            MALAYALAM {2014} വിലക്കപ്പെട്ട ലൈംഗിക വിദ്യാഭ്യാസം
                         </span>
 
                         <div>
-                            <a href="https://wa.me/message/medmelo" class="preorder-btn">
-                                <span>⚡</span> PRE-ORDER NOW
+                            <a href="https://medmelobooks.com/products/the-forbidden-sex-education-preorder-2"
+                                target="_blank" class="preorder-btn">
+                                <span>⚡</span> BUY NOW
                             </a>
                         </div>
 
@@ -1648,7 +1779,7 @@
                     <!-- Right: Story Narrative -->
                     <div style="flex: 1.2; min-width: 320px;">
                         <div class="medmelo-section-heading animate-up">
-                            [ CLASSIFIED DECODER ] THE ORIGIN: THE ₹20 SURVIVAL
+                            THE ORIGIN: THE ₹20 SURVIVAL
                         </div>
                         <div style="border-left: 2px solid rgba(212,175,55,0.3); padding-left: 2rem;">
                             <p class="medmelo-narrative-text animate-up">
@@ -1685,7 +1816,7 @@
                 <div style="max-width: 800px; margin: 0 auto 6rem; text-align: left;">
 
                     <div class="medmelo-section-heading animate-up">
-                        [ SYSTEM CORE ARCHITECTURE ] THE ENGINE
+                        THE ENGINE
                     </div>
                     <p class="medmelo-narrative-text animate-up"
                         style="font-style: normal; color: rgba(255,255,255,0.85);">
@@ -1723,7 +1854,7 @@
                     </p>
 
                     <div class="medmelo-section-heading animate-up" style="color: #D62828;">
-                        <span style="color: #D62828;">[ RED DIRECTIVE COMMAND ] THE TACTICAL SHUTDOWN</span>
+                        <span style="color: #D62828;"> THE TACTICAL SHUTDOWN</span>
                     </div>
                     <p class="medmelo-narrative-text animate-up" style="font-style: normal;">
                         “As the platform exploded, the matrix pushed back.<br><br>
@@ -1960,7 +2091,7 @@
                 style="position: relative; z-index: 10; display: flex; justify-content: center; width: 100%;">
                 <div class="empire-glass-container">
 
-                    <div class="empire-badge">[ THE GENESIS CODE ]</div>
+                    <div class="empire-badge"> THE GENESIS CODE </div>
 
                     <p
                         style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 1.8rem); color: rgba(255,255,255,0.9); font-style: italic; line-height: 1.8; margin-bottom: 2rem;">
@@ -2778,7 +2909,7 @@
             <div class="container">
                 <!-- Section Header -->
                 <div class="arsenal-header animate-up">
-                    <div class="section-eyebrow">[ Intellectual Property ]</div>
+                    <div class="section-eyebrow"> Intellectual Property </div>
                     <h2 class="section-title center gold-text">THE ARSENAL</h2>
                     <p class="section-subtitle">Books designed to break the system and awaken a generation.</p>
                 </div>
@@ -2801,7 +2932,7 @@
                                     aria-selected="false">മലയാളം</button>
                             </div>
                             <h4>THE RICH AMBULANCE DRIVER</h4>
-                            <span class="bonus-lang-badge">[ MALAYALAM ]</span>
+                            <span class="bonus-lang-badge"> MALAYALAM </span>
                             <span class="bonus-ml-subtitle">ദി റിച്ച് ആംബുലൻസ് ഡ്രൈവർ</span>
 
                             <p class="bonus-tagline">The Ultimate Survival Blueprint. From rock bottom to building an
@@ -2877,14 +3008,15 @@
 
                             <!-- Section 01: Physical -->
                             <div class="asset-tier">
-                                <p class="asset-tier-title">[ 01 : SECURE THE PHYSICAL ASSET ]</p>
-                                <a href="contact.html#get-the-book" class="btn btn-gold-glow"
+                                <p class="asset-tier-title"> 01 : SECURE THE PHYSICAL ASSET </p>
+                                <a href="https://medmelobooks.com/products/the-rich-ambulance-drivermalayalam-1"
+                                    target="_blank" class="btn btn-gold-glow"
                                     style="width: 100%; text-align: center; margin-bottom: 0.5rem; font-size: 0.75rem; gap: 0.5rem;">
                                     <img src="images/logo12.png" alt="Medmelo"
                                         style="height: 20px; object-fit: contain; vertical-align: middle;"> BUY ON
                                     MEDMELO BOOKS </a>
                                 <div class="btn-ghost-group">
-                                    <a href="https://www.amazon.in" target="_blank" class="btn-ghost btn-platform"
+                                    <a href="https://amzn.in/d/0cPhmcF8" target="_blank" class="btn-ghost btn-platform"
                                         style="flex:1;"><img src="images/amazon_logo.png" alt="Amazon"
                                             class="platform-logo"></a>
                                     <a href="https://www.flipkart.com" target="_blank" class="btn-ghost btn-platform"
@@ -2895,7 +3027,7 @@
 
                             <!-- Section 02: Audio -->
                             <div class="asset-tier">
-                                <p class="asset-tier-title">[ 02 : AUDIO INTELLIGENCE ]</p>
+                                <p class="asset-tier-title"> 02 : AUDIO INTELLIGENCE </p>
                                 <div class="btn-ghost-group">
                                     <a href="https://kukufm.com" target="_blank"
                                         class="btn-ghost btn-platform btn-negotiating" style="flex:1;"><img
@@ -2911,7 +3043,7 @@
 
                             <!-- Section 03: Digital -->
                             <div class="asset-tier">
-                                <p class="asset-tier-title">[ 03 : THE DIGITAL BLUEPRINT ]</p>
+                                <p class="asset-tier-title"> 03 : THE DIGITAL BLUEPRINT </p>
                                 <span class="status-pulse-red" style="margin-bottom: 0.5rem;">COMING SOON</span>
                                 <div class="btn-ghost-group">
                                     <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
@@ -2951,7 +3083,7 @@
 
                             <!-- Syndicate Footer -->
                             <div class="syndicate-footer">
-                                <strong>[ 14K+ MATRIX BREAKERS ALREADY INSIDE ]</strong>
+                                <strong> 14K+ MATRIX BREAKERS ALREADY INSIDE </strong>
                                 The movement has begun. Join the rawest survival and wealth-building syndicate on the
                                 internet.
                                 <br>
@@ -2998,18 +3130,19 @@
                                     aria-selected="false">മലയാളം</button>
                             </div>
                             <h4>FORBIDDEN SEX EDUCATION</h4>
-                            <span class="bonus-lang-badge">[ MALAYALAM ]</span>
+                            <span class="bonus-lang-badge"> MALAYALAM </span>
                             <span class="bonus-ml-subtitle">വിലക്കപ്പെട്ട ലൈംഗിക വിദ്യാഭ്യാസം</span>
 
                             <p class="bonus-tagline">Decoding the unspoken truths. The knowledge schools &amp; society
-                                refused to teach you. 🤫<br>The book they tried to keep locked 🔒</p>
+                                refused to teach you.<br>The book they tried to keep locked 🔒</p>
 
                             <!-- Section 01: Physical -->
                             <div class="asset-tier">
-                                <p class="asset-tier-title">[ 01 : SECURE THE PHYSICAL ASSET ]</p>
-                                <a href="https://wa.me/message/medmelo" class="btn btn-gold-glow"
+                                <p class="asset-tier-title"> 01 : SECURE THE PHYSICAL ASSET </p>
+                                <a href="https://medmelobooks.com/products/the-forbidden-sex-education-preorder-2"
+                                    target="_blank" class="btn btn-gold-glow"
                                     style="width: 100%; text-align: center; margin-bottom: 0.5rem; font-size: 0.75rem;">[
-                                    ⚡ PRE-ORDER VOL 1 NOW ]</a>
+                                    ⚡ BUY VOL 1 NOW ]</a>
                                 <div class="btn-ghost-group">
                                     <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
                                             src="images/amazon_logo.png" alt="Amazon" class="platform-logo"></span>
@@ -3020,7 +3153,7 @@
 
                             <!-- Section 02: Audio -->
                             <div class="asset-tier">
-                                <p class="asset-tier-title">[ 02 : AUDIO INTELLIGENCE (NEGOTIATING) ]</p>
+                                <p class="asset-tier-title"> 02 : AUDIO INTELLIGENCE (NEGOTIATING) </p>
                                 <div class="btn-ghost-group">
                                     <a href="https://kukufm.com" target="_blank"
                                         class="btn-ghost btn-platform btn-negotiating" style="flex:1;"><img
@@ -3036,7 +3169,7 @@
 
                             <!-- Section 03: Digital -->
                             <div class="asset-tier">
-                                <p class="asset-tier-title">[ 03 : DIGITAL BLUEPRINT (COMING SOON) ]</p>
+                                <p class="asset-tier-title"> 03 : DIGITAL BLUEPRINT (COMING SOON) </p>
                                 <div class="btn-ghost-group">
                                     <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
                                             src="images/kindle_logo.png" alt="Kindle" class="platform-logo"></span>
@@ -3072,7 +3205,7 @@
 
                             <!-- Syndicate Footer -->
                             <div class="syndicate-footer">
-                                <strong>[ 80,000+ MINDS DECODING THE TRUTH ]</strong>
+                                <strong> 80,000+ MINDS DECODING THE TRUTH </strong>
                                 A 80K+ strong underground community unlearning the lies and mastering unspoken clinical
                                 truths.
                                 <br>
@@ -3147,7 +3280,7 @@
                 <div class="animate-up" style="margin-top: 6rem; text-align: center; padding-bottom: 2rem;">
                     <div
                         style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 1rem; text-transform: uppercase; opacity: 0.7;">
-                        [ THE EXTENDED ARSENAL ]
+                        THE EXTENDED ARSENAL
                     </div>
                     <p
                         style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: rgba(255,255,255,0.45); max-width: 550px; margin: 0 auto 2.5rem; line-height: 1.7; font-style: italic;">
@@ -3155,8 +3288,8 @@
                         strategic deployments.
                     </p>
                     <a href="vault.html" class="btn-vault-premium" id="vaultCta">
-                        <span class="vault-btn-text">[ ACCESS THE CLASSIFIED VAULT ]</span>
-                        <span class="vault-btn-hover">[ DECLASSIFYING... ]</span>
+                        <span class="vault-btn-text"> ACCESS THE CLASSIFIED VAULT </span>
+                        <span class="vault-btn-hover"> DECLASSIFYING... </span>
                     </a>
                 </div>
 
@@ -3443,7 +3576,7 @@
 
                 <div
                     style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 1.5rem; text-transform: uppercase;">
-                    [ THE DIGITAL COMMUNITY ]
+                    THE DIGITAL COMMUNITY
                 </div>
 
                 <h2 class="section-title center"
@@ -3626,8 +3759,8 @@
                         <div
                             style="font-family: 'Space Mono', monospace; font-size: 0.75rem; color: #25d366; letter-spacing: 0.15em; margin-bottom: 0.5rem; text-transform: uppercase;">
                             <span
-                                style="display: inline-block; width: 6px; height: 6px; background: #25d366; border-radius: 50%; margin-right: 6px; animation: pulseGreen 2s infinite;"></span>[
-                            STATUS: ACTIVE ]
+                                style="display: inline-block; width: 6px; height: 6px; background: #25d366; border-radius: 50%; margin-right: 6px; animation: pulseGreen 2s infinite;"></span>
+                            STATUS: ACTIVE
                         </div>
                         <h4
                             style="font-family: 'Space Mono', monospace; font-size: 1.1rem; color: #fff; letter-spacing: 0.1em; margin-bottom: 2rem;">
@@ -3675,8 +3808,8 @@
                         <div
                             style="font-family: 'Space Mono', monospace; font-size: 0.75rem; color: #D62828; letter-spacing: 0.15em; margin-bottom: 0.5rem; text-transform: uppercase;">
                             <span
-                                style="display: inline-block; width: 6px; height: 6px; background: #D62828; border-radius: 50%; margin-right: 6px; animation: pulseRed 2s infinite;"></span>[
-                            THE 2031 DIRECTIVE ]
+                                style="display: inline-block; width: 6px; height: 6px; background: #D62828; border-radius: 50%; margin-right: 6px; animation: pulseRed 2s infinite;"></span>
+                            THE 2031 DIRECTIVE
                         </div>
                         <h4
                             style="font-family: 'Space Mono', monospace; font-size: 1.1rem; color: #fff; letter-spacing: 0.1em; margin-bottom: 2rem;">
@@ -3823,7 +3956,7 @@
 
                 <div
                     style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 2.5rem; text-transform: uppercase;">
-                    [ THE CLIMAX ]
+                    THE CLIMAX
                 </div>
 
                 <!-- Title tags -->
@@ -3921,7 +4054,7 @@
                     style="display: inline-block; padding: 1rem 2.5rem; border: 1px solid rgba(212,175,55,0.4); background: rgba(212,175,55,0.06); border-radius: 4px; text-decoration: none; font-family: 'Space Mono', monospace; font-size: 0.85rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); backdrop-filter: blur(10px);"
                     onmouseover="this.style.background='rgba(212,175,55,0.15)'; this.style.borderColor='var(--gold)'; this.style.boxShadow='0 0 40px rgba(212,175,55,0.15)';"
                     onmouseout="this.style.background='rgba(212,175,55,0.06)'; this.style.borderColor='rgba(212,175,55,0.4)'; this.style.boxShadow='none';">
-                    [ DECODE THE ARCHITECTURE ]
+                    DECODE THE ARCHITECTURE
                 </a>
             </div>
         </section>
@@ -3938,7 +4071,7 @@
                     doctors study from"
                 </blockquote>
                 <div class="empathy-action">
-                    <a href="#book" class="btn btn-gold-glow">[ SECURE THE ASSET ]</a>
+                    <a href="#book" class="btn btn-gold-glow"> SECURE THE ASSET </a>
                 </div>
             </div>
         </section>
@@ -4314,7 +4447,7 @@
                         </p>
                         <a href="https://youtube.com/" target="_blank" class="btn btn-gold-glow"
                             style="display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center;">
-                            <span style="font-size: 1.2rem;">📺</span> [ ENTER THE DIGITAL CLINIC ]
+                            <span style="font-size: 1.2rem;">📺</span> ENTER THE DIGITAL CLINIC
                         </a>
                     </div>
                 </div>
@@ -4450,7 +4583,7 @@
                 <div style="text-align: center; margin-bottom: 4rem;">
                     <div
                         style="font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.35em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; opacity: 0.7;">
-                        [ CORPORATE &amp; INVESTOR RELATIONS ]</div>
+                        CORPORATE &amp; INVESTOR RELATIONS </div>
                     <h2
                         style="font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: #fff; background: linear-gradient(to bottom, #ffffff 0%, #b0b0b0 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.8)); margin-bottom: 2rem;">
                         FORGING GLOBAL ALLIANCES</h2>
@@ -4548,7 +4681,7 @@
                 style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at center, rgba(139, 0, 0, 0.1) 0%, transparent 70%); pointer-events: none;">
             </div>
             <div class="container animate-up" style="position: relative; z-index: 10;">
-                <h2 class="section-title gold-text" style="margin-bottom: 1rem;">[ ENTER THE WAR-ROOM ]</h2>
+                <h2 class="section-title gold-text" style="margin-bottom: 1rem;"> ENTER THE WAR-ROOM </h2>
                 <p
                     style="font-family: 'Inter', sans-serif; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.6;">
                     Join the exclusive Inner Circle. Get direct access to clinical decodes, ecosystem updates, and
@@ -4573,8 +4706,8 @@
                 <h2 class="footer-statement animate-up text-gold">This is not just a book.<br>This is initiation.</h2>
 
                 <div class="footer-actions animate-up">
-                    <a href="contact.html#get-the-book" class="btn btn-primary">[ SECURE THE BOOK ]</a>
-                    <a href="contact.html" class="btn btn-outline">[ COMMAND CENTER ]</a>
+                    <a href="contact.html#get-the-book" class="btn btn-primary"> SECURE THE BOOK </a>
+                    <a href="contact.html" class="btn btn-outline"> COMMAND CENTER </a>
                 </div>
 
                 <div class="footer-contact animate-up">

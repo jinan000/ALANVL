@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Intel Vault | Medmelo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             --bg-dark: #020202;
@@ -28,8 +31,8 @@
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
             /* Scanline effect over entire page */
-            background-image: 
-                linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+            background-image:
+                linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
                 linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
             background-size: 100% 2px, 3px 100%;
         }
@@ -50,25 +53,26 @@
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, transparent 100%);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .btn-override {
             font-family: 'Space Mono', monospace;
             font-size: 0.75rem;
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             padding: 0.5rem 1rem;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 4px;
             transition: all 0.3s ease;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
         }
+
         .btn-override:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: #fff;
             border-color: #fff;
         }
@@ -93,9 +97,17 @@
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
         }
 
         /* Container */
@@ -109,7 +121,7 @@
         /* Section Layouts */
         .vault-section {
             padding: 8rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
         }
 
@@ -144,13 +156,13 @@
         }
 
         /* Specific Modules (To be filled) */
-        
     </style>
 </head>
+
 <body>
 
     <nav class="vault-nav">
-        <a href="index.html" class="btn-override">[ &#60; OVERRIDE // RETURN TO COMMAND CENTER ]</a>
+        <a href="index.html" class="btn-override"> &#60; OVERRIDE // RETURN TO COMMAND CENTER </a>
         <div class="system-status">
             <div class="pulse-dot"></div>
             DATABASE: SECURE
@@ -158,11 +170,18 @@
     </nav>
 
     <!-- HERO / TITLE -->
-    <header class="vault-section" style="padding-top: 15rem; border-bottom: none; text-align: center; background: radial-gradient(circle at center, rgba(212,175,55,0.05) 0%, transparent 60%);">
+    <header class="vault-section"
+        style="padding-top: 15rem; border-bottom: none; text-align: center; background: radial-gradient(circle at center, rgba(212,175,55,0.05) 0%, transparent 60%);">
         <div class="container">
-            <h1 style="font-family: 'Cinzel', serif; font-size: clamp(3rem, 7vw, 6rem); letter-spacing: 0.1em; color: #fff; text-shadow: 0 0 30px rgba(255,255,255,0.1); margin-bottom: 1.5rem;">THE INTEL VAULT</h1>
-            <p style="font-family: 'Space Mono', monospace; font-size: clamp(0.9rem, 2vw, 1.2rem); color: var(--gold); letter-spacing: 0.25em; text-transform: uppercase;">Decoded Assets &amp; Tactical Frameworks</p>
-            <div style="width: 1px; height: 100px; background: linear-gradient(180deg, var(--gold) 0%, transparent 100%); margin: 4rem auto 0;"></div>
+            <h1
+                style="font-family: 'Cinzel', serif; font-size: clamp(3rem, 7vw, 6rem); letter-spacing: 0.1em; color: #fff; text-shadow: 0 0 30px rgba(255,255,255,0.1); margin-bottom: 1.5rem;">
+                THE INTEL VAULT</h1>
+            <p
+                style="font-family: 'Space Mono', monospace; font-size: clamp(0.9rem, 2vw, 1.2rem); color: var(--gold); letter-spacing: 0.25em; text-transform: uppercase;">
+                Decoded Assets &amp; Tactical Frameworks</p>
+            <div
+                style="width: 1px; height: 100px; background: linear-gradient(180deg, var(--gold) 0%, transparent 100%); margin: 4rem auto 0;">
+            </div>
         </div>
     </header>
 
@@ -170,11 +189,12 @@
     <section class="vault-section" id="literature">
         <div class="container">
             <div class="section-header">
-                <div class="section-id">[ 01 ]</div>
+                <div class="section-id"> 01 </div>
                 <h2 class="section-title">THE LITERATURE COMMAND</h2>
-                <div class="section-subtitle" style="color: #fff;">Forging Future Doctors through Uncompromised Medical Literature.</div>
+                <div class="section-subtitle" style="color: #fff;">Forging Future Doctors through Uncompromised Medical
+                    Literature.</div>
             </div>
-            
+
             <div class="carousel-container">
                 <div class="carousel-track">
                     <!-- Books 1-11 -->
@@ -213,9 +233,11 @@
                 transform: translateX(-50%);
                 overflow: hidden;
                 padding: 4rem 0;
-                background: linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.8) 50%, rgba(10,10,10,0) 100%);
+                background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 0.8) 50%, rgba(10, 10, 10, 0) 100%);
             }
-            .carousel-container::before, .carousel-container::after {
+
+            .carousel-container::before,
+            .carousel-container::after {
                 content: '';
                 position: absolute;
                 top: 0;
@@ -224,55 +246,72 @@
                 z-index: 10;
                 pointer-events: none;
             }
+
             .carousel-container::before {
                 left: 0;
                 background: linear-gradient(90deg, var(--bg-dark) 0%, transparent 100%);
             }
+
             .carousel-container::after {
                 right: 0;
                 background: linear-gradient(-90deg, var(--bg-dark) 0%, transparent 100%);
             }
+
             .carousel-track {
                 display: flex;
                 gap: 3rem;
                 width: max-content;
                 animation: scrollBooks 45s linear infinite;
             }
+
             .carousel-track:hover {
                 animation-play-state: paused;
             }
+
             .carousel-book {
                 height: 400px;
                 width: auto;
                 border-radius: 4px;
-                box-shadow: 10px 10px 30px rgba(0,0,0,0.9), 0 0 0 1px rgba(255,255,255,0.05);
+                box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.05);
                 transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), filter 0.6s ease, box-shadow 0.6s ease;
                 filter: brightness(0.4) saturate(0.5);
                 cursor: pointer;
             }
+
             .carousel-book:hover {
                 transform: translateY(-15px) scale(1.03);
                 filter: brightness(1.1) saturate(1.2);
                 z-index: 20;
-                box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 30px rgba(212,175,55,0.15), 0 0 0 1px rgba(212,175,55,0.4);
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(212, 175, 55, 0.15), 0 0 0 1px rgba(212, 175, 55, 0.4);
             }
+
             @keyframes scrollBooks {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(calc(-50% - 1.5rem)); }
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-50% - 1.5rem));
+                }
             }
-            
+
             @media (max-width: 768px) {
-                .carousel-book { height: 280px; gap: 1.5rem; }
+                .carousel-book {
+                    height: 280px;
+                    gap: 1.5rem;
+                }
             }
         </style>
     </section>
-    
+
     <!-- PHASE 3: AUDIO INTELLIGENCE -->
     <section class="section audio-intelligence" id="audio"
         style="padding: 6rem 0; background: #020202; position: relative;">
         <div class="container">
-            <div class="text-center animate-up" style="margin: 0 auto 5rem; display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 900px;">
-                <h2 class="section-title center" style="color: #fff; font-family: 'Cinzel', serif; font-size: clamp(2rem, 3.5vw, 3.5rem); line-height: 1.25; text-transform: uppercase;">
+            <div class="text-center animate-up"
+                style="margin: 0 auto 5rem; display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 900px;">
+                <h2 class="section-title center"
+                    style="color: #fff; font-family: 'Cinzel', serif; font-size: clamp(2rem, 3.5vw, 3.5rem); line-height: 1.25; text-transform: uppercase;">
                     AUDIO INTELLIGENCE:CREATOR OF <span style="text-transform: none;">The</span> GLOBAL BROADCAST
                 </h2>
                 <p class="font-heading"
@@ -283,48 +322,78 @@
 
             <style>
                 .custom-podcast-card {
-                    display: flex; flex-direction: column; text-align: center;
-                    border-radius: 6px; overflow: hidden; height: 100%;
-                    border: 1px solid rgba(255, 255, 255, 0.03); 
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    height: 100%;
+                    border: 1px solid rgba(255, 255, 255, 0.03);
                     background: rgba(10, 10, 10, 0.5);
                     transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
                 }
+
                 .custom-podcast-card:hover {
                     transform: translateY(-8px) scale(1.02);
-                    box-shadow: 0 30px 60px rgba(0,0,0,0.9), 0 0 30px rgba(0,255,50,0.08) inset, 0 0 40px rgba(0,255,50,0.05);
+                    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 255, 50, 0.08) inset, 0 0 40px rgba(0, 255, 50, 0.05);
                     border-color: rgba(0, 200, 50, 0.6) !important;
                     background: rgba(5, 12, 5, 0.8);
                 }
+
                 .custom-podcast-card img.podcast-cover {
-                    width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; padding: 1px; border-radius: 6px 6px 0 0;
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                    display: block;
+                    padding: 1px;
+                    border-radius: 6px 6px 0 0;
                 }
+
                 .custom-podcast-card .card-content {
-                    padding: 2.5rem 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; flex: 1;
+                    padding: 2.5rem 1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    text-align: center;
+                    flex: 1;
                 }
             </style>
 
-            <div class="podcast-grid animate-up" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+            <div class="podcast-grid animate-up"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
                 <!-- Podcast 1 -->
                 <div class="custom-podcast-card">
-                    <img src="images/vitals-and-vitamins.jpeg" alt="Vitals and Villains Podcast" class="podcast-cover" />
+                    <img src="images/vitals-and-vitamins.jpeg" alt="Vitals and Villains Podcast"
+                        class="podcast-cover" />
                     <div class="card-content">
-                        <h3 style="font-family: 'Cinzel', serif; font-size: 1.25rem; letter-spacing: 0.1em; margin-bottom: 0.8rem; color: #fff; font-weight: 600; text-align: center;">
+                        <h3
+                            style="font-family: 'Cinzel', serif; font-size: 1.25rem; letter-spacing: 0.1em; margin-bottom: 0.8rem; color: #fff; font-weight: 600; text-align: center;">
                             VITALS AND VILLAINS</h3>
-                        <p style="color: rgba(255,255,255,0.6); font-family: 'Inter', sans-serif; font-size: 0.75rem; margin-bottom: 3.5rem; max-width: 250px; line-height: 1.6; text-align: center;">
+                        <p
+                            style="color: rgba(255,255,255,0.6); font-family: 'Inter', sans-serif; font-size: 0.75rem; margin-bottom: 3.5rem; max-width: 250px; line-height: 1.6; text-align: center;">
                             Unfiltered conversations on peak performance and survival.</p>
 
-                        <div style="display: flex; flex-direction: column; gap: 2.2rem; align-items: center; width: 100%; margin-top: auto;">
+                        <div
+                            style="display: flex; flex-direction: column; gap: 2.2rem; align-items: center; width: 100%; margin-top: auto;">
                             <!-- Spotify -->
-                            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="images/spotify_logo.png" alt="Listen on Spotify" style="height: 110px; width: auto;">
+                            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer"
+                                style="display: inline-flex; align-items: center; justify-content: center; transition: transform 0.3s;"
+                                onmouseover="this.style.transform='scale(1.05)'"
+                                onmouseout="this.style.transform='scale(1)'">
+                                <img src="images/spotify_logo.png" alt="Listen on Spotify"
+                                    style="height: 110px; width: auto;">
                             </a>
 
                             <!-- Apple Podcast Coming Soon -->
-                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.85;">
-                                <div style="background: #D4AF37; color: #000; font-family: 'Space Mono', monospace; font-size: 0.55rem; padding: 3px 10px; border-radius: 4px; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase;">
+                            <div
+                                style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.85;">
+                                <div
+                                    style="background: #D4AF37; color: #000; font-family: 'Space Mono', monospace; font-size: 0.55rem; padding: 3px 10px; border-radius: 4px; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase;">
                                     COMING SOON
                                 </div>
-                                <img src="images/apple_podcast_logo.png" alt="Apple Podcasts Coming Soon" style="height: 130px; width: auto; filter: grayscale(100%); opacity: 0.6;">
+                                <img src="images/apple_podcast_logo.png" alt="Apple Podcasts Coming Soon"
+                                    style="height: 130px; width: auto; filter: grayscale(100%); opacity: 0.6;">
                             </div>
                         </div>
                     </div>
@@ -334,23 +403,33 @@
                 <div class="custom-podcast-card">
                     <img src="images/NSMU_casefiles.jpeg" alt="Echoes of Evidence Podcast" class="podcast-cover" />
                     <div class="card-content">
-                        <h3 style="font-family: 'Cinzel', serif; font-size: 1.25rem; letter-spacing: 0.1em; margin-bottom: 0.8rem; color: #fff; text-transform: uppercase; font-weight: 600; text-align: center;">
+                        <h3
+                            style="font-family: 'Cinzel', serif; font-size: 1.25rem; letter-spacing: 0.1em; margin-bottom: 0.8rem; color: #fff; text-transform: uppercase; font-weight: 600; text-align: center;">
                             ECHOES OF EVIDENCE</h3>
-                        <p style="color: rgba(255,255,255,0.6); font-family: 'Inter', sans-serif; font-size: 0.75rem; margin-bottom: 3.5rem; max-width: 250px; line-height: 1.6; text-align: center;">
+                        <p
+                            style="color: rgba(255,255,255,0.6); font-family: 'Inter', sans-serif; font-size: 0.75rem; margin-bottom: 3.5rem; max-width: 250px; line-height: 1.6; text-align: center;">
                             Mastering the unspoken clinical truths.</p>
 
-                        <div style="display: flex; flex-direction: column; gap: 2.2rem; align-items: center; width: 100%; margin-top: auto;">
+                        <div
+                            style="display: flex; flex-direction: column; gap: 2.2rem; align-items: center; width: 100%; margin-top: auto;">
                             <!-- Spotify -->
-                            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="images/spotify_logo.png" alt="Listen on Spotify" style="height: 110px; width: auto;">
+                            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer"
+                                style="display: inline-flex; align-items: center; justify-content: center; transition: transform 0.3s;"
+                                onmouseover="this.style.transform='scale(1.05)'"
+                                onmouseout="this.style.transform='scale(1)'">
+                                <img src="images/spotify_logo.png" alt="Listen on Spotify"
+                                    style="height: 110px; width: auto;">
                             </a>
 
                             <!-- Apple Podcast Coming Soon -->
-                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.85;">
-                                <div style="background: #D4AF37; color: #000; font-family: 'Space Mono', monospace; font-size: 0.55rem; padding: 3px 10px; border-radius: 4px; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase;">
+                            <div
+                                style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.85;">
+                                <div
+                                    style="background: #D4AF37; color: #000; font-family: 'Space Mono', monospace; font-size: 0.55rem; padding: 3px 10px; border-radius: 4px; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase;">
                                     COMING SOON
                                 </div>
-                                <img src="images/apple_podcast_logo.png" alt="Apple Podcasts Coming Soon" style="height: 130px; width: auto; filter: grayscale(100%); opacity: 0.6;">
+                                <img src="images/apple_podcast_logo.png" alt="Apple Podcasts Coming Soon"
+                                    style="height: 130px; width: auto; filter: grayscale(100%); opacity: 0.6;">
                             </div>
                         </div>
                     </div>
@@ -362,68 +441,105 @@
     <section class="vault-section" id="tactical" style="background: var(--bg-dark);">
         <div class="container">
             <div class="section-header">
-                <div class="section-id">[ 03 ]</div>
+                <div class="section-id"> 03 </div>
                 <h2 class="section-title">TACTICAL &amp; CLINICAL DEPLOYMENT</h2>
                 <div class="section-subtitle" style="color: #fff;">Strategic Architecture &amp; System Domination</div>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: stretch;">
-                
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: stretch;">
+
                 <!-- Left: Chess -->
-                <div style="border: 1px solid rgba(255,255,255,0.05); padding: 3rem; position: relative; background: radial-gradient(circle at top left, rgba(212,175,55,0.03) 0%, transparent 60%); overflow: hidden;">
+                <div
+                    style="border: 1px solid rgba(255,255,255,0.05); padding: 3rem; position: relative; background: radial-gradient(circle at top left, rgba(212,175,55,0.03) 0%, transparent 60%); overflow: hidden;">
                     <!-- subtle background grid -->
-                    <div style="position: absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 20px 20px; pointer-events:none;"></div>
-                    
-                    <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 1.5rem; text-transform: uppercase;">[ STRATEGIC DOMINANCE ]</div>
-                    
-                    <div style="font-size: 3.5rem; margin-bottom: 0.8rem; color: #fff; text-shadow: 0 0 20px rgba(255,255,255,0.3); line-height: 1; position: relative; z-index: 2;">
+                    <div
+                        style="position: absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 20px 20px; pointer-events:none;">
+                    </div>
+
+                    <div
+                        style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 1.5rem; text-transform: uppercase;">
+                        STRATEGIC DOMINANCE </div>
+
+                    <div
+                        style="font-size: 3.5rem; margin-bottom: 0.8rem; color: #fff; text-shadow: 0 0 20px rgba(255,255,255,0.3); line-height: 1; position: relative; z-index: 2;">
                         ♞
                     </div>
-                    
-                    <h3 style="font-family: 'Cinzel', serif; font-size: 2rem; color: #fff; margin-bottom: 1rem; line-height: 1.2;">International Chess Competitor</h3>
-                    <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
-                        Achieved Rank 3 globally in rigorous analytical warfare. A prior competitor in the Russia Olympiad, applying master-level cognitive frameworks directly into medical diagnostics and high-stakes business scaling.
+
+                    <h3
+                        style="font-family: 'Cinzel', serif; font-size: 2rem; color: #fff; margin-bottom: 1rem; line-height: 1.2;">
+                        International Chess Competitor</h3>
+                    <div
+                        style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+                        Achieved Rank 3 globally in rigorous analytical warfare. A prior competitor in the Russia
+                        Olympiad, applying master-level cognitive frameworks directly into medical diagnostics and
+                        high-stakes business scaling.
                     </div>
-                    
-                    <div style="background: rgba(212,175,55,0.05); border-left: 2px solid var(--gold); padding: 1rem; font-family: 'Space Mono', monospace; font-size: 0.8rem; color: #fff; text-transform: uppercase; letter-spacing: 0.1em;">
+
+                    <div
+                        style="background: rgba(212,175,55,0.05); border-left: 2px solid var(--gold); padding: 1rem; font-family: 'Space Mono', monospace; font-size: 0.8rem; color: #fff; text-transform: uppercase; letter-spacing: 0.1em;">
                         STATUS: VERIFIED <span style="color: var(--gold);">// RANK 03</span>
                     </div>
                 </div>
 
                 <!-- Right: Medmelo Framework -->
-                <div style="border: 1px solid rgba(255,255,255,0.05); padding: 3rem; position: relative; background: radial-gradient(circle at top right, rgba(214,40,40,0.03) 0%, transparent 60%); overflow: hidden;">
+                <div
+                    style="border: 1px solid rgba(255,255,255,0.05); padding: 3rem; position: relative; background: radial-gradient(circle at top right, rgba(214,40,40,0.03) 0%, transparent 60%); overflow: hidden;">
                     <!-- abstract geometric bg -->
-                    <div style="position: absolute; width: 200px; height: 200px; border-radius: 50%; opacity: 0.02; border: 1px solid #fff; bottom: -50px; right: -50px;"></div>
-                    <div style="position: absolute; width: 300px; height: 300px; border-radius: 50%; opacity: 0.02; border: 1px solid #fff; bottom: -100px; right: -100px;"></div>
-
-                    <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 1.5rem; text-transform: uppercase;">[ THE MEDMELO FRAMEWORK ]</div>
-                    <h3 style="font-family: 'Cinzel', serif; font-size: 2rem; color: #fff; margin-bottom: 1rem; line-height: 1.2;">App-Based Education Revolution</h3>
-                    <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
-                        Engineered the Medmelo Learning App to systematically eradicate barriers in medical education. Transforming average medical students into high-level diagnosticians through an uncompromising clinical teaching architecture.
+                    <div
+                        style="position: absolute; width: 200px; height: 200px; border-radius: 50%; opacity: 0.02; border: 1px solid #fff; bottom: -50px; right: -50px;">
+                    </div>
+                    <div
+                        style="position: absolute; width: 300px; height: 300px; border-radius: 50%; opacity: 0.02; border: 1px solid #fff; bottom: -100px; right: -100px;">
                     </div>
 
-                    <div style="background: rgba(214,40,40,0.05); border-left: 2px solid var(--red-alert); padding: 1rem; font-family: 'Space Mono', monospace; font-size: 0.8rem; color: #fff; text-transform: uppercase; letter-spacing: 0.1em;">
+                    <div
+                        style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 1.5rem; text-transform: uppercase;">
+                        THE MEDMELO FRAMEWORK </div>
+                    <h3
+                        style="font-family: 'Cinzel', serif; font-size: 2rem; color: #fff; margin-bottom: 1rem; line-height: 1.2;">
+                        App-Based Education Revolution</h3>
+                    <div
+                        style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+                        Engineered the Medmelo Learning App to systematically eradicate barriers in medical education.
+                        Transforming average medical students into high-level diagnosticians through an uncompromising
+                        clinical teaching architecture.
+                    </div>
+
+                    <div
+                        style="background: rgba(214,40,40,0.05); border-left: 2px solid var(--red-alert); padding: 1rem; font-family: 'Space Mono', monospace; font-size: 0.8rem; color: #fff; text-transform: uppercase; letter-spacing: 0.1em;">
                         DEPLOYMENT: ACTIVE <span style="color: var(--red-alert);">// 2022</span>
                     </div>
                 </div>
 
                 <!-- Center: Olympiad Rank 2 -->
-                <div style="border: 1px solid rgba(255,255,255,0.05); padding: 3rem; position: relative; background: radial-gradient(circle at center, rgba(212,175,55,0.03) 0%, transparent 60%); overflow: hidden;">
+                <div
+                    style="border: 1px solid rgba(255,255,255,0.05); padding: 3rem; position: relative; background: radial-gradient(circle at center, rgba(212,175,55,0.03) 0%, transparent 60%); overflow: hidden;">
                     <!-- subtle background grid -->
-                    <div style="position: absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 20px 20px; pointer-events:none;"></div>
-                    
-                    <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 1.5rem; text-transform: uppercase;">[ ELITE EXAMINATION ]</div>
-                    
-                    <div style="font-size: 3.5rem; margin-bottom: 0.8rem; color: #fff; text-shadow: 0 0 30px rgba(212,175,55,0.6); line-height: 1; position: relative; z-index: 2;">
+                    <div
+                        style="position: absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 20px 20px; pointer-events:none;">
+                    </div>
+
+                    <div
+                        style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 1.5rem; text-transform: uppercase;">
+                        ELITE EXAMINATION </div>
+
+                    <div
+                        style="font-size: 3.5rem; margin-bottom: 0.8rem; color: #fff; text-shadow: 0 0 30px rgba(212,175,55,0.6); line-height: 1; position: relative; z-index: 2;">
                         🏅
                     </div>
-                    
-                    <h3 style="font-family: 'Cinzel', serif; font-size: 2rem; color: #fff; margin-bottom: 1rem; line-height: 1.2;">Pediatrics Olympiad 2025</h3>
-                    <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
-                        Competed against thousands of medical students worldwide. Achieving global recognition through rigorous academic and clinical demonstration under absolute pressure.
+
+                    <h3
+                        style="font-family: 'Cinzel', serif; font-size: 2rem; color: #fff; margin-bottom: 1rem; line-height: 1.2;">
+                        Pediatrics Olympiad 2025</h3>
+                    <div
+                        style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+                        Competed against thousands of medical students worldwide. Achieving global recognition through
+                        rigorous academic and clinical demonstration under absolute pressure.
                     </div>
-                    
-                    <div style="background: rgba(212,175,55,0.05); border-left: 2px solid var(--gold); padding: 1rem; font-family: 'Space Mono', monospace; font-size: 0.8rem; color: #fff; text-transform: uppercase; letter-spacing: 0.1em;">
+
+                    <div
+                        style="background: rgba(212,175,55,0.05); border-left: 2px solid var(--gold); padding: 1rem; font-family: 'Space Mono', monospace; font-size: 0.8rem; color: #fff; text-transform: uppercase; letter-spacing: 0.1em;">
                         STATUS: VERIFIED <span style="color: var(--gold);">// GLOBAL RANK 02</span>
                     </div>
                 </div>
@@ -433,38 +549,56 @@
     </section>
 
     <!-- 4. THE DETECTIVE'S FILES -->
-    <section class="vault-section" id="detective" style="background: #000; position: relative; overflow: hidden; border-bottom: none;">
+    <section class="vault-section" id="detective"
+        style="background: #000; position: relative; overflow: hidden; border-bottom: none;">
         <!-- grainy texture -->
-        <div style="position: absolute; inset:0; opacity: 0.04; background: url('https://www.transparenttextures.com/patterns/cream-pixels.png'); pointer-events: none;"></div>
-        
+        <div
+            style="position: absolute; inset:0; opacity: 0.04; background: url('https://www.transparenttextures.com/patterns/cream-pixels.png'); pointer-events: none;">
+        </div>
+
         <div class="container">
             <div class="section-header">
-                <div class="section-id" style="color: #666;">[ CLASSIFIED: LEVEL 4 ]</div>
+                <div class="section-id" style="color: #666;"> CLASSIFIED: LEVEL 4 </div>
                 <h2 class="section-title" style="color: #eee;">THE DETECTIVE'S FILES</h2>
                 <div class="section-subtitle" style="color: #888;">High-Security Field Research Archives</div>
             </div>
 
-            <div class="intel-document" style="max-width: 800px; margin: 0 auto; background: #fafafa; padding: 4rem; color: #111; font-family: 'Courier Prime', Courier, monospace; box-shadow: 0 0 30px rgba(0,0,0,0.6); position: relative;">
-                
-                <div style="position: absolute; top: 2rem; right: 2rem; border: 3px solid #a00; padding: 0.5rem 1rem; color: #a00; font-weight: bold; font-family: sans-serif; transform: rotate(12deg); letter-spacing: 0.2em; opacity: 0.8; font-size: 1.5rem;">TOP SECRET</div>
-                
-                <div style="border-bottom: 2px solid #111; margin-bottom: 2.5rem; padding-bottom: 1rem; display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1rem;">
+            <div class="intel-document"
+                style="max-width: 800px; margin: 0 auto; background: #fafafa; padding: 4rem; color: #111; font-family: 'Courier Prime', Courier, monospace; box-shadow: 0 0 30px rgba(0,0,0,0.6); position: relative;">
+
+                <div
+                    style="position: absolute; top: 2rem; right: 2rem; border: 3px solid #a00; padding: 0.5rem 1rem; color: #a00; font-weight: bold; font-family: sans-serif; transform: rotate(12deg); letter-spacing: 0.2em; opacity: 0.8; font-size: 1.5rem;">
+                    TOP SECRET</div>
+
+                <div
+                    style="border-bottom: 2px solid #111; margin-bottom: 2.5rem; padding-bottom: 1rem; display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1rem;">
                     <div>FILE DECLASSIFIED: <span style="font-weight: normal;">2026-X</span></div>
                     <div>AUTHOR: <span style="font-weight: normal;">CEO ALAN</span></div>
                 </div>
 
                 <div style="line-height: 1.8; font-size: 1rem;">
-                    <p style="margin-bottom: 1.5rem;"><strong>SUBJECT_01:</strong> Clinical Pathology &amp; Human Analysis.</p>
-                    <p style="margin-bottom: 1.5rem;"><span style="background: #111; color: #111; user-select: none;">[REDACTED]</span> Field research decoding the behavioral psychology behind clinical presentation. By analyzing and interrogating over <span style="background: #e6e6e6; padding: 0 5px;">1000+ patients</span>, the architecture of societal trauma and physical morbidity was fully mapped.</p>
-                    <p style="margin-bottom: 1.5rem;"><strong>OBSERVATION:</strong> Medicine is an analytical detective process mapping somatic symptoms to cellular malfunction. Emotional contamination corrupts the diagnostic grid.</p>
-                    
+                    <p style="margin-bottom: 1.5rem;"><strong>SUBJECT_01:</strong> Clinical Pathology &amp; Human
+                        Analysis.</p>
+                    <p style="margin-bottom: 1.5rem;"><span
+                            style="background: #111; color: #111; user-select: none;">[REDACTED]</span> Field research
+                        decoding the behavioral psychology behind clinical presentation. By analyzing and interrogating
+                        over <span style="background: #e6e6e6; padding: 0 5px;">1000+ patients</span>, the architecture
+                        of societal trauma and physical morbidity was fully mapped.</p>
+                    <p style="margin-bottom: 1.5rem;"><strong>OBSERVATION:</strong> Medicine is an analytical detective
+                        process mapping somatic symptoms to cellular malfunction. Emotional contamination corrupts the
+                        diagnostic grid.</p>
+
                     <div style="text-align: center; margin: 4rem 0;">
-                        <span style="display:inline-block; padding: 1rem; border: 1px solid #ccc; background: white; box-shadow: 0 8px 20px rgba(0,0,0,0.2); transform: rotate(-2deg);">
-                            <img src="images/radiology1.jpeg" alt="Field Intel" style="max-width: 100%; height: auto; filter: grayscale(100%) contrast(1.2); display: block;" onerror="this.src=''; this.alt='[ ATTACHMENT MISSION START ]'; this.style.padding='4rem';">
+                        <span
+                            style="display:inline-block; padding: 1rem; border: 1px solid #ccc; background: white; box-shadow: 0 8px 20px rgba(0,0,0,0.2); transform: rotate(-2deg);">
+                            <img src="images/radiology1.jpeg" alt="Field Intel"
+                                style="max-width: 100%; height: auto; filter: grayscale(100%) contrast(1.2); display: block;"
+                                onerror="this.src=''; this.alt='[ ATTACHMENT MISSION START ]'; this.style.padding='4rem';">
                         </span>
                     </div>
 
-                    <p style="font-weight: bold;">CONCLUSION: <em style="font-weight: normal;">"The absolute truth is written strictly in the silence of the X-Ray."</em></p>
+                    <p style="font-weight: bold;">CONCLUSION: <em style="font-weight: normal;">"The absolute truth is
+                            written strictly in the silence of the X-Ray."</em></p>
                 </div>
             </div>
         </div>
@@ -481,9 +615,10 @@
         <div class="container animate-up">
             <p
                 style="font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.3em; color: rgba(100, 160, 190, 0.8); margin-bottom: 2rem;">
-                [ CLASSIFIED: PROJECT RED ]
+                CLASSIFIED: PROJECT RED
             </p>
-            <h2 style="font-family: 'Cinzel', serif; font-size: clamp(3rem, 7vw, 5.5rem); line-height: 1.1; color: #e62b2b; font-weight: 700; margin-bottom: 1.5rem; text-shadow: 0 0 50px rgba(230,43,43,0.3);">
+            <h2
+                style="font-family: 'Cinzel', serif; font-size: clamp(3rem, 7vw, 5.5rem); line-height: 1.1; color: #e62b2b; font-weight: 700; margin-bottom: 1.5rem; text-shadow: 0 0 50px rgba(230,43,43,0.3);">
                 THE RED FILES<br>OF DETECTIVE TOX
             </h2>
             <p
@@ -493,11 +628,13 @@
 
             <div
                 style="display: inline-flex; align-items: center; justify-content: center; padding: 0.8rem 2.5rem; border: 1px solid rgba(230, 43, 43, 0.4); border-radius: 4px; background: rgba(230, 43, 43, 0.05); color: #e62b2b; font-family: 'Inter', sans-serif; font-size: 0.85rem; letter-spacing: 0.15em; font-weight: 700;">
-                <span style="display:inline-block; width:8px; height:8px; background:#e62b2b; border-radius:50%; margin-right:12px; box-shadow: 0 0 10px #e62b2b;"></span>
+                <span
+                    style="display:inline-block; width:8px; height:8px; background:#e62b2b; border-radius:50%; margin-right:12px; box-shadow: 0 0 10px #e62b2b;"></span>
                 COMING SOON • LIVE
             </div>
         </div>
     </section>
 
 </body>
+
 </html>
