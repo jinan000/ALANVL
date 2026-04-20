@@ -27,7 +27,7 @@
     <style>
         html, body {
             max-width: 100vw;
-            overflow-x: hidden;
+            overflow-x: clip;
         }
     </style>
 </head>
@@ -1744,9 +1744,26 @@
                                 <span style="color: rgba(255,255,255,0.6);">LOCATION:</span> THE STREETS
                             </div>
 
-                            <video src="images/pitch%20video.mp4" poster="images/dairy_ambulance.jpeg" autoplay loop
+                            <video id="grindVideo" src="images/pitch%20video.mp4" poster="images/pitch_cover_image.png" autoplay loop
                                 muted playsinline
                                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(70%) contrast(1.2) brightness(0.7);"></video>
+                            
+                            <script>
+                                document.addEventListener("DOMContentLoaded", () => {
+                                    const grindVid = document.getElementById("grindVideo");
+                                    if(grindVid) {
+                                        const observer = new IntersectionObserver((entries) => {
+                                            entries.forEach(entry => {
+                                                if(entry.isIntersecting) {
+                                                    // Force play whenever video comes back into viewport
+                                                    grindVid.play().catch(e => console.warn('Grind video play blocked:', e));
+                                                }
+                                            });
+                                        }, { threshold: 0.05 });
+                                        observer.observe(grindVid);
+                                    }
+                                });
+                            </script>
                         </div>
                     </div>
 
@@ -2107,44 +2124,44 @@
 
                 <!-- Row 2: Moving Left -->
                 <div class="marquee-row secondary">
-                    <img class="ecosystem-logo" src="images/logo5.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo8.png" alt="Ecosystem Brand">
                     <img class="ecosystem-logo" src="images/yale.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo2.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo6.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo3.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo16.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo4.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo9.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo10.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo11.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo12.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo13.png" alt="Ecosystem Brand">
                     <img class="ecosystem-logo" src="images/stanford.png" alt="Ecosystem Brand">
                     <!-- Loop copy -->
-                    <img class="ecosystem-logo" src="images/logo5.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo8.png" alt="Ecosystem Brand">
                     <img class="ecosystem-logo" src="images/yale.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo2.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo6.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo3.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo16.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo4.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo9.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo10.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo11.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo12.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo13.png" alt="Ecosystem Brand">
                     <img class="ecosystem-logo" src="images/stanford.png" alt="Ecosystem Brand">
                 </div>
 
                 <!-- Row 3: Moving Right -->
                 <div class="marquee-row primary" style="animation-duration: 55s;">
-                    <img class="ecosystem-logo" src="images/logo7.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo4.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo1.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/iarc.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo16.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo14.png" alt="Ecosystem Brand">
                     <img class="ecosystem-logo" src="images/logo2.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo4.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/iarc.png" alt="Ecosystem Brand">
                     <img class="ecosystem-logo" src="images/logo6.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo3.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo8.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo10.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo12.png" alt="Ecosystem Brand">
                     <!-- Loop copy -->
-                    <img class="ecosystem-logo" src="images/logo7.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo4.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo1.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/iarc.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo16.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo14.png" alt="Ecosystem Brand">
                     <img class="ecosystem-logo" src="images/logo2.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo4.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/iarc.png" alt="Ecosystem Brand">
                     <img class="ecosystem-logo" src="images/logo6.png" alt="Ecosystem Brand">
-                    <img class="ecosystem-logo" src="images/logo3.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo8.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo10.png" alt="Ecosystem Brand">
+                    <img class="ecosystem-logo" src="images/logo12.png" alt="Ecosystem Brand">
                 </div>
             </div>
 
@@ -2986,12 +3003,12 @@
                         </div>
                         <div class="bonus-info-premium">
                             <!-- Mini Toggle -->
-                            <div class="lang-toggle mini arsenal-mini-toggle" data-active="en" role="tablist">
+                            <div class="lang-toggle mini arsenal-mini-toggle" data-active="ml" role="tablist">
                                 <div class="toggle-slider" aria-hidden="true"></div>
-                                <button class="toggle-btn active" data-lang="en" role="tab"
-                                    aria-selected="true">English</button>
-                                <button class="toggle-btn" data-lang="ml" role="tab"
-                                    aria-selected="false">മലയാളം</button>
+                                <button class="toggle-btn" data-lang="en" role="tab"
+                                    aria-selected="false">English</button>
+                                <button class="toggle-btn active" data-lang="ml" role="tab"
+                                    aria-selected="true">മലയാളം</button>
                             </div>
                             <h4>THE RICH AMBULANCE DRIVER</h4>
                             <span class="bonus-lang-badge"> MALAYALAM </span>
@@ -3184,12 +3201,12 @@
                         </div>
                         <div class="bonus-info-premium">
                             <!-- Mini Toggle -->
-                            <div class="lang-toggle mini arsenal-mini-toggle" data-active="en" role="tablist">
+                            <div class="lang-toggle mini arsenal-mini-toggle" data-active="ml" role="tablist">
                                 <div class="toggle-slider" aria-hidden="true"></div>
-                                <button class="toggle-btn active" data-lang="en" role="tab"
-                                    aria-selected="true">English</button>
-                                <button class="toggle-btn" data-lang="ml" role="tab"
-                                    aria-selected="false">മലയാളം</button>
+                                <button class="toggle-btn" data-lang="en" role="tab"
+                                    aria-selected="false">English</button>
+                                <button class="toggle-btn active" data-lang="ml" role="tab"
+                                    aria-selected="true">മലയാളം</button>
                             </div>
                             <h4>FORBIDDEN SEX EDUCATION</h4>
                             <span class="bonus-lang-badge"> MALAYALAM </span>
@@ -4608,107 +4625,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="text-center animate-up" style="margin-bottom: 5rem;">
-                        <h2 class="section-title center gold-text"
-                            style="font-family: 'Space Mono', monospace; font-size: clamp(1.5rem, 4vw, 2.2rem); text-transform: uppercase; letter-spacing: 0.15em;">
-                            THE DETECTIVE’S FILES:<br>RESEARCH & PRESENTATIONS</h2>
-                    </div><!-- Dossier Presentation Layout -->
-                    <div class="dossier-layout animate-up" style="display: flex; flex-direction: column; gap: 4rem;">
-                        <!-- Case 01 row -->
-                        <div
-                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 4rem; align-items: stretch;">
-                            <div class="dossier-visual"
-                                style="border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 1.5rem; background: #0a0a0a; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
-                                <div
-                                    style="font-family: 'Space Mono', monospace; font-size: 0.75rem; color: #555; text-transform: uppercase; margin-bottom: 1.5rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
-                                    <span>Visual Evidence .01</span><span>Stage Presentation</span>
-                                </div><img src="images/casefile1.jpeg" alt="Nipah Virus Presentation"
-                                    style="width: 100%; height: auto; border-radius: 2px; filter: grayscale(80%) sepia(20%) contrast(1.1) brightness(0.9);">
-                            </div>
-                            <div class="case-file"
-                                style="background: #080808; border: 1px solid rgba(212,175,55,0.2); border-left: 4px solid var(--gold); padding: 2.5rem; position: relative; display: flex; flex-direction: column; justify-content: center;">
-                                <div
-                                    style="position: absolute; top: -12px; right: 20px; background: #050505; border: 1px solid var(--gold); padding: 2px 12px; color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em;">
-                                    [ RESTRICTED]</div>
-                                <h4
-                                    style="font-family: 'Space Mono', monospace; font-size: 0.95rem; color: #666; margin-bottom: 0.8rem; letter-spacing: 0.1em;">
-                                    CASE FILE 01</h4>
-                                <h3
-                                    style="font-family: var(--font-heading); font-size: 1.8rem; color: #fff; margin-bottom: 1.2rem;">
-                                    Outbreak Intelligence Framework</h3>
-                                <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
-                                    Delivering advanced epidemiological frameworks to international medical forums.
-                                    Standardizing crisis responses and mapping zero-hour containment structures.</p>
-                            </div>
-                        </div><!-- Case 02 row - The Clinical Exhibit -->
-                        <div
-                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 4rem; align-items: stretch;">
-                            <div class="dossier-visual"
-                                style="border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 1.5rem; background: #0a0a0a; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
-                                <div
-                                    style="font-family: 'Space Mono', monospace; font-size: 0.75rem; color: #555; text-transform: uppercase; margin-bottom: 1.5rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
-                                    <span>Visual Evidence .02</span><span>NEURAL MAPPING MODEL</span>
-                                </div><img src="images/casefile2.jpeg" alt="Neural Mapping Model"
-                                    style="width: 100%; height: auto; border-radius: 2px; filter: grayscale(100%) contrast(1.2) brightness(0.8);">
-                            </div>
-                            <div class="case-file"
-                                style="background: #080808; border: 1px solid rgba(255,255,255,0.1); border-left: 4px solid #fff; padding: 2.5rem; position: relative; display: flex; flex-direction: column; justify-content: center;">
-                                <div
-                                    style="position: absolute; top: -12px; right: 20px; background: #050505; border: 1px solid #555; padding: 2px 12px; color: #fff; font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em;">
-                                    [ DECLASSIFIED]</div>
-                                <h4
-                                    style="font-family: 'Space Mono', monospace; font-size: 0.95rem; color: #666; margin-bottom: 0.8rem; letter-spacing: 0.1em;">
-                                    CASE FILE 02</h4>
-                                <h3
-                                    style="font-family: var(--font-heading); font-size: 1.8rem; color: #fff; margin-bottom: 1.2rem;">
-                                    Advanced Psychiatric Profiling Model</h3>
-                                <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
-                                    Pioneering methodologies at the razor-edge intersection of severe psychosocial
-                                    trauma and systemic clinical recovery. A masterclass in decoding the architecture of
-                                    human breakdown.</p>
-                            </div>
-                        </div><!-- Case 03 row - The Redacted Image -->
-                        <div
-                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 4rem; align-items: stretch;">
-                            <div class="dossier-visual"
-                                style="border: 1px solid rgba(214,40,40,0.3); border-radius: 4px; padding: 1.5rem; background: #000; box-shadow: 0 20px 50px rgba(214,40,40,0.1); position: relative;">
-                                <div
-                                    style="font-family: 'Space Mono', monospace; font-size: 0.75rem; color: rgba(214,40,40,0.8); text-transform: uppercase; margin-bottom: 1.5rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(214,40,40,0.2); display: flex; justify-content: space-between;">
-                                    <span>Visual Evidence .03</span><span>STATUS: HIGHLY CLASSIFIED</span>
-                                </div>
-                                <div
-                                    style="width: 100%; aspect-ratio: 16/10; background: #050505; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border: 1px dashed rgba(214,40,40,0.4);">
-                                    <div
-                                        style="text-align: center; font-family: 'Space Mono', monospace; padding: 1rem;">
-                                        <div
-                                            style="color: rgba(214,40,40,0.9); font-size: 1.3rem; font-weight: 700; letter-spacing: 0.2rem; margin-bottom: 0.8rem; text-transform: uppercase;">
-                                            [ VISUAL EVIDENCE WITHHELD]</div>
-                                        <div
-                                            style="color: #666; font-size: 0.85rem; letter-spacing: 0.15rem; background: rgba(0,0,0,0.5); padding: 0.4rem 1rem; border-radius: 2px;">
-                                            ACCESS DENIED BY PROTOCOL</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="case-file"
-                                style="background: #080808; border: 1px solid rgba(212,175,55,0.2); border-left: 4px solid var(--gold); padding: 2.5rem; position: relative; display: flex; flex-direction: column; justify-content: center;">
-                                <div
-                                    style="position: absolute; top: -12px; right: 20px; background: #050505; border: 1px solid var(--gold); padding: 2px 12px; color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em;">
-                                    [ RESTRICTED]</div>
-                                <h4
-                                    style="font-family: 'Space Mono', monospace; font-size: 0.95rem; color: #666; margin-bottom: 0.8rem; letter-spacing: 0.1em;">
-                                    CASE FILE 03</h4>
-                                <h3
-                                    style="font-family: var(--font-heading); font-size: 1.8rem; color: #fff; margin-bottom: 1.2rem;">
-                                    Pediatrics Olympiad 2025 — Global Rank 2</h3>
-                                <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">Competed
-                                    against thousands of medical students worldwide in an elite-level pediatrics
-                                    examination — securing <strong style="color: #fff;">Global Rank 2</strong>. A
-                                    clinical display of diagnostic mastery,
-                                    pattern recognition,
-                                    and zero-margin-of-error decision-making under pressure.</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section><!-- CLINICAL MENTORING CORE -->
@@ -4959,7 +4875,7 @@
         <!-- FINAL CULT CONVERSION FOOTER -->
         <footer class="section footer" id="contact">
             <div class="container text-center">
-                <h2 class="footer-statement animate-up text-gold">This is not just a book.<br>This is initiation.</h2>
+                <h2 class="footer-statement animate-up text-gold">Think the journey ends here?<br>You are mistaken.<br>This is merely a glimpse. The real war has just begun.</h2>
 
                 <div class="footer-actions animate-up">
                     <a href="contact.html#get-the-book" class="btn btn-primary"> SECURE THE BOOK </a>

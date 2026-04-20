@@ -494,13 +494,13 @@ document.addEventListener("DOMContentLoaded", () => {
     })), 130);
 
     // Initialize Ecosystem Loop
-    createLogoLoop('ecosystem-loop', 'ecosystem-loop-track', [8,9,11,12,13,15,16].map(n => ({
+    createLogoLoop('ecosystem-loop', 'ecosystem-loop-track', [1,2,3,4,5,6,7,8,9,10,11,12,13,14].map(n => ({
         src: `images/logo${n}.png`,
         alt: `Medmelo Brand ${n}`
     })), 95);
 
     // Initialize Soul Ecosystem Loop (under "original soul" quote)
-    createLogoLoop('soul-ecosystem-loop', 'soul-ecosystem-loop-track', [8,9,11,12,13,15,16].map(n => ({
+    createLogoLoop('soul-ecosystem-loop', 'soul-ecosystem-loop-track', [1,2,3,4,5,6,7,8,9,10,11,12,13,14].map(n => ({
         src: `images/logo${n}.png`,
         alt: `Medmelo Brand ${n}`
     })), 80);
