@@ -711,15 +711,80 @@ document.addEventListener("DOMContentLoaded", () => {
         let currentSpeed = playbackSpeed;
         let trackXPos = 0;
         
+        // --- MANUAL SCROLL STATE ---
+        let isDragging = false;
+        let startX = 0;
+        let startTrackX = 0;
+        
+        filmContainer.style.cursor = 'grab';
+
+        // Mouse & Touch Down
+        const downEvent = (e) => {
+            isDragging = true;
+            startX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
+            startTrackX = trackXPos;
+            targetSpeed = 0;
+            currentSpeed = 0; // immediate halt
+            filmContainer.style.cursor = 'grabbing';
+            filmTrack.style.transition = 'none'; // prevent transition conflicts
+        };
+
+        // Mouse & Touch Move
+        const moveEvent = (e) => {
+            if (!isDragging) return;
+            const x = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
+            const dragDist = x - startX;
+            trackXPos = startTrackX + dragDist;
+        };
+
+        // Mouse & Touch Up
+        const upEvent = () => {
+            if (!isDragging) return;
+            isDragging = false;
+            targetSpeed = playbackSpeed;
+            filmContainer.style.cursor = 'grab';
+        };
+
+        filmContainer.addEventListener('mousedown', downEvent);
+        filmContainer.addEventListener('touchstart', downEvent, {passive: true});
+        
+        window.addEventListener('mousemove', moveEvent);
+        window.addEventListener('touchmove', moveEvent, {passive: true});
+        
+        window.addEventListener('mouseup', upEvent);
+        window.addEventListener('touchend', upEvent);
+
+        // Trackpad / Horizontal Wheel scrolling
+        filmContainer.addEventListener('wheel', (e) => {
+            // Only hijack when user scrolls horizontally (e.g. trackpad side swipe)
+            if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+                e.preventDefault();
+                trackXPos -= e.deltaX;
+                // Temporarily pause auto scroll while wheeling
+                targetSpeed = 0;
+                currentSpeed = 0;
+                clearTimeout(filmContainer.wheelTimeout);
+                filmContainer.wheelTimeout = setTimeout(() => {
+                    if (!isDragging) targetSpeed = playbackSpeed;
+                }, 200);
+            }
+        }, {passive: false});
+        
         const filmFrames = document.querySelectorAll('.film-frame');
         
         filmFrames.forEach(frame => {
+            // Prevent native image dragging causing issues
+            const img = frame.querySelector('img');
+            if(img) img.addEventListener('dragstart', (e) => e.preventDefault());
+
             frame.addEventListener('mouseenter', () => {
+                if(isDragging) return;
                 targetSpeed = 0;
                 filmContainer.classList.add('is-paused');
                 frame.classList.add('is-focused');
             });
             frame.addEventListener('mouseleave', () => {
+                if(isDragging) return;
                 targetSpeed = playbackSpeed;
                 filmContainer.classList.remove('is-paused');
                 frame.classList.remove('is-focused');
@@ -727,17 +792,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         
         function renderFilmStrip() {
-            // Easing physics simulate projector brakes
-            currentSpeed += (targetSpeed - currentSpeed) * 0.06;
-            trackXPos -= currentSpeed;
-            
-            const oneSetWidth = filmTrack.scrollWidth / 3;
-            if (Math.abs(trackXPos) >= oneSetWidth) {
-                trackXPos += oneSetWidth; // Seamless Loop Jump
+            if (!isDragging) {
+                // Easing physics simulate projector brakes
+                currentSpeed += (targetSpeed - currentSpeed) * 0.06;
+                trackXPos -= currentSpeed;
             }
             
-            // Micro-jitter injection for analog realism
-            const jitterActive = currentSpeed > 0.6;
+            // Core bi-directional seamless loop logic
+            const oneSetWidth = filmTrack.scrollWidth / 3;
+            if (trackXPos <= -oneSetWidth) {
+                trackXPos += oneSetWidth; // Scrolling left normally
+            } else if (trackXPos > 0) {
+                trackXPos -= oneSetWidth; // Dragging/scrolling right
+            }
+            
+            // Micro-jitter injection for analog realism (only when actually rolling fast)
+            const jitterActive = currentSpeed > 0.6 && !isDragging;
             const jitterY = (jitterActive && Math.random() > 0.3) ? (Math.random() * 1.5 - 0.75) : 0;
             
             filmTrack.style.transform = `translate3d(${trackXPos}px, ${jitterY}px, 0)`;
