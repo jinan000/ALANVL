@@ -24,6 +24,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="logoloop.css">
+    <style>
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 
 <body>
@@ -1683,7 +1689,7 @@
 
                         <span
                             style="font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.35); border: 1px solid rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 2px; display: inline-block; margin-bottom: 1.8rem;">
-                            MALAYALAM {2014} വിലക്കപ്പെട്ട ലൈംഗിക വിദ്യാഭ്യാസം
+                            MALAYALAM {2026} വിലക്കപ്പെട്ട ലൈംഗിക വിദ്യാഭ്യാസം
                         </span>
 
                         <div>
@@ -2044,8 +2050,11 @@
                 .empire-glass-container {
                     position: relative;
                     z-index: 10;
+                    width: calc(100% - 2rem);
                     max-width: 850px;
-                    padding: 5rem 4rem;
+                    margin: 0 auto;
+                    padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 4vw, 4rem);
+                    box-sizing: border-box;
                     background: rgba(5, 5, 5, 0.6);
                     backdrop-filter: blur(20px);
                     -webkit-backdrop-filter: blur(20px);
@@ -2053,6 +2062,7 @@
                     border-radius: 8px;
                     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.05);
                     text-align: center;
+                    overflow: hidden;
                 }
 
                 .empire-badge {
