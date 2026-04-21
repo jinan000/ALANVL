@@ -3910,20 +3910,33 @@
                         background: rgba(212, 175, 55, 0.2);
                     }
                 </style> <!-- ═══ Extended Arsenal Vault CTA ═══ -->
-                <div class="animate-up" style="margin-top: 6rem; text-align: center; padding-bottom: 2rem;">
+                <div class="animate-up"
+                    style="margin-top: 8rem; position: relative; width: 100vw; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 10rem 1rem; background: linear-gradient(to bottom, #010101, #080808, #010101); border-top: 1px solid rgba(212, 175, 55, 0.1); border-bottom: 1px solid rgba(212, 175, 55, 0.1); overflow: hidden; text-align: center;">
+                    <!-- Ambient Glow -->
                     <div
-                        style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 1rem; text-transform: uppercase; opacity: 0.7;">
-                        THE EXTENDED ARSENAL
+                        style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(212,175,55,0.05) 0%, transparent 60%); pointer-events: none;">
                     </div>
-                    <p
-                        style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: rgba(255,255,255,0.45); max-width: 550px; margin: 0 auto 2.5rem; line-height: 1.7; font-style: italic;">
-                        Discover the complete ecosystem of 11 medical textbooks, clinical audio intelligence, and global
-                        strategic deployments.
-                    </p>
-                    <a href="vault.html" class="btn-vault-premium" id="vaultCta">
-                        <span class="vault-btn-text"> ACCESS THE CLASSIFIED VAULT </span>
-                        <span class="vault-btn-hover"> DECLASSIFYING... </span>
-                    </a>
+
+                    <div style="max-width: 900px; margin: 0 auto; position: relative; z-index: 10;">
+                        <div
+                            style="font-family: 'Space Mono', monospace; font-size: 0.95rem; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 1.5rem; text-transform: uppercase; text-shadow: 0 0 20px rgba(212,175,55,0.4);">
+                            THE MEDICAL DETECTIVE'S JOURNAL
+                        </div>
+                        <h2
+                            style="font-family: var(--font-heading, 'Cinzel', serif); font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 2rem; background: linear-gradient(135deg, #fff 0%, var(--gold, #D4AF37) 40%, rgba(214,40,40,0.8) 60%, var(--gold, #D4AF37) 100%); background-size: 300% 300%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: ecoTitleShimmer 5s ease infinite;">
+                            Unlock The Classified Vault
+                        </h2>
+                        <p
+                            style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 2.5vw, 1.6rem); color: rgba(255,255,255,0.65); margin: 0 auto 4rem; line-height: 1.8; font-style: italic;">
+                            Discover the complete ecosystem of 11 medical textbooks, clinical audio intelligence, and
+                            global
+                            strategic deployments.
+                        </p>
+                        <a href="vault.html" class="btn-vault-premium" id="vaultCta" style="transform: scale(1.15);">
+                            <span class="vault-btn-text"> ACCESS THE CLASSIFIED VAULT </span>
+                            <span class="vault-btn-hover"> DECLASSIFYING... </span>
+                        </a>
+                    </div>
                 </div>
 
                 <style>
