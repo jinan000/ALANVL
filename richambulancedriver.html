@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initiation - The Author</title>
+
+    <!-- Luxury 4-Font System: Bodoni, Playfair, Cormorant, Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400;1,6..96,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- WebGL Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="logoloop.css">
+    <style>
+        html, body {
+            max-width: 100vw;
+            overflow-x: clip;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CINEMATIC PRELOADER -->
+    <div id="cinematic-loader" class="cinematic-loader">
+        <div class="loader-content">
+            <span class="loader-eyebrow" id="loader-status">ESTABLISHING SECURE CONNECTION…</span>
+            <div class="loader-progress-wrapper">
+                <div class="loader-progress-bar" id="loader-bar"></div>
+            </div>
+            <div class="loader-percentage" id="loader-percentage">0%</div>
+        </div>
+    </div>
+
+    <div class="noise-overlay"></div>
+
+    <header class="site-header">
+        <div class="logo">Dr. Alan V.L</div>
+        <nav class="site-nav">
+            <a href="#origin">The Origin</a>
+            <a href="#intelligence">Intelligence</a>
+            <a href="#book">The Book</a>
+            <a href="credentials.html">Credentials</a>
+            <a href="contact.html" class="nav-cta">[ INITIALIZE CONTACT ]</a>
+        </nav>
+    </header>
+
+    <main class="smooth-scroll-wrapper">
+
+
+        <!-- JOURNEY SCROLL SECTION -->
+
+        <section class="journey-scroll" id="journey">
+            <div class="journey-sticky">
+                <canvas id="journey-canvas"></canvas>
+                <div class="journey-overlay"></div>
+
+                <div class="journey-text-container">
+                    <div class="journey-text text-0" style="opacity: 1;">
+                        <h2 class="font-heading">This is not just a website.<br>This is my journey from nothing.</h2>
+                        <div class="scroll-prompt">
+                            <span class="heartbeat-arrow">&darr;</span> SCROLL TO WALK THE PATH
+                        </div>
+                    </div>
+                    <div class="journey-text text-30" style="opacity: 0;">
+                        <h2 class="font-heading text-bold-white">Every Drop of Sweat Was a Silent Rebellion<br><span
+                                class="italic text-gold">Against the System.</span></h2>
+                    </div>
+                    <div class="journey-text text-60" style="opacity: 0;">
+                        <div class="ecg-container">
+                            <svg class="ecg-line" viewBox="0 0 500 100" preserveAspectRatio="none">
+                                <polyline points="0,50 150,50 170,20 190,100 210,10 230,70 250,50 500,50" />
+                            </svg>
+                        </div>
+                        <h2 class="font-heading text-large-white">The White Coat Wasn't Given.<br><span
+                                class="italic text-small-gold">It Was Earned in the Dark.</span></h2>
+                    </div>
+                    <div class="journey-text text-90" style="opacity: 0;">
+                        <div class="spotlight-effect"></div>
+                        <h2 class="font-heading">From Surviving the Streets to Awakening a Generation.</h2>
+
+                        <!-- Premium Animated Scroll Down Indicator -->
+                        <a href="#origin" class="journey-scroll-cta" aria-label="Scroll to explore">
+                            <span class="scroll-cta-text">EXPLORE THE ARCHITECTURE</span>
+                            <div class="scroll-cta-arrow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <style>
+                            .journey-scroll-cta {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 1rem;
+                                text-decoration: none;
+                                margin-top: 2.5rem;
+                                cursor: pointer;
+                                position: relative;
+                            }
+
+                            .scroll-cta-text {
+                                font-family: 'Space Mono', monospace;
+                                font-size: 0.7rem;
+                                letter-spacing: 0.35em;
+                                color: rgba(212, 175, 55, 0.7);
+                                text-transform: uppercase;
+                                transition: color 0.4s ease, letter-spacing 0.4s ease;
+                            }
+
+                            .journey-scroll-cta:hover .scroll-cta-text {
+                                color: var(--gold);
+                                letter-spacing: 0.45em;
+                            }
+
+                            .scroll-cta-arrow {
+                                width: 48px;
+                                height: 48px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: var(--gold);
+                                position: relative;
+                                animation: scrollFloat 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+                            }
+
+                            .scroll-cta-arrow::before {
+                                content: '';
+                                position: absolute;
+                                inset: 0;
+                                border-radius: 50%;
+                                border: 1px solid rgba(212, 175, 55, 0.2);
+                                animation: scrollPulseRing 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+                            }
+
+                            .scroll-cta-arrow::after {
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                                background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+                                animation: scrollGlow 2.4s ease-in-out infinite;
+                            }
+
+                            .scroll-cta-trail {
+                                width: 1px;
+                                height: 40px;
+                                background: linear-gradient(180deg, rgba(212, 175, 55, 0.4) 0%, transparent 100%);
+                                animation: trailPulse 2.4s ease-in-out infinite;
+                                transform-origin: top center;
+                            }
+
+                            .journey-scroll-cta:hover .scroll-cta-arrow {
+                                animation-duration: 1.6s;
+                            }
+
+                            .journey-scroll-cta:hover .scroll-cta-arrow::before {
+                                border-color: rgba(212, 175, 55, 0.5);
+                                box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+                            }
+
+                            @keyframes scrollFloat {
+
+                                0%,
+                                100% {
+                                    transform: translateY(0);
+                                }
+
+                                50% {
+                                    transform: translateY(10px);
+                                }
+                            }
+
+                            @keyframes scrollPulseRing {
+                                0% {
+                                    transform: scale(1);
+                                    opacity: 0.6;
+                                }
+
+                                50% {
+                                    transform: scale(1.3);
+                                    opacity: 0;
+                                }
+
+                                100% {
+                                    transform: scale(1);
+                                    opacity: 0;
+                                }
+                            }
+
+                            @keyframes scrollGlow {
+
+                                0%,
+                                100% {
+                                    opacity: 0.3;
+                                    transform: scale(1);
+                                }
+
+                                50% {
+                                    opacity: 0.8;
+                                    transform: scale(1.5);
+                                }
+                            }
+
+                            @keyframes trailPulse {
+
+                                0%,
+                                100% {
+                                    opacity: 0.3;
+                                    transform: scaleY(0.6);
+                                }
+
+                                50% {
+                                    opacity: 0.8;
+                                    transform: scaleY(1);
+                                }
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- [ The Matrix Breaker & Empire Architect ] -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <section class="section rich-ambulance-driver" id="rich-ambulance-driver"
+            style="padding: 8rem 0; background: #010101; position: relative; overflow: hidden; border-top: 1px solid rgba(214,40,40,0.1);">
+
+            <style>
+                .rad-narrative {
+                    font-family: 'Cormorant Garamond', serif;
+                    font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+                    font-style: italic;
+                    color: rgba(255, 255, 255, 0.8);
+                    line-height: 2;
+                    margin-bottom: 1.2rem;
+                }
+
+                .rad-highlight {
+                    color: #fff;
+                    font-weight: 600;
+                    font-style: normal;
+                }
+
+                .rad-red {
+                    background: linear-gradient(90deg, #D62828, #ff4444);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    font-weight: 700;
+                    font-style: normal;
+                }
+
+                .rad-book-container {
+                    perspective: 1400px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .rad-book {
+                    width: 300px;
+                    height: 450px;
+                    position: relative;
+                    transform-style: preserve-3d;
+                    transform: rotateY(-20deg) rotateX(3deg);
+                    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+                    cursor: pointer;
+                }
+
+                .rad-book:hover {
+                    transform: rotateY(-5deg) rotateX(0deg) translateY(-12px) scale(1.03);
+                }
+
+                .rad-book-face {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 4px 14px 14px 4px;
+                    overflow: hidden;
+                    box-shadow:
+                        -10px 10px 30px rgba(0, 0, 0, 0.7),
+                        0 0 80px rgba(180, 0, 0, 0.12),
+                        0 0 0 1px rgba(255, 255, 255, 0.05);
+                    backface-visibility: hidden;
+                }
+
+                .rad-book-face img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: contrast(1.1) brightness(0.95) saturate(1.1);
+                }
+
+                .rad-book-spine {
+                    position: absolute;
+                    left: -35px;
+                    width: 35px;
+                    height: 100%;
+                    background: linear-gradient(180deg, #1a0505 0%, #2a0808 30%, #0d0000 100%);
+                    transform: rotateY(-90deg) translateZ(0px);
+                    transform-origin: right center;
+                    border-radius: 6px 0 0 6px;
+                    box-shadow: inset -3px 0 12px rgba(0, 0, 0, 0.6);
+                }
+
+                .rad-book-pages {
+                    position: absolute;
+                    right: -4px;
+                    width: 4px;
+                    height: 96%;
+                    top: 2%;
+                    background: repeating-linear-gradient(180deg,
+                            #e8dcc8 0px, #e8dcc8 1px,
+                            #d4c8b0 1px, #d4c8b0 2px);
+                    border-radius: 0 2px 2px 0;
+                    transform: translateZ(-2px);
+                }
+
+                .rad-book-glow {
+                    position: absolute;
+                    inset: -50px;
+                    background: radial-gradient(ellipse at center, rgba(180, 0, 0, 0.2) 0%, rgba(180, 0, 0, 0.05) 40%, transparent 70%);
+                    pointer-events: none;
+                    animation: radBookGlow 5s ease-in-out infinite;
+                    z-index: -1;
+                }
+
+                @keyframes radBookGlow {
+
+                    0%,
+                    100% {
+                        opacity: 0.5;
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        opacity: 1;
+                        transform: scale(1.08);
+                    }
+                }
+
+                .rad-ambulance-icon {
+                    font-size: 2rem;
+                    animation: ambulancePulse 2s ease-in-out infinite;
+                }
+
+                @keyframes ambulancePulse {
+
+                    0%,
+                    100% {
+                        transform: scale(1);
+                        opacity: 0.8;
+                    }
+
+                    50% {
+                        transform: scale(1.15);
+                        opacity: 1;
+                    }
+                }
+            </style>
+
+            <!-- Atmospheric red-dark glow -->
+            <div
+                style="position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 30%, rgba(180,0,0,0.06) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(212,175,55,0.03) 0%, transparent 50%); pointer-events: none;">
+            </div>
+            <!-- Vertical scanlines -->
+            <div
+                style="position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(255,255,255,0.008) 3px, rgba(255,255,255,0.008) 4px); pointer-events: none;">
+            </div>
+
+            <div class="container animate-up" style="position: relative; z-index: 10; max-width: 1100px;">
+
+                <!-- Section Header -->
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <div
+                        style="font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 1rem; text-transform: uppercase;">
+                        <span class="rad-ambulance-icon">🚑</span>
+                    </div>
+                    <div
+                        style="font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 1.5rem; text-transform: uppercase;">
+                        THE RICH AMBULANCE DRIVER
+                    </div>
+                    <h2 class="section-title center" style="
+                        color: #fff;
+                        font-family: var(--font-heading);
+                        font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+                        line-height: 1.3;
+                        margin-bottom: 0.8rem;
+                    ">The Matrix Breaker<br>&amp; Empire Architect</h2>
+                    <div
+                        style="width: 60px; height: 2px; background: linear-gradient(90deg, transparent, #D62828, transparent); margin: 0 auto;">
+                    </div>
+                </div>
+
+                <!-- Two-Column Layout: Narrative + Book -->
+                <div style="display: flex; flex-wrap: wrap; gap: 5rem; align-items: center; justify-content: center;">
+
+                    <!-- LEFT: The Narrative -->
+                    <div style="flex: 1; min-width: 340px; max-width: 550px;">
+
+                        <!-- Origin Story -->
+                        <div
+                            style="margin-bottom: 3rem; padding: 2.5rem; background: rgba(10,10,10,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.06); border-left: 3px solid rgba(214,40,40,0.5); border-radius: 0 12px 12px 0;">
+                            <p class="rad-narrative">
+                                <span style="color: var(--gold); font-size: 1.6rem; line-height: 0;">&ldquo;</span>In
+                                2019, I secured a <span class="rad-highlight">Diploma in Radiology.</span>
+                            </p>
+                            <p class="rad-narrative" style="color: rgba(255,255,255,0.55);">
+                                It was the ultimate 'safe career' that society conditions you to accept.
+                            </p>
+                            <p class="rad-narrative" style="color: rgba(255,255,255,0.55);">
+                                Most would have settled for that comfortable road, taken the job, and lived an average
+                                life.
+                            </p>
+                            <p class="rad-narrative" style="margin-top: 2rem;">
+                                But I wasn't built for <span class="rad-red">average.</span>
+                            </p>
+                        </div>
+
+                        <!-- The Rebellion -->
+                        <div style="margin-bottom: 3rem;">
+                            <p class="rad-narrative">
+                                I rejected the safe parameters, walked into the relentless chaos of the streets, and
+                                lived through <span class="rad-highlight">30+ blue-collar identities.</span>
+                            </p>
+                            <p class="rad-narrative"
+                                style="margin-top: 2rem; font-size: clamp(1.3rem, 2.5vw, 1.8rem); color: #fff; font-weight: 500;">
+                                I didn't learn about life and business from a classroom;<br>
+                                I learned it from <span class="rad-red">the driver's seat of an ambulance.</span><span
+                                    style="color: var(--gold); font-size: 1.6rem; line-height: 0;">&rdquo;</span>
+                            </p>
+                        </div>
+
+                        <!-- The Pitch -->
+                        <div style="border-top: 1px solid rgba(212,175,55,0.15); padding-top: 2.5rem;">
+                            <p
+                                style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 2vw, 1.6rem); font-style: italic; color: rgba(255,255,255,0.9); line-height: 1.8; margin-bottom: 1rem;">
+                                <span style="color: var(--gold);">&ldquo;</span>This isn't just a biography.<br>
+                                This is the <span class="rad-highlight">raw, unfiltered blueprint</span> of how I built
+                                an empire from absolute scratch.
+                            </p>
+                            <p
+                                style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 1.8vw, 1.4rem); font-style: italic; color: rgba(255,255,255,0.65); line-height: 1.8;">
+                                A masterclass in <span class="rad-red">survival, mindset, and breaking the
+                                    matrix.</span><span style="color: var(--gold);">&rdquo;</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: 3D Book Cover -->
+                    <div
+                        style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 2.5rem;">
+                        <div class="rad-book-container">
+                            <div class="rad-book">
+                                <div class="rad-book-glow"></div>
+                                <div class="rad-book-spine"></div>
+                                <div class="rad-book-pages"></div>
+                                <div class="rad-book-face">
+                                    <img src="images/the_rich_ambulance_driver.jpeg"
+                                        alt="The Rich Ambulance Driver — Book Cover" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pitch Video -->
+                        <div
+                            style="width: 100%; max-width: 320px; border: 1px solid rgba(212,175,55,0.2); border-left: 3px solid var(--gold); background: #000; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                            <video src="images/pitch%20video.mp4" controls autoplay muted loop playsinline
+                                style="width: 100%; height: auto; display: block;"></video>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div style="text-align: center;">
+                            <a href="https://medmelobooks.com/products/the-rich-ambulance-drivermalayalam-1"
+                                target="_blank" class="btn btn-gold-glow"
+                                style="display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.8rem; padding: 1rem 2.5rem; margin-bottom: 1rem;">
+                                <img src="images/medmelobooks.png" alt="Medmelo Books"
+                                    style="height: 18px; object-fit: contain; vertical-align: middle;">
+                                BUY ON MEDMELO BOOKS
+                            </a>
+                            <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 0.5rem;">
+                                <a href="https://www.amazon.in" target="_blank"
+                                    style="transition: transform 0.3s; display: inline-flex;"
+                                    onmouseover="this.style.transform='scale(1.1)'"
+                                    onmouseout="this.style.transform='scale(1)'">
+                                    <img src="images/amazon_logo.png" alt="Amazon"
+                                        style="height: 50px; width: auto; object-fit: contain;">
+                                </a>
+                                <a href="https://www.flipkart.com" target="_blank"
+                                    style="transition: transform 0.3s; display: inline-flex;"
+                                    onmouseover="this.style.transform='scale(1.1)'"
+                                    onmouseout="this.style.transform='scale(1)'">
+                                    <img src="images/flipkart_logo.png" alt="Flipkart"
+                                        style="height: 50px; width: auto; object-fit: contain;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+<section class="section arsenal-premium" id="arsenal" style="padding: 8rem 0; background: #010101;">
+            <style>
+                /* ═══════════════════════════════════════════════════════ */
+                /* ARSENAL PREMIUM — Luxury Editorial Bookstore Aesthetic */
+                /* ═══════════════════════════════════════════════════════ */
+
+                .arsenal-premium {
+                    background: linear-gradient(180deg, #000000 0%, #030303 30%, #050505 60%, #020202 100%);
+                    position: relative;
+                    overflow: hidden;
+                    padding: 8rem 0 6rem;
+                }
+
+                /* Ambient Background Particles */
+                .arsenal-premium::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background:
+                        radial-gradient(ellipse 800px 600px at 20% 30%, rgba(197, 160, 89, 0.03) 0%, transparent 70%),
+                        radial-gradient(ellipse 600px 400px at 80% 70%, rgba(197, 160, 89, 0.02) 0%, transparent 70%),
+                        radial-gradient(ellipse 400px 300px at 50% 50%, rgba(255, 255, 255, 0.01) 0%, transparent 60%);
+                    pointer-events: none;
+                    z-index: 0;
+                }
+
+                .arsenal-premium>* {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                /* Section Header */
+                .arsenal-header {
+                    text-align: center;
+                    margin-bottom: 4rem;
+                }
+
+                .arsenal-header .section-eyebrow {
+                    font-family: 'Space Mono', monospace;
+                    font-size: 0.7rem;
+                    letter-spacing: 0.4em;
+                    color: var(--gold);
+                    text-transform: uppercase;
+                    margin-bottom: 1.5rem;
+                    opacity: 0.8;
+                }
+
+                .arsenal-header .section-title {
+                    font-family: var(--font-heading);
+                    font-size: clamp(2.8rem, 5vw, 4.5rem);
+                    color: #f5f5f5;
+                    margin-bottom: 1.5rem;
+                    letter-spacing: -0.03em;
+                    line-height: 1.1;
+                }
+
+                .arsenal-header .section-subtitle {
+                    font-family: 'Cormorant Garamond', serif;
+                    font-size: clamp(1.1rem, 2vw, 1.4rem);
+                    color: rgba(255, 255, 255, 0.45);
+                    font-style: italic;
+                    font-weight: 300;
+                    max-width: 600px;
+                    margin: 0 auto;
+                    line-height: 1.7;
+                }
+
+                /* ─── LANGUAGE TOGGLE ─── */
+                .lang-toggle-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 5rem;
+                }
+
+                .lang-toggle {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    background: rgba(255, 255, 255, 0.03);
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border-radius: 100px;
+                    padding: 5px;
+                    box-shadow:
+                        0 4px 24px rgba(0, 0, 0, 0.4),
+                        0 0 0 1px rgba(255, 255, 255, 0.03),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+                    cursor: pointer;
+                    user-select: none;
+                    overflow: hidden;
+                }
+
+                .lang-toggle::before {
+                    content: '';
+                    position: absolute;
+                    top: -50%;
+                    left: -50%;
+                    width: 200%;
+                    height: 200%;
+                    background: radial-gradient(circle at center, rgba(197, 160, 89, 0.06) 0%, transparent 60%);
+                    opacity: 0;
+                    transition: opacity 0.6s ease;
+                    pointer-events: none;
+                }
+
+                .lang-toggle:hover::before {
+                    opacity: 1;
+                }
+
+                /* Slider pill */
+                .toggle-slider {
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    width: calc(50% - 5px);
+                    height: calc(100% - 10px);
+                    background: linear-gradient(135deg, rgba(197, 160, 89, 0.2), rgba(197, 160, 89, 0.08));
+                    border: 1px solid rgba(197, 160, 89, 0.3);
+                    border-radius: 100px;
+                    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+                    box-shadow:
+                        0 2px 12px rgba(197, 160, 89, 0.15),
+                        0 0 30px rgba(197, 160, 89, 0.05),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+                    z-index: 1;
+                }
+
+                .lang-toggle[data-active="ml"] .toggle-slider {
+                    transform: translateX(100%);
+                }
+
+                .toggle-btn {
+                    position: relative;
+                    z-index: 2;
+                    padding: 0.75rem 2.5rem;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                    letter-spacing: 0.12em;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, 0.35);
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    transition: color 0.4s ease, transform 0.3s ease;
+                    white-space: nowrap;
+                    min-width: 130px;
+                    text-align: center;
+                }
+
+                .toggle-btn:hover {
+                    color: rgba(255, 255, 255, 0.6);
+                }
+
+                .toggle-btn.active {
+                    color: #fff;
+                    text-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+                }
+
+                .lang-toggle.mini {
+                    margin-bottom: 1.2rem;
+                    display: inline-flex;
+                    padding: 3px;
+                }
+
+                .lang-toggle.mini .toggle-btn {
+                    padding: 0.4rem 1.2rem;
+                    font-size: 0.65rem;
+                    min-width: 0;
+                    flex: 1;
+                }
+
+                .lang-toggle.mini .toggle-slider {
+                    top: 3px;
+                    left: 3px;
+                    width: calc(50% - 3px);
+                    height: calc(100% - 6px);
+                }
+
+                /* ─── PREMIUM ARSENAL GRID ─── */
+                .arsenal-grid-premium {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 4rem;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+
+                /* ─── PREMIUM BONUS CARD ─── */
+                .arsenal-bonus-premium {
+                    display: grid;
+                    grid-template-columns: 1fr 1.2fr;
+                    background: linear-gradient(145deg, rgba(12, 12, 12, 0.95), rgba(5, 5, 5, 0.98));
+                    border: 1px solid rgba(255, 255, 255, 0.06);
+                    border-radius: 20px;
+                    overflow: hidden;
+                    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+                    box-shadow:
+                        0 20px 60px rgba(0, 0, 0, 0.5),
+                        0 0 0 1px rgba(255, 255, 255, 0.02),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+                    position: relative;
+                }
+
+                .arsenal-bonus-premium::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(135deg, rgba(197, 160, 89, 0.02) 0%, transparent 50%);
+                    border-radius: 20px;
+                    pointer-events: none;
+                    z-index: 0;
+                }
+
+                .arsenal-bonus-premium:hover {
+                    transform: translateY(-6px);
+                    box-shadow:
+                        0 30px 80px rgba(0, 0, 0, 0.6),
+                        0 0 60px rgba(197, 160, 89, 0.06),
+                        0 0 0 1px rgba(197, 160, 89, 0.15);
+                    border-color: rgba(197, 160, 89, 0.2);
+                }
+
+                /* Book Cover */
+                .bonus-cover-premium {
+                    position: relative;
+                    background: #080808;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 3rem;
+                    overflow: hidden;
+                    min-height: 480px;
+                }
+
+                .bonus-cover-premium::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: radial-gradient(ellipse at center, rgba(197, 160, 89, 0.04) 0%, transparent 70%);
+                    pointer-events: none;
+                }
+
+                .bonus-cover-premium img {
+                    width: 100%;
+                    max-width: 320px;
+                    height: auto;
+                    object-fit: contain;
+                    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.6));
+                    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .arsenal-bonus-premium:hover .bonus-cover-premium img {
+                    transform: scale(1.05) translateY(-4px);
+                    filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 20px rgba(197, 160, 89, 0.08));
+                }
+
+                /* Content Side */
+                .bonus-info-premium {
+                    padding: 3.5rem 3rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .bonus-info-premium h4 {
+                    font-family: var(--font-heading);
+                    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+                    color: #f5f5f5;
+                    margin-bottom: 0.6rem;
+                    letter-spacing: 0.04em;
+                    line-height: 1.25;
+                }
+
+                .bonus-lang-badge {
+                    font-family: 'Space Mono', monospace;
+                    font-size: 0.55rem;
+                    letter-spacing: 0.2em;
+                    color: rgba(255, 255, 255, 0.35);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    padding: 3px 8px;
+                    border-radius: 3px;
+                    display: inline-block;
+                    margin-bottom: 0.5rem;
+                    text-transform: uppercase;
+                }
+
+                .bonus-ml-subtitle {
+                    font-family: 'Noto Sans Malayalam', sans-serif;
+                    font-size: 0.85rem;
+                    color: rgba(255, 255, 255, 0.3);
+                    margin-bottom: 1.2rem;
+                    font-weight: 300;
+                }
+
+                .bonus-tagline {
+                    font-family: 'Cormorant Garamond', serif;
+                    font-size: 1.05rem;
+                    font-style: italic;
+                    color: rgba(255, 255, 255, 0.5);
+                    line-height: 1.7;
+                    margin-bottom: 1.5rem;
+                    font-weight: 300;
+                }
+
+                /* ─── REGULAR CARDS GRID ─── */
+                .arsenal-regular-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 2rem;
+                }
+
+                .arsenal-card-premium {
+                    background: linear-gradient(160deg, rgba(12, 12, 12, 0.95), rgba(5, 5, 5, 0.98));
+                    border: 1px solid rgba(255, 255, 255, 0.05);
+                    border-radius: 16px;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+                    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+                    position: relative;
+                }
+
+                .arsenal-card-premium::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(135deg, rgba(197, 160, 89, 0.015) 0%, transparent 40%);
+                    border-radius: 16px;
+                    pointer-events: none;
+                    z-index: 0;
+                }
+
+                .arsenal-card-premium:hover {
+                    transform: translateY(-8px);
+                    box-shadow:
+                        0 20px 60px rgba(0, 0, 0, 0.5),
+                        0 0 40px rgba(197, 160, 89, 0.05);
+                    border-color: rgba(197, 160, 89, 0.15);
+                }
+
+                .card-cover-premium {
+                    width: 100%;
+                    aspect-ratio: 4/3;
+                    background: #080808;
+                    position: relative;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .card-cover-premium::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 60px;
+                    background: linear-gradient(to top, rgba(8, 8, 8, 0.8), transparent);
+                    pointer-events: none;
+                    z-index: 2;
+                }
+
+                .card-cover-premium img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding: 2rem;
+                    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .arsenal-card-premium:hover .card-cover-premium img {
+                    transform: scale(1.06);
+                }
+
+                .card-info-premium {
+                    padding: 2rem 2.2rem 2.5rem;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .card-info-premium h4 {
+                    font-family: var(--font-heading);
+                    font-size: 1.15rem;
+                    color: #f0f0f0;
+                    margin-bottom: 0.8rem;
+                    letter-spacing: 0.04em;
+                    line-height: 1.3;
+                }
+
+                .card-info-premium .card-desc {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 0.88rem;
+                    color: rgba(255, 255, 255, 0.4);
+                    line-height: 1.7;
+                    font-weight: 300;
+                    margin-bottom: 1rem;
+                }
+
+                .card-info-premium .card-genre {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 0.78rem;
+                    color: rgba(255, 255, 255, 0.3);
+                    font-style: italic;
+                    margin-bottom: 1.5rem;
+                    flex: 1;
+                }
+
+                /* ─── DIVIDER ─── */
+                .arsenal-divider {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 1rem 0;
+                    opacity: 0.4;
+                }
+
+                .arsenal-divider .div-line {
+                    width: 1px;
+                    height: 30px;
+                    background: linear-gradient(to bottom, transparent, rgba(197, 160, 89, 0.5));
+                }
+
+                .arsenal-divider .div-diamond {
+                    width: 4px;
+                    height: 4px;
+                    transform: rotate(45deg);
+                    background: rgba(197, 160, 89, 0.7);
+                    margin: 5px 0;
+                    box-shadow: 0 0 8px rgba(197, 160, 89, 0.4);
+                }
+
+                .arsenal-divider .div-line-down {
+                    width: 1px;
+                    height: 30px;
+                    background: linear-gradient(to top, transparent, rgba(197, 160, 89, 0.5));
+                }
+
+                /* ─── LANGUAGE TRANSITION ANIMATIONS ─── */
+                .lang-content {
+                    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+                }
+
+                .lang-content.hiding {
+                    opacity: 0;
+                    transform: translateY(12px);
+                    pointer-events: none;
+                }
+
+                .lang-content.showing {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+                /* ML-only elements */
+                .ml-only {
+                    display: none;
+                }
+
+                .en-only {
+                    display: inline-block;
+                }
+
+                [data-lang-state="ml"] .ml-only {
+                    display: inline-block;
+                }
+
+                [data-lang-state="ml"] .en-only {
+                    display: none;
+                }
+
+                /* ─── RESPONSIVE ─── */
+                @media (max-width: 1024px) {
+                    .arsenal-regular-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+
+                    .arsenal-bonus-premium {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .arsenal-premium {
+                        padding: 5rem 0 4rem;
+                    }
+
+                    .arsenal-bonus-premium {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .bonus-cover-premium {
+                        min-height: 340px;
+                        padding: 2rem;
+                    }
+
+                    .arsenal-regular-grid {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .toggle-btn {
+                        padding: 0.65rem 1.8rem;
+                        font-size: 0.72rem;
+                        min-width: 110px;
+                    }
+
+                    .bonus-info-premium {
+                        padding: 2.5rem 2rem;
+                    }
+                }
+
+                /* ─── STAR RATING SYSTEM ─── */
+                .book-rating {
+                    margin-top: 1.5rem;
+                    padding-top: 1.2rem;
+                    border-top: 1px solid rgba(255, 255, 255, 0.06);
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    flex-wrap: wrap;
+                }
+
+                .book-rating .rating-display {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+
+                .book-rating .rating-score {
+                    font-family: 'Jost', 'Inter', sans-serif;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    color: var(--gold);
+                    letter-spacing: 0.02em;
+                    text-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+                }
+
+                .book-rating .stars {
+                    display: flex;
+                    gap: 2px;
+                }
+
+                .book-rating .star {
+                    font-size: 1rem;
+                    color: rgba(255, 255, 255, 0.15);
+                    cursor: pointer;
+                    transition: color 0.25s ease, transform 0.2s ease, filter 0.25s ease;
+                    user-select: none;
+                    line-height: 1;
+                }
+
+                .book-rating .star.filled {
+                    color: var(--gold);
+                    filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.4));
+                }
+
+                .book-rating .star.half {
+                    background: linear-gradient(90deg, var(--gold) 50%, rgba(255, 255, 255, 0.15) 50%);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.2));
+                }
+
+                .book-rating .star:hover {
+                    transform: scale(1.25);
+                    color: var(--gold);
+                    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+                }
+
+                .book-rating .rating-meta {
+                    font-family: 'Space Mono', monospace;
+                    font-size: 0.6rem;
+                    color: rgba(255, 255, 255, 0.35);
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                }
+
+                .book-rating .rating-meta span {
+                    color: rgba(255, 255, 255, 0.55);
+                    font-weight: 700;
+                }
+            </style>
+
+<div class="container">
+<div class="arsenal-grid-premium animate-up" id="arsenalContent">
+                    <!-- ═══════ BONUS CARD 1: The Rich Ambulance Driver ═══════ -->
+                    <div class="arsenal-bonus-premium lang-content showing">
+                        <div class="bonus-cover-premium">
+                            <img src="images/the_rich_ambulance_driver.jpeg" alt="The Rich Ambulance Driver" />
+                        </div>
+                        <div class="bonus-info-premium">
+                            <!-- Mini Toggle -->
+                            <div class="lang-toggle mini arsenal-mini-toggle" data-active="ml" role="tablist">
+                                <div class="toggle-slider" aria-hidden="true"></div>
+                                <button class="toggle-btn" data-lang="en" role="tab"
+                                    aria-selected="false">English</button>
+                                <button class="toggle-btn active" data-lang="ml" role="tab"
+                                    aria-selected="true">മലയാളം</button>
+                            </div>
+                            <h4>THE RICH AMBULANCE DRIVER</h4>
+                            <span class="bonus-lang-badge"> MALAYALAM </span>
+                            <span class="bonus-ml-subtitle">ദി റിച്ച് ആംബുലൻസ് ഡ്രൈവർ</span>
+
+                            <p class="bonus-tagline">The Ultimate Survival Blueprint. From rock bottom to building an
+                                empire.</p>
+
+                            <!-- Premium Live Stock Counter -->
+                            <div
+                                style="margin: 1.2rem 0; padding: 0.85rem 1rem; border: 1px solid rgba(214,40,40,0.25); border-radius: 12px; background: linear-gradient(90deg, rgba(214,40,40,0.06) 0%, rgba(10,10,10,0.3) 100%); display: flex; align-items: center; justify-content: space-between; box-shadow: inset 0 0 20px rgba(214,40,40,0.03), 0 4px 12px rgba(0,0,0,0.2);">
+                                <div style="display: flex; align-items: center; gap: 0.7rem;">
+                                    <div style="position: relative; width: 10px; height: 10px;">
+                                        <div
+                                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #D62828; border-radius: 50%; z-index: 2;">
+                                        </div>
+                                        <div
+                                            style="position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px; background: rgba(214,40,40,0.4); border-radius: 50%; animation: pulseRedStock 2s infinite; z-index: 1;">
+                                        </div>
+                                    </div>
+                                    <span
+                                        style="font-family: 'Space Mono', monospace; font-size: 0.65rem; color: #D62828; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700;">LIVE
+                                        STOCK</span>
+                                </div>
+                                <div
+                                    style="font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 500; color: rgba(255,255,255,0.5);">
+                                    <span class="rad-stock-counter"
+                                        style="display: inline-block; min-width: 28px; text-align: center; font-family: 'Space Mono', monospace; font-size: 1.1rem; font-weight: 700; color: var(--gold); text-shadow: 0 0 10px rgba(212,175,55,0.3); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">100</span>
+                                    COPIES LEFT
+                                </div>
+                            </div>
+
+                            <style>
+                                @keyframes pulseRedStock {
+                                    0% {
+                                        transform: scale(0.8);
+                                        opacity: 0.8;
+                                    }
+
+                                    50% {
+                                        transform: scale(2);
+                                        opacity: 0;
+                                    }
+
+                                    100% {
+                                        transform: scale(0.8);
+                                        opacity: 0;
+                                    }
+                                }
+
+                                .rad-stock-counter.update-stock {
+                                    color: #D62828 !important;
+                                    text-shadow: 0 0 15px rgba(214, 40, 40, 0.6) !important;
+                                }
+                            </style>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    setTimeout(function () {
+                                        const counters = document.querySelectorAll('.rad-stock-counter');
+                                        counters.forEach(counter => {
+                                            counter.style.opacity = '0';
+                                            counter.style.transform = 'translateY(10px) scale(0.9)';
+                                            setTimeout(() => {
+                                                counter.innerText = '99';
+                                                counter.classList.add('update-stock');
+                                                counter.style.opacity = '1';
+                                                counter.style.transform = 'translateY(0) scale(1.15)';
+                                                setTimeout(() => {
+                                                    counter.style.transform = 'translateY(0) scale(1)';
+                                                }, 300);
+                                            }, 400);
+                                        });
+                                    }, 3500);
+                                });
+                            </script>
+
+                            <!-- Section 01: Physical -->
+                            <div class="asset-tier">
+                                <p class="asset-tier-title"> 01 : SECURE THE PHYSICAL ASSET </p>
+                                <a href="https://medmelobooks.com/products/the-rich-ambulance-drivermalayalam-1"
+                                    target="_blank" class="btn btn-gold-glow"
+                                    style="width: 100%; text-align: center; margin-bottom: 0.5rem; font-size: 0.75rem; gap: 0.5rem;">
+                                    <img src="images/logo12.png" alt="Medmelo"
+                                        style="height: 20px; object-fit: contain; vertical-align: middle;"> BUY ON
+                                    MEDMELO BOOKS </a>
+                                <div class="btn-ghost-group">
+                                    <a href="https://amzn.in/d/0cPhmcF8" target="_blank" class="btn-ghost btn-platform"
+                                        style="flex:1;"><img src="images/amazon_logo.png" alt="Amazon"
+                                            class="platform-logo"></a>
+                                    <a href="https://www.flipkart.com" target="_blank" class="btn-ghost btn-platform"
+                                        style="flex:1;"><img src="images/flipkart_logo.png" alt="Flipkart"
+                                            class="platform-logo"></a>
+                                </div>
+                            </div>
+
+                            <!-- Section 02: Audio -->
+                            <div class="asset-tier">
+                                <p class="asset-tier-title"> 02 : AUDIO INTELLIGENCE </p>
+                                <div class="btn-ghost-group">
+                                    <a href="https://kukufm.com" target="_blank"
+                                        class="btn-ghost btn-platform btn-negotiating" style="flex:1;"><img
+                                            src="images/Kukufm_logo.png" alt="Kuku FM" class="platform-logo"></a>
+                                    <a href="https://www.storytel.com" target="_blank"
+                                        class="btn-ghost btn-platform btn-negotiating" style="flex:1;"><img
+                                            src="images/storytel_logo.png" alt="Storytel" class="platform-logo"></a>
+                                    <a href="https://www.audible.in" target="_blank"
+                                        class="btn-ghost btn-platform btn-negotiating" style="flex:1;"><img
+                                            src="images/audible_logo.png" alt="Audible" class="platform-logo"></a>
+                                </div>
+                            </div>
+
+                            <!-- Section 03: Digital -->
+                            <div class="asset-tier">
+                                <p class="asset-tier-title"> 03 : THE DIGITAL BLUEPRINT </p>
+                                <span class="status-pulse-red" style="margin-bottom: 0.5rem;">COMING SOON</span>
+                                <div class="btn-ghost-group">
+                                    <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
+                                            src="images/kindle_logo.png" alt="Kindle" class="platform-logo"></span>
+                                    <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
+                                            src="images/apple_books_logo.png" alt="Apple Books"
+                                            class="platform-logo"></span>
+                                    <span class="btn-ghost btn-platform btn-disabled" style="flex:1;"><img
+                                            src="images/google_play_logo.png" alt="Google Play"
+                                            class="platform-logo"></span>
+                                </div>
+                            </div>
+
+                            <!-- Minimal Instagram Proof -->
+                            <div
+                                style="margin: 1.2rem 0; padding: 0.65rem 0.9rem; background: rgba(10,10,10,0.35); border: 1px solid rgba(255,255,255,0.04); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.7rem; position: relative; z-index: 2;">
+                                    <div
+                                        style="width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, rgba(225,48,108,0.1), rgba(252,176,69,0.1)); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(225,48,108,0.15);">
+                                        <img src="images/Instagram_icon.png" alt="Instagram"
+                                            style="height: 14px; opacity: 0.85; filter: drop-shadow(0 0 5px rgba(225,48,108,0.3));">
+                                    </div>
+                                    <div style="display: flex; flex-direction: column; line-height: 1.2;">
+                                        <span
+                                            style="font-family: 'Inter', sans-serif; font-size: 0.75rem; color: #fff; font-weight: 600; letter-spacing: 0.02em;"><span
+                                                class="insta-counter" data-target="14.0">0.0</span>K Followers</span>
+                                        <span
+                                            style="font-family: 'Space Mono', monospace; font-size: 0.55rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.1rem;">@richambulancedriver</span>
+                                    </div>
+                                </div>
+                                <a href="https://www.instagram.com/richambulancedriver/" target="_blank"
+                                    style="position: relative; z-index: 2; font-family: 'Space Mono', monospace; font-size: 0.55rem; font-weight: 700; color: rgba(255,255,255,0.6); text-decoration: none; padding: 0.35rem 0.7rem; border-radius: 6px; background: transparent; border: 1px solid rgba(255,255,255,0.12); transition: all 0.3s; letter-spacing: 0.1em;"
+                                    onmouseover="this.style.background='rgba(255,255,255,0.05)'; this.style.color='#fff';"
+                                    onmouseout="this.style.background='transparent'; this.style.color='rgba(255,255,255,0.6)';">FOLLOW</a>
+                            </div>
+
+                            <!-- Syndicate Footer -->
+                            <div class="syndicate-footer">
+                                <strong> 14K+ MATRIX BREAKERS ALREADY INSIDE </strong>
+                                The movement has begun. Join the rawest survival and wealth-building syndicate on the
+                                internet.
+                                <br>
+                                <a href="https://instagram.com/richambulancedriver" target="_blank"
+                                    class="syndicate-cta">⚡ JOIN THE SYNDICATE (Follow @richambulancedriver)</a>
+                            </div>
+
+                            <!-- Star Rating -->
+                            <div class="book-rating" data-book="rad">
+                                <div class="rating-display">
+                                    <span class="rating-score">4.9</span>
+                                    <div class="stars">
+                                        <span class="star filled" data-value="1">★</span>
+                                        <span class="star filled" data-value="2">★</span>
+                                        <span class="star filled" data-value="3">★</span>
+                                        <span class="star filled" data-value="4">★</span>
+                                        <span class="star half" data-value="5">★</span>
+                                    </div>
+                                </div>
+                                <div class="rating-meta"><span>117</span> votes · Rate this book</div>
+                            </div>
+                        </div>
+                    </div>
+
+</div>
+</div>
+
+            <!-- ═══ Language Toggle Controller ═══ -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const toggles = document.querySelectorAll('.arsenal-mini-toggle');
+
+                    toggles.forEach(toggle => {
+                        const buttons = toggle.querySelectorAll('.toggle-btn');
+
+                        buttons.forEach(btn => {
+                            btn.addEventListener('click', function () {
+                                const lang = this.dataset.lang;
+                                if (toggle.dataset.active === lang) return;
+
+                                // Update local toggle state
+                                toggle.dataset.active = lang;
+                                buttons.forEach(b => {
+                                    b.classList.remove('active');
+                                    b.setAttribute('aria-selected', 'false');
+                                });
+                                this.classList.add('active');
+                                this.setAttribute('aria-selected', 'true');
+
+                                // Find parent card and cover to animate
+                                const parentCard = this.closest('.arsenal-bonus-premium') || this.closest('.arsenal-card-premium') || this.closest('.card-info-premium').parentElement;
+                                if (!parentCard) return;
+
+                                const cover = parentCard.querySelector('.bonus-cover-premium, .card-cover-premium');
+
+                                if (cover) {
+                                    // Fade sequence for the cover only
+                                    cover.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                                    cover.style.opacity = '0';
+                                    cover.style.transform = 'scale(0.95)';
+
+                                    setTimeout(() => {
+                                        cover.style.opacity = '1';
+                                        cover.style.transform = 'scale(1)';
+                                    }, 400);
+                                }
+                            });
+                        });
+                    });
+
+                    // Instagram counter animation
+                    const instaCounters = document.querySelectorAll('.insta-counter');
+                    const observerOptions = { threshold: 0.5 };
+                    let countersAnimated = false;
+
+                    const counterObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !countersAnimated) {
+                                countersAnimated = true;
+                                instaCounters.forEach(counter => {
+                                    const target = parseFloat(counter.dataset.target);
+                                    let current = 0;
+                                    const increment = target / 60;
+                                    const timer = setInterval(() => {
+                                        current += increment;
+                                        if (current >= target) {
+                                            counter.textContent = target.toFixed(1);
+                                            clearInterval(timer);
+                                        } else {
+                                            counter.textContent = current.toFixed(1);
+                                        }
+                                    }, 25);
+                                });
+                            }
+                        });
+                    }, observerOptions);
+
+                    const arsenalSection = document.querySelector('.arsenal-premium');
+                    if (arsenalSection) counterObserver.observe(arsenalSection);
+
+                    // Star Rating System Interactions
+                    const ratingWidgets = document.querySelectorAll('.book-rating');
+                    ratingWidgets.forEach(widget => {
+                        const originalStarsContainer = widget.querySelector('.stars');
+                        const ratingScoreDisplay = widget.querySelector('.rating-score');
+                        const voteDisplay = widget.querySelector('.rating-meta span');
+                        let hasVoted = false;
+
+                        // 1. Make the original display stars non-interactive
+                        originalStarsContainer.style.pointerEvents = 'none';
+
+                        // 2. Wrap the "Rate this book" text in a clickable element
+                        const metaTextContainer = widget.querySelector('.rating-meta');
+                        const currentVotes = voteDisplay.textContent;
+                        metaTextContainer.innerHTML = `<span>${currentVotes}</span> votes · <a href="javascript:void(0)" class="rate-trigger" style="color: var(--gold); text-decoration: none; border-bottom: 1px dashed var(--gold);">Rate this book</a>`;
+
+                        const rateBtn = widget.querySelector('.rate-trigger');
+
+                        rateBtn.addEventListener('click', () => {
+                            if (hasVoted) return;
+
+                            // Hide the trigger text
+                            rateBtn.style.display = 'none';
+
+                            // Create the interactive rating panel
+                            const panel = document.createElement('div');
+                            panel.className = 'interactive-rating-panel';
+                            panel.style.cssText = 'width: 100%; margin-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1rem; animation: fadeUp 0.4s ease forwards;';
+                            panel.innerHTML = `
+                                <div style="font-family: 'Space Mono', monospace; font-size: 0.65rem; color: rgba(255,255,255,0.5); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;">Select your rating:</div>
+                                <div class="interactive-stars" style="display: flex; gap: 4px; font-size: 1.6rem; line-height: 1;">
+                                    <span class="star" data-value="1" style="cursor:pointer; color:rgba(255,255,255,0.15); transition:all 0.2s;">★</span>
+                                    <span class="star" data-value="2" style="cursor:pointer; color:rgba(255,255,255,0.15); transition:all 0.2s;">★</span>
+                                    <span class="star" data-value="3" style="cursor:pointer; color:rgba(255,255,255,0.15); transition:all 0.2s;">★</span>
+                                    <span class="star" data-value="4" style="cursor:pointer; color:rgba(255,255,255,0.15); transition:all 0.2s;">★</span>
+                                    <span class="star" data-value="5" style="cursor:pointer; color:rgba(255,255,255,0.15); transition:all 0.2s;">★</span>
+                                </div>
+                            `;
+                            widget.appendChild(panel);
+
+                            const interactiveStars = panel.querySelectorAll('.star');
+
+                            interactiveStars.forEach((star, index) => {
+                                // Hover: Fill up to hovered star
+                                star.addEventListener('mouseenter', () => {
+                                    if (hasVoted) return;
+                                    interactiveStars.forEach((s, i) => {
+                                        if (i <= index) {
+                                            s.style.color = 'var(--gold)';
+                                            s.style.filter = 'drop-shadow(0 0 6px rgba(212,175,55,0.6))';
+                                        } else {
+                                            s.style.color = 'rgba(255,255,255,0.15)';
+                                            s.style.filter = 'none';
+                                        }
+                                    });
+                                });
+
+                                // Leave: Reset all
+                                star.addEventListener('mouseleave', () => {
+                                    if (hasVoted) return;
+                                    interactiveStars.forEach(s => {
+                                        s.style.color = 'rgba(255,255,255,0.15)';
+                                        s.style.filter = 'none';
+                                    });
+                                });
+
+                                // Click: Lock in rating
+                                star.addEventListener('click', () => {
+                                    if (hasVoted) return;
+                                    hasVoted = true;
+                                    const score = star.dataset.value;
+
+                                    // Lock visual state
+                                    interactiveStars.forEach((s, i) => {
+                                        if (i <= index) {
+                                            s.style.color = 'var(--gold)';
+                                            s.style.filter = 'drop-shadow(0 0 4px rgba(212,175,55,0.4))';
+                                            s.style.transform = 'scale(1.1)';
+                                            setTimeout(() => s.style.transform = 'scale(1)', 200);
+                                        } else {
+                                            s.style.color = 'rgba(255,255,255,0.05)';
+                                            s.style.filter = 'none';
+                                        }
+                                        s.style.cursor = 'default';
+                                    });
+
+                                    // Update text feedback
+                                    const headingInfo = panel.querySelector('div');
+                                    headingInfo.textContent = 'Thanks for your feedback!';
+                                    headingInfo.style.color = 'var(--gold)';
+
+                                    // Optionally update global score display & votes
+                                    let newVotes = parseInt(currentVotes) + 1;
+                                    metaTextContainer.innerHTML = `<span>${newVotes}</span> votes · Rating submitted`;
+                                });
+                            });
+                        });
+                    });
+
+                });
+            </script>
+</section>
+
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
