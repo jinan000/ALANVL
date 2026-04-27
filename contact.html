@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & The Book — Dr Alan VL</title>
+    <title>Contact & The Book — ALAN V.L</title>
     <meta name="description"
-        content="Get the book, collaborate with Dr. Alan VL, or reach out for speaking engagements and clinical consultations.">
+        content="Get the book, collaborate with ALAN V.L, or reach out for speaking engagements and clinical consultations.">
 
     <!-- Luxury 4-Font System -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,13 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
+
+    <meta property="og:title" content="Contact & The Book — ALAN V.L">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+    <meta property="og:site_name" content="ALAN V.L">
+    <meta property="og:image" content="images/favicon.svg">
 </head>
 
 <body>
@@ -24,7 +31,7 @@
 
     <!-- HEADER -->
     <header class="site-header">
-        <a href="index.html" class="logo">Dr. Alan V.L</a>
+        <a href="index.html" class="logo">ALAN V.L</a>
         <nav class="site-nav">
             <a href="index.html#origin">The Origin</a>
             <a href="index.html#intelligence">Intelligence</a>
@@ -115,7 +122,7 @@
                         <div class="book-meta">
                             <div class="book-meta-item">
                                 <span class="book-meta-label">Author</span>
-                                <span class="book-meta-value">Dr. Alan VL</span>
+                                <span class="book-meta-value">ALAN V.L</span>
                             </div>
                             <div class="book-meta-item">
                                 <span class="book-meta-label">Genre</span>
@@ -172,7 +179,7 @@
             <div class="container collab-cta-inner">
                 <div class="collab-spotlight"></div>
                 <p class="collab-eyebrow">SPEAKING &amp; PARTNERSHIPS</p>
-                <h2 class="collab-title">Invite Dr. Alan VL to Your Stage</h2>
+                <h2 class="collab-title">Invite ALAN V.L to Your Stage</h2>
                 <p class="collab-body">Keynotes on clinical intelligence, leadership under pressure, psychosomatic
                     medicine, and building ISO-certified enterprises. Available for hospitals, medical conferences,
                     corporate institutions, and premium events.</p>
@@ -195,7 +202,7 @@
                 <a href="index.html" class="contact-link">← Back to Home</a>
             </div>
             <div class="footer-legal">
-                <p>&copy; 2026 Dr. Alan VL. All intelligence protected.</p>
+                <p>&copy; 2026 ALAN V.L. All intelligence protected.</p>
                 <div style="margin-top: 1rem;">
                     <a href="legal.html"
                         style="color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.8rem; font-family: 'Space Mono', monospace; letter-spacing: 0.1em; text-transform: uppercase;">LEGAL
@@ -229,6 +236,28 @@
         gsap.from('.book-cover-back', { x: -20, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.book-sale-visual', start: 'top 80%' } });
         gsap.from('.collab-title', { y: 40, opacity: 0, duration: 1.1, ease: 'power2.out', scrollTrigger: { trigger: '.collab-cta', start: 'top 80%' } });
     </script>
+
+<!-- Navigation Script injected automatically -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if(targetId === '#') return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                if (typeof lenis !== 'undefined') {
+                    lenis.scrollTo(targetElement, { duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+                } else {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+});
+</script>
+
 </body>
 
 </html>

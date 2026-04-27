@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal & Disclaimer — Dr. Alan VL</title>
-    <meta name="description" content="Legal and Trademark Disclaimer for Dr. Alan V.L.'s professional ecosystem.">
+    <title>Legal & Disclaimer — ALAN V.L</title>
+    <meta name="description" content="Legal and Trademark Disclaimer for ALAN V.L.'s professional ecosystem.">
 
     <!-- Luxury 4-Font System -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,6 +62,13 @@
             margin-bottom: 1.5rem;
         }
     </style>
+
+    <meta property="og:title" content="Legal & Disclaimer — ALAN V.L">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+    <meta property="og:site_name" content="ALAN V.L">
+    <meta property="og:image" content="images/favicon.svg">
 </head>
 
 <body>
@@ -69,7 +76,7 @@
 
     <!-- HEADER -->
     <header class="site-header">
-        <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">Dr. Alan V.L</a>
+        <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">ALAN V.L</a>
         <nav class="site-nav">
             <a href="index.html#origin">The Origin</a>
             <a href="index.html#intelligence">Intelligence</a>
@@ -86,10 +93,10 @@
                     <h1 class="legal-title">Institutional Credentials &amp; Logos</h1>
                     <div class="legal-content">
                         <p>
-                            "The logos and trademarks of institutions (including but not limited to WHO, Stanford University, NYIF, NSE, SBI, DeakinCo, etc.) displayed on this website are the property of their respective owners. Their presence on this platform is solely to represent the professional certifications, courses, and academic credentials successfully completed by Dr. Alan V.L."
+                            "The logos and trademarks of institutions (including but not limited to WHO, Stanford University, NYIF, NSE, SBI, DeakinCo, etc.) displayed on this website are the property of their respective owners. Their presence on this platform is solely to represent the professional certifications, courses, and academic credentials successfully completed by ALAN V.L."
                         </p>
                         <p>
-                            "Use of these logos does not imply any official partnership, endorsement, or affiliation with these institutions. Dr. Alan V.L. and Medmelo Ventures Pvt. Ltd. do not claim any ownership of these trademarks."
+                            "Use of these logos does not imply any official partnership, endorsement, or affiliation with these institutions. ALAN V.L. and Medmelo Ventures Pvt. Ltd. do not claim any ownership of these trademarks."
                         </p>
                     </div>
                 </div>
@@ -109,7 +116,7 @@
                 <a href="index.html" class="contact-link">← Back to Home</a>
             </div>
             <div class="footer-legal">
-                <p>&copy; 2026 Dr. Alan VL. All intelligence protected.</p>
+                <p>&copy; 2026 ALAN V.L. All intelligence protected.</p>
                 <div style="margin-top: 1rem;">
                     <a href="legal.html" style="color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.8rem; font-family: 'Space Mono', monospace;">LEGAL &amp; TRADEMARKS</a>
                 </div>
@@ -120,6 +127,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+
+<!-- Navigation Script injected automatically -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if(targetId === '#') return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                if (typeof lenis !== 'undefined') {
+                    lenis.scrollTo(targetElement, { duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+                } else {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+});
+</script>
+
 </body>
 
 </html>

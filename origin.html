@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Origin | Dr Alan V L</title>
+    <title>The Origin | ALAN V.L</title>
     <meta name="description"
-        content="The origin story of Dr. Alan V.L — from publisher rejection to building a global empire alone. The architecture of a one-man empire.">
+        content="The origin story of ALAN V.L — from publisher rejection to building a global empire alone. The architecture of a one-man empire.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -106,6 +106,13 @@
             }
         }
     </style>
+
+    <meta property="og:title" content="The Origin | ALAN V.L">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+    <meta property="og:site_name" content="ALAN V.L">
+    <meta property="og:image" content="images/favicon.svg">
 </head>
 
 <body>
@@ -295,6 +302,28 @@
         }, { threshold: 0.15 });
         reveals.forEach(el => observer.observe(el));
     </script>
+
+
+<!-- Navigation Script injected automatically -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if(targetId === '#') return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                if (typeof lenis !== 'undefined') {
+                    lenis.scrollTo(targetElement, { duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+                } else {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+});
+</script>
 
 </body>
 
